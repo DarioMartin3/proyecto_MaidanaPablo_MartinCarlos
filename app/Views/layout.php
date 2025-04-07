@@ -121,28 +121,28 @@
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Nosotros</h5>
                     <ul class="list-unstyled">
-                        <li><button type="button" class="btn">Local</button></li>
-                        <li><button type="button" class="btn">Venta Mayorista</button></li>
-                        <li><button type="button" class="btn">Sobre Nosotros</button></li>
+                        <li><button type="button" class="btn btn-link">Local</button></li>
+                        <li><button type="button" class="btn btn-link">Venta Mayorista</button></li>
+                        <li><button type="button" class="btn btn-link">Sobre Nosotros</button></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Ayuda</h5>
                     <ul class="list-unstyled">
-                        <li><button type="button" class="btn">Contacto</button></li>
-                        <li><button type="button" class="btn">Formas de pago</button></li>
-                        <li><button type="button" class="btn">Metodos de envío</button></li>
-                        <li><button type="button" class="btn">Cambio y Devoluciones</button></li>
-                        <li><button type="button" class="btn">Preguntas precuentes</button></li>
-                        <li><button type="button" class="btn">Promociones</button></li>
+                        <li><button type="button" class="btn btn-link">Contacto</button></li>
+                        <li><button type="button" class="btn btn-link">Formas de pago</button></li>
+                        <li><button type="button" class="btn btn-link">Metodos de envío</button></li>
+                        <li><button type="button" class="btn btn-link">Cambio y Devoluciones</button></li>
+                        <li><button type="button" class="btn btn-link">Preguntas precuentes</button></li>
+                        <li><button type="button" class="btn btn-link">Promociones</button></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Legales</h5>
                     <ul class="list-unstyled ">
-                        <li><button type="button" class="btn">Politica de privacidad</button></li>
-                        <li><button type="button" class="btn">Termino y condiciones</button></li>
-                        <li><button type="button" class="btn" style="display: flex; align-items: center;">
+                        <li><button type="button" class="btn btn-link">Politica de privacidad</button></li>
+                        <li><button type="button" class="btn btn-link">Termino y condiciones</button></li>
+                        <li><button type="button" class="btn btn-link" style="display: flex; align-items: center;">
                                 <img src="./assets/img/Iconos_layout/bag-x.svg"
                                     alt="Icono Arrepentimiento"
                                     width="20"
@@ -152,9 +152,9 @@
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Siguenos</h5>
                     <ul class="list-unstyled d-flex justify-content-start">
-                        <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></button></li>
-                        <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></button></li>
-                        <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></button></li>
+                        <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></button></li>
+                        <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></button></li>
+                        <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></button></li>
                     </ul>
                 </div>
             </div>

@@ -89,3 +89,15 @@ h1 {
     margin-left: 12px;
     /* Espacio superior */
 }
+
+.btn-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: black; /* Color del texto */
+}
+
+.btn-link:hover {
+    text-decoration: none; /* Asegura que no haya subrayado al pasar el mouse */
+    font-weight: bold; /* Cambia el texto a negrita */
+    color: black; /* Mantén el color negro al pasar el mouse */
+}
+
