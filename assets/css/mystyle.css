@@ -1,67 +1,91 @@
-p{ font-family: verdana;/*tipo de letras*/    
-    color: black; /*color de la fuente*/
-    font-size: 24px;/*tamaño de la fuente*/    
-    }
-    body {
-    background-color: rgba(255, 255, 255, 0.473); /*color de fondo del body*/
-    }
-    /* color y alineación de la etiqueta h1*/
-    h1 { color: white;
-    font-weight: bold;/* negrito o fuerte*/
-    text-align: center;/*alineación*/
-    }
-    .center-bold-italic {
-    text-align: center;/*alineación*/
-    font-style: italic; /*estilo */
-    font-weight: bold; /* negrito o fuerte*/  
-    }
-    .style-div {
-        color: blue; /*color de la fuente*/
-        font-size: 20px; /*tamaño de la fuente*/
-        font-family: Arial;
-        font-weight: normal;
-        text-align: justify;
-    }
-    .highlight-item {
-        font-size: 18px; /* Tamaño de fuente más grande */
-        font-weight: bold; /* Negrita */
-    }
-    
-    .dropdown-columns {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-        gap: 10px; /* Espaciado entre columnas */
-        padding: 10px; /* Espaciado interno */
-    }
-    
-    .dropdown-columns .column {
-        list-style: none; /* Elimina los puntos de lista */
-        padding: 0;
-    }
-    
-    .dropdown-columns .dropdown-item {
-        text-align: left; /* Alinea el texto a la izquierda */
-    }
-    
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block; /* Muestra el menú */
-        margin-top: 0; /* Ajusta el margen superior */
-    }
-    
-    /* Opcional: elimina el retraso en la transición */
-    .dropdown-menu {
-        transition: none;
-    }
+p {
+    font-family: verdana;
+    /*tipo de letras*/
+    color: black;
+    /*color de la fuente*/
+    font-size: 24px;
+    /*tamaño de la fuente*/
+}
 
-    .nav-link.dropdown-toggle::after {
-        display: none; /* Oculta el triángulo */
-    }
+body {
+    background-color: rgba(255, 255, 255, 0.473);
+    /*color de fondo del body*/
+}
 
-    .carousel-inner img {
-        height: 700px; /* Ajusta el alto deseado */
-        object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
-        width: 100%; /* Asegura que ocupe todo el ancho */
-        object-position: top; /* Alinea la imagen al principio del contenedor */
-    }
-    
-    
+/* color y alineación de la etiqueta h1*/
+h1 {
+    color: white;
+    font-weight: bold;
+    /* negrito o fuerte*/
+    text-align: center;
+    /*alineación*/
+}
+
+.style-div {
+    font-size: 20px;
+    /*tamaño de la fuente*/
+    font-family: Arial;
+    font-weight: normal;
+    text-align: justify;
+}
+
+.highlight-item {
+    font-size: 18px;
+    /* Tamaño de fuente más grande */
+    font-weight: bold;
+    /* Negrita */
+}
+
+.dropdown-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas de igual ancho */
+    gap: 10px;
+    /* Espaciado entre columnas */
+    padding: 10px;
+    /* Espaciado interno */
+}
+
+.dropdown-columns .column {
+    list-style: none;
+    /* Elimina los puntos de lista */
+    padding: 0;
+}
+
+.dropdown-columns .dropdown-item {
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    /* Muestra el menú */
+    margin-top: 0;
+    /* Ajusta el margen superior */
+}
+
+/* Opcional: elimina el retraso en la transición */
+.dropdown-menu {
+    transition: none;
+}
+
+.nav-link.dropdown-toggle::after {
+    display: none;
+    /* Oculta el triángulo */
+}
+
+.carousel-inner img {
+    height: 700px;
+    /* Ajusta el alto deseado */
+    object-fit: cover;
+    /* Recorta la imagen para que se ajuste al contenedor */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
+    object-position: top;
+    /* Alinea la imagen al principio del contenedor */
+}
+
+.footer-margin-column {
+    margin-left: 12px;
+    /* Espacio superior */
+}
