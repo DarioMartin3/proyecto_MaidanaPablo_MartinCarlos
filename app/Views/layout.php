@@ -117,9 +117,47 @@
     <!--Footer-->
     <footer class="footer mt-auto py-3 bg-body-tertiary">
         <div class="container">
-            <span class="text-body-secondary">Nosotros</span>
-            
-        </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Nosotros</h5>
+                    <ul class="list-unstyled">
+                        <li><button type="button" class="btn">Local</button></li>
+                        <li><button type="button" class="btn">Venta Mayorista</button></li>
+                        <li><button type="button" class="btn">Sobre Nosotros</button></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Ayuda</h5>
+                    <ul class="list-unstyled">
+                        <li><button type="button" class="btn">Contacto</button></li>
+                        <li><button type="button" class="btn">Formas de pago</button></li>
+                        <li><button type="button" class="btn">Metodos de envío</button></li>
+                        <li><button type="button" class="btn">Cambio/Devoluciones</button></li>
+                        <li><button type="button" class="btn">Preguntas precuentes</button></li>
+                        <li><button type="button" class="btn">Promociones</button></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Legales</h5>
+                    <ul class="list-unstyled">
+                        <li><button type="button" class="btn">Politica de privacidad</button></li>
+                        <li><button type="button" class="btn">Termino y condiciones</button></li>
+                        <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/bag-x.svg" alt="Icono SVG" width="20" height="20">Boton de arrepentimiento</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 text-start">
+                
+                <h5>Siguenos</h5>
+                <ul class="list-unstyled d-flex justify-content-start">
+                    <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono SVG" width="20" height="20"></button></li>
+                    <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono SVG" width="20" height="20"></button></li>
+                    <li><button type="button" class="btn"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono SVG" width="20" height="20"></button></li>
+                </ul>
+                
+            </div>
+
+
     </footer>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>

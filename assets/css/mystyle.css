@@ -56,3 +56,12 @@ p{ font-family: verdana;/*tipo de letras*/
     .nav-link.dropdown-toggle::after {
         display: none; /* Oculta el triángulo */
     }
+
+    .carousel-inner img {
+        height: 700px; /* Ajusta el alto deseado */
+        object-fit: cover; /* Recorta la imagen para que se ajuste al contenedor */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        object-position: top; /* Alinea la imagen al principio del contenedor */
+    }
+    
+    
