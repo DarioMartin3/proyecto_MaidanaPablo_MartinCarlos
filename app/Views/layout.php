@@ -116,33 +116,62 @@
     <?php echo $this->renderSection('content'); ?>
     <!--Footer-->
     <footer class="footer mt-auto py-3 bg-body-tertiary">
-        <div class="container">
+        <!-- Sección de Arriba-->
+        <div class="footer-top">
+        <ul class="list-unstyled d-flex justify-content-start">
+                        <li><img src="./assets/img/Iconos_layout/shipping.svg"
+                                    alt="Icono Arrepentimiento"
+                                    width="50"
+                                    height="50">
+                                    <h4>Envío Gratis</h4><p>a partir de $120.000</p>
+                                    <button type="button" class="btn btn-link">Ver mas</button></li>
+                        <li><img src="./assets/img/Iconos_layout/credit-card.svg"
+                                    alt="Icono Arrepentimiento"
+                                    width="50"
+                                    height="50">
+                                    <h4>3 cuotas sin interés</h4><p>en todo el sitio</p>
+                                    <button type="button" class="btn btn-link">Ver mas</button></li>
+                        <li><img src="./assets/img/Iconos_layout/returns.svg"
+                                    alt="Icono Arrepentimiento"
+                                    width="50"
+                                    height="50">
+                                    <h4>Cambios?</h4><p>Cambio gratis hasta 7 días</p>
+                                    <button type="button" class="btn btn-link">Ver mas</button></li>
+                    </ul>
+        </div>
+
+        <!-- Sección intermedia -->
+        <div class="footer-middle">
+            
+        </div>
+        <!-- Sección de Abajo -->
+        <div class="footer-bottom container">
             <div class="row">
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Nosotros</h5>
                     <ul class="list-unstyled">
-                        <li><button type="button" class="btn btn-link">Local</button></li>
-                        <li><button type="button" class="btn btn-link">Venta Mayorista</button></li>
-                        <li><button type="button" class="btn btn-link">Sobre Nosotros</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Local</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Venta Mayorista</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Sobre Nosotros</button></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Ayuda</h5>
                     <ul class="list-unstyled">
-                        <li><button type="button" class="btn btn-link">Contacto</button></li>
-                        <li><button type="button" class="btn btn-link">Formas de pago</button></li>
-                        <li><button type="button" class="btn btn-link">Metodos de envío</button></li>
-                        <li><button type="button" class="btn btn-link">Cambio y Devoluciones</button></li>
-                        <li><button type="button" class="btn btn-link">Preguntas precuentes</button></li>
-                        <li><button type="button" class="btn btn-link">Promociones</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Contacto</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Formas de pago</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Metodos de envío</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Cambio y Devoluciones</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Preguntas precuentes</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Promociones</button></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Legales</h5>
                     <ul class="list-unstyled ">
-                        <li><button type="button" class="btn btn-link">Politica de privacidad</button></li>
-                        <li><button type="button" class="btn btn-link">Termino y condiciones</button></li>
-                        <li><button type="button" class="btn btn-link" style="display: flex; align-items: center;">
+                        <li><button type="button" class="btn btn-link-bottom">Politica de privacidad</button></li>
+                        <li><button type="button" class="btn btn-link-bottom">Termino y condiciones</button></li>
+                        <li><button type="button" class="btn btn-link-bottom" style="display: flex; align-items: center;">
                                 <img src="./assets/img/Iconos_layout/bag-x.svg"
                                     alt="Icono Arrepentimiento"
                                     width="20"
@@ -162,4 +191,5 @@
     </footer>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

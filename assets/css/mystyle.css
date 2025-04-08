@@ -90,14 +90,76 @@ h1 {
     /* Espacio superior */
 }
 
-.btn-link {
+.btn-link-bottom {
     text-decoration: none; /* Elimina el subrayado */
     color: black; /* Color del texto */
 }
 
-.btn-link:hover {
+.btn-link-bottom:hover {
     text-decoration: none; /* Asegura que no haya subrayado al pasar el mouse */
     font-weight: bold; /* Cambia el texto a negrita */
     color: black; /* Mantén el color negro al pasar el mouse */
 }
 
+.btn-link{
+    color: white;
+}
+
+.btn-link{
+    color: white;    
+}
+
+.footer-top img {
+    filter: invert(1); /* Invierte los colores del SVG */
+}
+
+.footer-top h4 {
+    color: white;
+    font-weight: bold;
+}
+
+.footer-top p {
+    color: white; 
+    font-size: 15px;
+}
+
+.footer-top li {
+    align-items: flex-start;
+    display: flex; /* Activa Flexbox para alinear imagen y texto */
+    flex-direction: column; /* Alinea los elementos en columna */     
+    margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+}
+
+.footer-top ul {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 130px; /* Espaciado entre los elementos de la lista */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+
+.footer-top {
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 2rem; /* Espaciado interno */
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espaciado entre los elementos */
+}
+  
+  .footer-middle {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 2rem;
+  }
+  
+  .footer-bottom {
+    background-color: #fff;
+    color: black;
+    padding: 2rem;
+    border-top: 1px solid #ccc;
+  }
