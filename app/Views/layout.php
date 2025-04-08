@@ -81,7 +81,7 @@
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Outlet
-                            </a>
+                            </a>    
                             <!--Contenido del menu desplegable-->
                             <ul class="dropdown-menu">
                                 <li class="dropdown-columns">
@@ -145,8 +145,8 @@
             
         </div>
         <!-- Sección de Abajo -->
-        <div class="footer-bottom container">
-            <div class="row">
+        <div class="footer-bottom container-fluid">
+            <div class="row ">
                 <div class="col-md-4">
                     <h5 class="footer-margin-column">Nosotros</h5>
                     <ul class="list-unstyled">

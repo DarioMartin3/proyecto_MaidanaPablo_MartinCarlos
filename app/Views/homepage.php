@@ -1,10 +1,6 @@
-<?php echo $this->extend('layout'); ?> <?php echo $this->section('content'); ?>
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
+<?php echo $this->extend('layout'); ?> 
+<?php echo $this->section('content'); ?>
+
 
   <body>
     <!--Carrusel automatico-->
@@ -90,5 +86,4 @@
       Explora nuestras últimas colecciones y ofertas exclusivas.
     </p>
   </body>
-</html>
 <?php echo $this->endSection(); ?>
