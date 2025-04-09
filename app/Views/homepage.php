@@ -88,5 +88,57 @@
     <p class="text-center">
       Explora nuestras últimas colecciones y ofertas exclusivas.
     </p>
+    <section class="conteiner-fluid">
+      <div class="d-grid gap-3 colum_responsive">
+        <div class="p-3 "> <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/remera.jpg" class="card-img" alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Remeras</h5>
+              </div>
+            </div>
+        </a></div>
+        <div class="p-3"> <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/remera_mujer.jpg" class="card-img" alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Remeras</h5>
+              </div>
+            </div>
+        </a></div>
+        <div class="p-3"> <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/cargo.webp" class="card-img" alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Remeras</h5>
+              </div>
+            </div>
+        </a></div>
+        <div class="p-3"> <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/buzo.jpg" class="card-img" alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Remeras</h5>
+              </div>
+            </div>
+        </a></div>
+        <div class="p-3"> <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/ropa_niño.jpg" class="card-img" alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Remeras</h5>
+              </div>
+            </div>
+        </a></div>
+        <div class="p-3"> <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/short.jpg" class="card-img " alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Remeras</h5>
+              </div>
+            </div>
+        </a></div>
+      </div>
+    </section>
   </body>
 <?php echo $this->endSection(); ?>
