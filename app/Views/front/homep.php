@@ -1,8 +1,4 @@
-<?php echo $this->extend('layout'); ?> 
-<?php echo $this->section('content'); ?>
-
-
-  <body>
+<body>
     <!--Carrusel automatico-->
     <section class="container-fluid mt-4">
       <div
@@ -153,5 +149,4 @@
           </a>
         </div>
     </section>
-  </body>
-<?php echo $this->endSection(); ?>
+</body>

@@ -4,11 +4,20 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index(): void
     {
-        return view('homepage');
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/homep');
+        echo view('front/footer');
+    }
+
+    public function qSomos(): string
+    {
+        return view('quienes_somos');
     }
 }
+
 
 
 
