@@ -101,13 +101,17 @@ h1 {
     color: black; /* Mantén el color negro al pasar el mouse */
 }
 
+
+
 .btn-link{
     color: white;
 }
 
-.btn-link{
+.btn-link:hover{
     color: white;    
 }
+
+
 
 .footer-top img {
     filter: invert(1); /* Invierte los colores del SVG */
@@ -173,7 +177,7 @@ h1 {
 }
 
 /* Mostrar el carrusel en pantallas pequeñas */
-@media (max-width: 899px) {
+@media (max-width: 900px) {
     .footer-top .row {
         display: none; /* Oculta el diseño original en pantallas pequeñas */
     }
@@ -246,13 +250,17 @@ h1 {
     padding: 2rem;
   }
   
-  .footer-bottom {
+  
+
+  .footer-bottom:hover {
     background-color: #fff;
     color: black;
     padding: 2rem;
     border-top: 1px solid #ccc;
     margin: 0%;
   }
+
+  
 
   .list-unstyled.d-flex.justify-content-start {
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
