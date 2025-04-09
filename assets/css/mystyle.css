@@ -259,7 +259,7 @@ h1 {
 }
 
 .card-img {
-    height: 600px; /* Altura fija para todas */
+    height: 450px; /* Altura fija para todas */
     width: 100%;
     object-fit: cover; /* Recorta la imagen manteniendo proporción */
 }
@@ -283,6 +283,11 @@ h1 {
         repeat(
             auto-fit,
             minmax(min(300px, 100%), 1fr)
-        );
-    
+        );  
+}
+
+@media (min-width: 1000px) {
+    .colum_responsive {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }

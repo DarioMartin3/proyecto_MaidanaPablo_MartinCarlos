@@ -139,6 +139,19 @@
             </div>
         </a></div>
       </div>
+    </section class="conteiner-fluid">
+    <section>
+    <div class="d-grid gap-3">
+        <div class="p-3 "> 
+          <a href="#">
+              <div class="card text-bg-dark float">
+              <img src="./assets/img/imagenes_cartila/ver_todo.jpg" class="card-img" alt="buzos">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Ver Todo</h5>
+              </div>
+            </div>
+          </a>
+        </div>
     </section>
   </body>
 <?php echo $this->endSection(); ?>
