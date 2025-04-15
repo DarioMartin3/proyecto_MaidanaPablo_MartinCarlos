@@ -84,7 +84,7 @@
                 <div class="col-12 col-md-4 mb-4">
                     <h5 class="footer-margin-column">Ayuda</h5>
                     <ul class="list-unstyled">
-                        <li><button type="button" class="btn btn-link-bottom">Contacto</button></li>
+                        <li><a href="<?= base_url('contact_info') ?>"  class="btn btn-link-bottom">Contacto</a></li>
                         <li><button type="button" class="btn btn-link-bottom">Formas de pago</button></li>
                         <li><button type="button" class="btn btn-link-bottom">Metodos de envío</button></li>
                         <li><button type="button" class="btn btn-link-bottom">Cambio y Devoluciones</button></li>

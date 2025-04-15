@@ -16,6 +16,11 @@ class Home extends BaseController
     {
         return view('quienes_somos');
     }
+
+    public function contact(): string
+    {
+        return view('front/contact_info');
+    }
 }
 
 
