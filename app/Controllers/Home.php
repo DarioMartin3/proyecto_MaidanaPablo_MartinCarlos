@@ -12,9 +12,12 @@ class Home extends BaseController
         echo view('front/footer');
     }
 
-    public function qSomos(): string
+    public function qSomos()
     {
-        return view('quienes_somos');
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/quienes_somos');
+        echo view('front/footer');
     }
 
     public function contact(): string
