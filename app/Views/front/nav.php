@@ -84,7 +84,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <a class="dropdown-item" href="#"> Quienes somos</a>
+                    <a class="dropdown-item" href="<?php echo base_url('/quienes_somos'); ?>"> Quienes somos</a>
                     <!--Buscador-->
                     <form class="d-flex" role="search">
                         <input

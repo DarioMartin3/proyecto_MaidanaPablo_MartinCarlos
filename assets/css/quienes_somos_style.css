@@ -1,3 +1,106 @@
 .titulo_quienes {
     text-align: center;
 }
+
+.quienes-somos {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; /* Fuente moderna */
+    max-width: 900px; /* Ancho óptimo para lectura */
+    margin: 0 auto; /* Centrado */
+    padding: 2rem;
+    color: #333; /* Color principal */
+    line-height: 1.6; /* Espaciado entre líneas */
+  }
+  
+  /* Títulos */
+  .quienes-somos .titulo-destacado {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Efecto decorativo para título */
+  .quienes-somos .titulo-destacado::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #e07a5f; /* Color de acento */
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Párrafos */
+  .quienes-somos .historia {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    hyphens: auto; /* División silábica elegante */
+  }
+  
+  /* Sección equipo */
+  .quienes-somos .equipo {
+    background: rgba(240, 240, 240, 0.7); /* Fondo sutil */
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid #e07a5f; /* Acento lateral */
+  }
+  
+  .quienes-somos .equipo h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+  
+  /* Cita destacada */
+  .quienes-somos blockquote.mision {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: relative;
+    border-left: none;
+  }
+  
+  /* Efecto decorativo para la cita */
+  .quienes-somos blockquote.mision::before {
+    content: "";
+    font-family: serif;
+    font-size: 4rem;
+    color: #e07a5f;
+    opacity: 0.2;
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .quienes-somos {
+      padding: 1rem;
+    }
+    .quienes-somos .titulo-destacado {
+      font-size: 2rem;
+    }
+  }
+
+.colum_responsive_qs{
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(min(300px, 100%), 1fr)
+        );  
+}
+
+@media (min-width: 1000px) {
+    .colum_responsive_qs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
