@@ -1,54 +1,47 @@
-<section class="container-fluid card_quienes_somos">
 
-    <div class="card text-bg-dark">
-    <img src="./assets/img/quienes_somos_img/titulo.jpg" class="card-img" alt="Quienes Somos">
-    <div class="card-img-overlay d-flex justify-content-center align-items-center ">
-        <h1 class="text-center titulo-destacado">Quienes Somos</h1>
-    </div>
-
-</section>
-<section class="container-fluid quienes somos">
+<link href="assets/css/quienes_somos_style.css" rel="stylesheet"/>
+<section class="container-fluid quienes somos" >
 <div class="container-fluid text-center">
-  <div class="row align-items-center colum_responsive_qs">
-    <div class="col">
+  <div class="row align-items-center ">
+    <div >
+      <p class="h1">Quiénes Somos</p>
       <p class="lead" >
-        "Quiénes Somos"
-         En <strong>Nombre de tu Empresa</strong>, nos apasiona crear moda con propósito. Fundada en <strong>[año]</strong> en <strong>[ciudad/país]</strong>,
-         comenzamos como un pequeño emprendimiento con un objetivo claro: ofrecer prendas de calidad, sostenibles y accesibles. 
+        "Nacimos en las calles, no en un taller de moda..."<br>
+
+         En 2020, un grupo de diseñadores millennials obsesionados con la cultura urbana<br> y la música trap lanzó 404CLOTHING 
+        desde un departamento en el centro.<br> Lo que empezó con 50 hoodies serigrafiados a mano,<br>
+         hoy es una marca viral en TikTok por sus diseños "wearable art".
       </p>
     </div>
-    <div class="col ">
-      <div class="card text-bg-dark">
-        <img src="./assets/img/quienes_somos_img/inicios.jpg">
-      </div>
+    <div >
+      <h3>Hoy buscamos:</h3>
+      <ul class="list-unstyled">
+        <li>🧢 <strong>Primera colección</strong>: "Concrete Jungle" – Sudaderas oversize con grafitis de artistas urbanos emergentes.<br> Cada pieza incluía un código QR que llevaba a una playlist exclusiva.</li>
+        <li>🎵 <strong>Filosofía</strong>: La moda es tu soundtrack visual.</li>
+      </ul>
+    </div>
+    <div class="mision-urbana-2024">
+      <h3>Este año rompemos:</h3>
+      <ul class="list-unstyled">
+          <li>🔥 <strong>Techwear accesible</strong>: Joggers con bolsillos RFID y tejido transpirable (a menos de $50).</li>
+          <li>📱 <strong>Moda digital</strong>: NFT wearables para vestir tus avatares en Meta.</li>
+          <li>🔄 <strong>Drops mensuales</strong>: Colecciones de 100 unidades máximo (nada de mas produccion).</li>
+      </ul>
+    </div>
+    <div class="mision-urbana-2024">
+      <h3>Este año rompemos:</h3>
+      <ul class="list-unstyled">
+          <li>🎤 <strong>Creativos digitales</strong>: TikTokers, artistas callejeros y DJs que mezclan estilos.</li>
+          <li>🏙 <strong>Habitantes de ciudad</strong>: Buscan comodidad edge para el metro, la oficina híbrida o el after.</li>
+          <li>🛍 <strong>Coleccionistas</strong>:Cazadores de piezas limited edition con detalles únicos.</li>
+      </ul>
     </div>
     
-  </div>
-  <div class="row align-items-center colum_responsive_qs">
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col equipo mt-4 p-4 "> <!-- Sección equipo con padding -->
-      <p>
-        Hoy, gracias a la confianza de nuestros clientes, hemos crecido hasta convertirnos en 
-        <em>"una marca reconocida por nuestro compromiso con el diseño ético y la innovación".</em>
-      </p>
-    </div>
-  </div>
-  <div class="row align-items-center colum_responsive_qs">
-    
-    <div class="col equipo mt-4 p-4 "> <!-- Sección equipo con padding -->
-            <h3 class="h5 mb-3">Nuestro Equipo</h3>
-            <p>
-              Formado por <strong>[número]</strong> profesionales comprometidos, desde diseñadores expertos hasta artesanos locales.
-            </p> 
-    </div>
-    <div class="col ">
-      One of three columns
-    </div>
-  </div>
   <blockquote class="mision mt-4 p-3">
-    "Más que una marca, somos una comunidad que viste con conciencia."
+    "No seguimos tendencias: las hacemos. Tu outfit es nuestra pantalla de visualización."
   </blockquote>
+  <div>
+    <img src="./assets/img/quienes_somos_img/logoqs.png" class="img_logo_qs">
+  </div> 
 </div>
 </section>
