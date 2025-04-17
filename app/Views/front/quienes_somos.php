@@ -29,7 +29,7 @@
       </ul>
     </div>
     <div class="mision-urbana-2024">
-      <h3>Este año rompemos:</h3>
+      <h3>Nuestra Tribu:</h3>
       <ul class="list-unstyled">
           <li>🎤 <strong>Creativos digitales</strong>: TikTokers, artistas callejeros y DJs que mezclan estilos.</li>
           <li>🏙 <strong>Habitantes de ciudad</strong>: Buscan comodidad edge para el metro, la oficina híbrida o el after.</li>
