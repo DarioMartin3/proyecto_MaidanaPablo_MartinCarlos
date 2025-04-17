@@ -20,9 +20,20 @@ class Home extends BaseController
         echo view('front/footer');
     }
 
-    public function contact(): string
+    public function contact() 
     {
-        return view('front/contact_info');
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/contact_info');
+        echo view('front/footer');
+    }
+
+    public function terms() 
+    {
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/terminos_y_usos');
+        echo view('front/footer');
     }
 }
 
