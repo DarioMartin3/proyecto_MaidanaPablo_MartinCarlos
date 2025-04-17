@@ -2,7 +2,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <!--Logo en la barra-->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="<?php echo base_url("/");?>">
                     <img
                         src="./assets/img/logo2.png"
                         alt="404 Clothing"
