@@ -96,7 +96,7 @@
                     <h5 class="footer-margin-column">Legales</h5>
                     <ul class="list-unstyled ">
                         <li><button type="button" class="btn btn-link-bottom">Politica de privacidad</button></li>
-                        <li><button type="button" class="btn btn-link-bottom">Termino y condiciones</button></li>
+                        <li><a href="<?= base_url('terminos_y_usos') ?>" class="btn btn-link-bottom">Termino y condiciones</a></li>
                         <li><button type="button" class="btn btn-link-bottom" style="display: flex; align-items: center;">
                                 <img src="./assets/img/Iconos_layout/bag-x.svg"
                                     alt="Icono Arrepentimiento"
