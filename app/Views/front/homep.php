@@ -78,52 +78,29 @@
       <div class="d-grid gap-3 colum_responsive">
         <div class="p-3 "> <a href="#">
             <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/remera.jpg" class="card-img" alt="buzos">
+              <img src="./assets/img/imagenes_cartila/ropa_mujer.jpg" class="card-img" alt="Ropa mujer">
               <div class="card-img-overlay">
-                <h5 class="card-title">Remeras</h5>
+                <h5 class="card-title">Ropa mujer</h5>
               </div>
             </div>
           </a></div>
         <div class="p-3"> <a href="#">
             <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/remera_mujer.jpg" class="card-img" alt="buzos">
+              <img src="./assets/img/imagenes_cartila/ropa_hombre.jpg" class="card-img" alt="Ropa Hombre">
               <div class="card-img-overlay">
-                <h5 class="card-title">Remeras</h5>
+                <h5 class="card-title">Ropa Hombre</h5>
               </div>
             </div>
           </a></div>
         <div class="p-3"> <a href="#">
             <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/cargo.webp" class="card-img" alt="buzos">
+              <img src="./assets/img/imagenes_cartila/ropa_invierno.jpg" class="card-img" alt="Ropa de Invierno">
               <div class="card-img-overlay">
-                <h5 class="card-title">Remeras</h5>
+                <h5 class="card-title">Ropa de Invierno</h5>
               </div>
             </div>
           </a></div>
-        <div class="p-3"> <a href="#">
-            <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/buzo.jpg" class="card-img" alt="buzos">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Remeras</h5>
-              </div>
-            </div>
-          </a></div>
-        <div class="p-3"> <a href="#">
-            <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/ropa_niño.jpg" class="card-img" alt="buzos">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Remeras</h5>
-              </div>
-            </div>
-          </a></div>
-        <div class="p-3"> <a href="#">
-            <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/short.jpg" class="card-img " alt="buzos">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Remeras</h5>
-              </div>
-            </div>
-          </a></div>
+        
       </div>
     </section class="conteiner-fluid">
     <section>
@@ -131,7 +108,7 @@
         <div class="p-3 ">
           <a href="#">
             <div class="card text-bg-dark float">
-              <img src="./assets/img/imagenes_cartila/ver_todo.jpg" class="card-img" alt="buzos">
+              <img src="./assets/img/imagenes_cartila/ver_todo.jpg" class="card-img" alt="Ver Todo">
               <div class="card-img-overlay">
                 <h5 class="card-title">Ver Todo</h5>
               </div>
