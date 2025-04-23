@@ -2,13 +2,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <!--Logo en la barra-->
-            <a class="navbar-brand" href="<?php echo base_url("/"); ?>">
-                <img
-                    src="./assets/img/logo2.png"
-                    alt="404 Clothing"
-                    width="150"
-                    height="100" />
-            </a>
+            
             <!--Boton para moviles-->
             <button
                 class="navbar-toggler"
@@ -36,17 +30,11 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-columns">
                                 <ul class="column">
-                                    <li>
-                                        <a class="dropdown-item highlight-item" href="#">Parte de Arriba</a>
-                                    </li>
                                     <li><a class="dropdown-item" href="#">Remeras</a></li>
                                     <li><a class="dropdown-item" href="#">Musculosas</a></li>
                                     <li><a class="dropdown-item" href="#">Camisas</a></li>
                                 </ul>
                                 <ul class="column">
-                                    <li>
-                                        <a class="dropdown-item highlight-item" href="#">Parte de Abajo</a>
-                                    </li>
                                     <li><a class="dropdown-item" href="#">Pantalons</a></li>
                                     <li><a class="dropdown-item" href="#">Bermudas</a></li>
                                     <li><a class="dropdown-item" href="#">Zapatillas</a></li>

@@ -10,5 +10,15 @@
     <link href="assets/css/mystyle.css" rel="stylesheet" />
 </head>
 <header>
+    <div class="conteiner-fluid" style="text-align: center;">
+        <a class="navbar-brand" href="<?php echo base_url("/"); ?>">
+            <img
+                src="./assets/img/quienes_somos_img/logoqs.png"
+                alt="404 Clothing"
+                width="550"
+                height="100"
+                class="img_logo_qs" />
+        </a>
+    </div>
 
 

@@ -272,4 +272,12 @@ h1 {
 footer input.form-control:focus {
     box-shadow: none;
     border-color: black;
+}
+
+@media(max-width: 700px){
+    .img_logo_qs {
+      width: 100%;
+      height: flex;
+      padding-bottom: 0px;
+    }
   }
