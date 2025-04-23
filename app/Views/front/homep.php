@@ -69,11 +69,8 @@
       </div>
     </section>
     <p class="text-center mt-4">
-      ¡Bienvenido a 404 Clothing! Tu tienda de moda online.
-    </p>
-    <p class="text-center">
-      Explora nuestras últimas colecciones y ofertas exclusivas.
-    </p>
+      Secciones
+    </p>    
     <section class="conteiner-fluid">
       <div class="d-grid gap-3 colum_responsive">
         <div class="p-3 "> <a href="#">

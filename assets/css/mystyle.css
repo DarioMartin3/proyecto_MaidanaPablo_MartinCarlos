@@ -1,3 +1,5 @@
+
+@import url('nav.css');
 p {
     font-family: verdana;
     /*tipo de letras*/
@@ -36,43 +38,9 @@ h1 {
     /* Negrita */
 }
 
-.dropdown-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Dos columnas de igual ancho */
-    gap: 10px;
-    /* Espaciado entre columnas */
-    padding: 10px;
-    /* Espaciado interno */
-}
 
-.dropdown-columns .column {
-    list-style: none;
-    /* Elimina los puntos de lista */
-    padding: 0;
-}
 
-.dropdown-columns .dropdown-item {
-    text-align: left;
-    /* Alinea el texto a la izquierda */
-}
 
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-    /* Muestra el menú */
-    margin-top: 0;
-    /* Ajusta el margen superior */
-}
-
-/* Opcional: elimina el retraso en la transición */
-.dropdown-menu {
-    transition: none;
-}
-
-.nav-link.dropdown-toggle::after {
-    display: none;
-    /* Oculta el triángulo */
-}
 
 .carousel-inner img {
     height: 700px;
