@@ -9,7 +9,6 @@
                     width="150"
                     height="100" />
             </a>
-            <!--<a class="navbar-brand" href="#">404 Clothing</a>-->
             <!--Boton para moviles-->
             <button
                 class="navbar-toggler"
@@ -84,7 +83,6 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- Botón de Login -->
                 <!-- Botón de Login -->
                 <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                     <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">

@@ -117,7 +117,7 @@
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Siguenos</h5>
                 <ul class="list-unstyled d-flex justify-content-start">
-                    <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></button></li>
+                    <li><a href=""><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></a></li>
                     <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></button></li>
                     <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></button></li>
                 </ul>
