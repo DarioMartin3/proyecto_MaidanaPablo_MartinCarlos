@@ -1,11 +1,10 @@
-.img_logo_qs {
-      width: 30%;
-      height: flex;
-      padding-bottom: 40px;
+.img_logo {
+    width: 650px;
+    height: 125px;
 }
 
 @media(max-width: 1050px){
-  .img_logo_qs {
+  .img_logo {
     width: 100%;
     height: flex;
     padding-bottom: 40px;
