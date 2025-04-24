@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <!--Logo en la barra-->
-            
+
             <!--Boton para moviles-->
             <button
                 class="navbar-toggler"
@@ -14,6 +14,9 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!--Boton Categoria-->
@@ -71,13 +74,6 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- Botón de Login -->
-                <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
-                </a>
-                <a>
-                    <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" class="me-2" alt="login">
-                </a>
                 <!--Buscador-->
                 <form class="d-flex" role="search">
                     <input
@@ -89,6 +85,16 @@
                         Buscar
                     </button>
                 </form>
+            </div>
+            <div class="d=flex aling-items-center">
+                <!-- Botón de Login -->
+                <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
+                </a>
+                <!-- Botón de carrito -->
+                <a href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
+                    <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
+                </a>
             </div>
         </div>
     </nav>
@@ -126,6 +132,17 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- Offcanvas del carrito -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="carritoOffcanvasLabel">Carrito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <i class="bi bi-bag" style="font-size: 3rem;"></i>
+        <p class="mt-2">Tu carrito está vacío.</p>        
     </div>
 </div>
 </header>
