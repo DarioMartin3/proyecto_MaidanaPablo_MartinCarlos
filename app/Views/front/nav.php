@@ -32,17 +32,11 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-columns">
                                 <ul class="column">
-                                    <li>
-                                        <a class="dropdown-item highlight-item" href="#">Parte de Arriba</a>
-                                    </li>
                                     <li><a class="dropdown-item" href="#">Remeras</a></li>
                                     <li><a class="dropdown-item" href="#">Musculosas</a></li>
                                     <li><a class="dropdown-item" href="#">Camisas</a></li>
                                 </ul>
                                 <ul class="column">
-                                    <li>
-                                        <a class="dropdown-item highlight-item" href="#">Parte de Abajo</a>
-                                    </li>
                                     <li><a class="dropdown-item" href="#">Pantalons</a></li>
                                     <li><a class="dropdown-item" href="#">Bermudas</a></li>
                                     <li><a class="dropdown-item" href="#">Zapatillas</a></li>

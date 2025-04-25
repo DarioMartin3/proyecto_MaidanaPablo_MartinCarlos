@@ -23,7 +23,7 @@
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+  background: rgba(255, 255, 255, 0.3); /* Fondo blanco semitransparente */
   backdrop-filter: blur(10px); /* Difuminado (efecto clave) */
   -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
