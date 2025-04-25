@@ -35,6 +35,13 @@ class Home extends BaseController
         echo view('front/terminos_y_usos');
         echo view('front/footer');
     }
+
+    public function form_pagos(){
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/formas_de_pago');
+        echo view('front/footer');
+    }
 }
 
 

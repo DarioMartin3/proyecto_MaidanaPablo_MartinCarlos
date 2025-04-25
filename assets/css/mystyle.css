@@ -1,6 +1,8 @@
 
 @import url('nav.css');
 
+@import url('formas_pagos.css');
+
 @font-face {
     font-family: 'MiFuentePersonal';
     src: url('fonts/CascadiaCode-VariableFont_wght.ttf');

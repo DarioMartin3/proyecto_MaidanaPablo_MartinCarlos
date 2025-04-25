@@ -12,3 +12,5 @@ $routes->get('/quienes_somos', 'Home::qSomos');
 $routes->get('/contact_info', 'Home::contact');
 
 $routes->get('/terminos_y_usos', 'Home::terms');
+
+$routes->get('/formas_de_pagos', 'Home::form_pagos');
