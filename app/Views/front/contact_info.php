@@ -22,7 +22,6 @@
             </a>
         </div>
     </div>
-
     <!-- Formulario de Consulta -->
     <h2 class="text-center mb-4">Formulario de Consulta</h2>
     <form class="p-4 border rounded shadow-sm bg-light">
@@ -35,25 +34,21 @@
                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required>
             </div>
         </div>
-
         <!-- Correo Electrónico -->
         <div class="mb-3">
             <input type="email" class="form-control" placeholder="Correo Electrónico" aria-label="Correo Electrónico" required>
         </div>
-
         <!-- Número de Teléfono -->
         <div class="mb-3">
             <input type="tel" class="form-control" id="telefono" placeholder="Número de Teléfono" aria-label="Número de Teléfono" required pattern="[0-9]+" title="Por favor, ingresa solo números.">
         </div>
-
         <!-- Mensaje de Consulta -->
         <div class="mb-3">
             <textarea class="form-control" rows="4" placeholder="Mensaje de Consulta" aria-label="Mensaje de Consulta" required></textarea>
         </div>
-
         <!-- Botón de Enviar y Limpiar -->
         <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg me-3">Enviar</button>
+            <button type="submit" class="btn btn-black btn-lg me-3">Enviar</button>
             <button type="reset" class="btn btn-secondary btn-lg">Limpiar</button>
         </div>
     </form>

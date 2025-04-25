@@ -67,15 +67,17 @@
         </div>
     </div>
     <!-- Sección intermedia -->
-    <div class="footer-middle">
-        <div class="mb-3 mb-md-0">
-            <h5 class="mb-1 fw-bold">OBTENÉ UN 5% OFF</h5>
+    <div class="footer-middle d-flex align-items-center justify-content-center text-center">
+        <div class="me-3 mb-md-0">
+            <h5 class="mb-1 fw-bold">OBTENÉ UN DESCUENTO</h5>
             <small class="text-muted">Suscribiéndote</small>
         </div>
         <form class="d-flex align-items-center" action="#" method="POST">
-            <input type="email" class="form-control border-0 border-bottom rounded-0 me-2" placeholder="Ingresá tu email" required>
+            <input type="email" class="form-control-sm border-0 border-bottom rounded-0 me-2" 
+            style="width: 40ch;"
+            placeholder="Ingresá tu email" required>
             <button type="submit" class="btn btn-link text-dark p-0">
-                <i class="bi bi-arrow-right"></i> <!-- Bootstrap Icons -->
+                <i class="bi bi-arrow-right"></i> 
             </button>
         </form>
     </div>
@@ -85,9 +87,7 @@
         <div class="row ">
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Nosotros</h5>
-                <ul class="list-unstyled">
-                    <li><button type="button" class="btn btn-link-bottom">Local</button></li>
-                    <li><button type="button" class="btn btn-link-bottom">Venta Mayorista</button></li>
+                <ul class="list-unstyled">                    
                     <li><a href="<?php echo base_url('/quienes_somos'); ?>" class="btn btn-link-bottom">Sobre Nosotros</a></li>
                 </ul>
             </div>
@@ -97,15 +97,12 @@
                     <li><a href="<?= base_url('contact_info') ?>" class="btn btn-link-bottom">Contacto</a></li>
                     <li><button type="button" class="btn btn-link-bottom">Formas de pago</button></li>
                     <li><button type="button" class="btn btn-link-bottom">Metodos de envío</button></li>
-                    <li><button type="button" class="btn btn-link-bottom">Cambio y Devoluciones</button></li>
-                    <li><button type="button" class="btn btn-link-bottom">Preguntas precuentes</button></li>
-                    <li><button type="button" class="btn btn-link-bottom">Promociones</button></li>
+                    <li><button type="button" class="btn btn-link-bottom">Cambio y Devoluciones</button></li>              
                 </ul>
             </div>
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Legales</h5>
-                <ul class="list-unstyled ">
-                    <li><button type="button" class="btn btn-link-bottom">Politica de privacidad</button></li>
+                <ul class="list-unstyled ">                    
                     <li><a href="<?= base_url('terminos_y_usos') ?>" class="btn btn-link-bottom">Termino y condiciones</a></li>
                     <li><button type="button" class="btn btn-link-bottom" style="display: flex; align-items: center;">
                             <img src="./assets/img/Iconos_layout/bag-x.svg"
@@ -117,9 +114,9 @@
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Siguenos</h5>
                 <ul class="list-unstyled d-flex justify-content-start">
-                    <li><a href=""><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></a></li>
-                    <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></button></li>
-                    <li><button type="button" class="btn btn-link"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></button></li>
+                    <li><a href="https://www.facebook.com" target="_blank" class="me-3"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" class="me-3"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></a></li>
+                    <li><a href="https://www.tiktok.com" target="_blank"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></a></li>
                 </ul>
             </div>
         </div>

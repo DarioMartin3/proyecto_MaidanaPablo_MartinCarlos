@@ -297,3 +297,15 @@ footer input.form-control:focus {
 .borde-card {
     border: none;
 }
+
+.btn-black {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+/* Uso hover para hacer el efecto de click  */
+.btn-black:hover {
+    background-color: #333; 
+    color: white;
+}

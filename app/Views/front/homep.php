@@ -30,21 +30,21 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="./assets/img/carrusel1.jpg"
+              src="./assets/img/carrusel/foto1.jpg"
               class="d-block w-100"
               alt="New Coleccion Woman"
               loading="lazy" />
           </div>
           <div class="carousel-item">
             <img
-              src="./assets/img/carrusel4.png"
+              src="./assets/img/carrusel/foto2.jpg"
               class="d-block w-100"
               alt="New Coleccion Men"
               loading="lazy" />
           </div>
           <div class="carousel-item">
             <img
-              src="./assets/img/carrusel6.jpg"
+              src="./assets/img/carrusel/foto3.jpg"
               class="d-block w-100"
               alt="Outlet"
               loading="lazy" />
