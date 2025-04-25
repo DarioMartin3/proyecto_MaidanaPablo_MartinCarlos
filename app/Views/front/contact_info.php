@@ -28,15 +28,15 @@
         <!-- Apellido y Nombre -->
         <div class="row g-3 mb-3">
             <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required>
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" required pattern="[A-Za-zÀ-ÿ\s]+">
             </div>
             <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" required>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" requiered pattern="[A-Za-zÀ-ÿ\s]+">
             </div>
         </div>
         <!-- Correo Electrónico -->
         <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Correo Electrónico" aria-label="Correo Electrónico" required>
+            <input type="email" class="form-control" placeholder="Correo Electrónico" aria-label="Correo Electrónico" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
         </div>
         <!-- Número de Teléfono -->
         <div class="mb-3">
