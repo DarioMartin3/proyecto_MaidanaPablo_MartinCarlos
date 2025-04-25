@@ -238,6 +238,7 @@ h1 {
     height: 450px; /* Altura fija para todas */
     width: 100%;
     object-fit: cover; /* Recorta la imagen manteniendo proporción */
+
 }
 
             
@@ -247,10 +248,9 @@ h1 {
     -moz-transition: .5s, color .10s;
 }
 .float:hover{
-    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
-    transform: translate(0px,5px);
-    -webkit-transform: translate(0px,5px);
-    -moz-transform:translate(0px,5px);
+    transform: translate(0px,-15px);
+    -webkit-transform: translate(0px,-15px);
+    -moz-transform:translate(0px,-15px);
 }
 
 .colum_responsive{
@@ -272,12 +272,21 @@ h1 {
 footer input.form-control:focus {
     box-shadow: none;
     border-color: black;
+  }
+
+  .img_logo {
+    width: 650px;
+    height: 125px;
 }
 
 @media(max-width: 700px){
-    .img_logo_qs {
-      width: 100%;
-      height: flex;
-      padding-bottom: 0px;
-    }
+  .img_logo {
+    width: 100%;
+    height: flex;
+    padding-bottom: 0px;
   }
+}
+
+.borde-card {
+    border: none;
+}

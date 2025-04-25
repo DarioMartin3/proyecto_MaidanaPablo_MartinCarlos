@@ -16,7 +16,6 @@
             </button>
 
 
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!--Boton Categoria-->
@@ -33,11 +32,17 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-columns">
                                 <ul class="column">
+                                    <li>
+                                        <a class="dropdown-item highlight-item" href="#">Parte de Arriba</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="#">Remeras</a></li>
                                     <li><a class="dropdown-item" href="#">Musculosas</a></li>
                                     <li><a class="dropdown-item" href="#">Camisas</a></li>
                                 </ul>
                                 <ul class="column">
+                                    <li>
+                                        <a class="dropdown-item highlight-item" href="#">Parte de Abajo</a>
+                                    </li>
                                     <li><a class="dropdown-item" href="#">Pantalons</a></li>
                                     <li><a class="dropdown-item" href="#">Bermudas</a></li>
                                     <li><a class="dropdown-item" href="#">Zapatillas</a></li>
