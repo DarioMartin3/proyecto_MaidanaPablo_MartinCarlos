@@ -72,9 +72,8 @@
             <h5 class="mb-1 fw-bold">OBTENÉ UN DESCUENTO</h5>
             <small class="text-muted">Suscribiéndote</small>
         </div>
-        <form class="d-flex align-items-center " action="#" method="POST">
-            <input type="email" class="form-control-sm border border-bottom rounded me-2" 
-            style="width: 40ch;"
+        <form class="d-flex flex-wrap align-items-center " action="#" method="POST">
+            <input type="email" class="form-control form-control-sm flex-grow-1 me-2"            
             placeholder="Ingresá tu email" required>
             <button type="submit" class="btn btn-link text-dark p-0">
                 <i class="bi bi-arrow-right"></i> 
