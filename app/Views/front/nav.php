@@ -15,7 +15,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            
+
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -87,18 +87,20 @@
                 </form>
             </div>
             <div class="d=flex aling-items-center">
+                
                 <!-- Botón de Login -->
-                <a href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                     <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
-                </a>
+                </button>
                 <!-- Botón de carrito -->
-                <a href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
+                <button href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
                     <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
-                </a>
+                </button>
             </div>
         </div>
     </nav>
 </section>
+
 <!-- Modal de Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -122,7 +124,7 @@
                         <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
                     </div>
                     <!-- Botón de Iniciar Sesión -->
-                    <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-dark w-100">Iniciar Sesión</button>
                 </form>
                 <hr>
                 <!-- Botón de Registro -->
@@ -137,12 +139,13 @@
 <!-- Offcanvas del carrito -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas" aria-labelledby="carritoOffcanvasLabel">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="carritoOffcanvasLabel">Carrito</h5>
+
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
         <i class="bi bi-bag" style="font-size: 3rem;"></i>
-        <p class="mt-2">Tu carrito está vacío.</p>        
+        <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
+        <p class="mt-2">Tu carrito está vacío.</p>
     </div>
 </div>
 </header>
