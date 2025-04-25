@@ -1,3 +1,4 @@
+</body>
 <footer class="footer mt-auto py-3 bg-body-tertiary">
     <!-- Sección de Arriba-->
     <div class="footer-top container-fluid">
@@ -122,6 +123,5 @@
     </div>
 </footer>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
-</body>
 
 </html>
