@@ -7,14 +7,7 @@
     font-family: 'MiFuentePersonal';
     src: url('fonts/CascadiaCode-VariableFont_wght.ttf');
   }
-p {
-    font-family: verdana;
-    /*tipo de letras*/
-    color: black;
-    /*color de la fuente*/
-    font-size: 24px;
-    /*tamaño de la fuente*/
-}
+
 
 body {
     background-color: rgba(255, 255, 255, 0.473);
@@ -88,7 +81,9 @@ h1 {
     color: white;    
 }
 
-
+.footer {
+    padding: 0;
+}
 
 .footer-top img {
     filter: invert(1); /* Invierte los colores del SVG */

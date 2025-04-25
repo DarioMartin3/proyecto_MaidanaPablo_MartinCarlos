@@ -75,7 +75,7 @@
         </div>
         <form class="d-flex flex-wrap align-items-center " action="#" method="POST">
             <input type="email" class="form-control form-control-sm flex-grow-1 me-2"            
-            placeholder="Ingresá tu email" required>
+            placeholder="Ingresá tu email" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
             <button type="submit" class="btn btn-link text-dark p-0">
                 <i class="bi bi-arrow-right"></i> 
             </button>

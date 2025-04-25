@@ -64,10 +64,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </section>
-    <p class="text-center mt-4">
-      Secciones
-    </p>
+    </section>    
     <section class="conteiner-fluid">
       <div class="d-grid gap-3 colum_responsive">
         <div class="p-3 "> <a href="#">
