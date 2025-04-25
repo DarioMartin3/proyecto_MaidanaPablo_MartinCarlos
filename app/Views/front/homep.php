@@ -1,13 +1,10 @@
     <!--Carrusel automatico-->
-    <section class="container-fluid mt-4">
+    <section class="container-fluid px-0 mt-4">
       <div
         id="carouselExampleAutoplaying"
         class="carousel slide"
         data-bs-ride="carousel"
-        data-bs-interval="3000">
-
-
-
+        data-bs-interval="3000">        
         <div class="carousel-indicators">
           <button
             type="button"
@@ -70,7 +67,7 @@
     </section>
     <p class="text-center mt-4">
       Secciones
-    </p>    
+    </p>
     <section class="conteiner-fluid">
       <div class="d-grid gap-3 colum_responsive">
         <div class="p-3 "> <a href="#">
@@ -97,7 +94,7 @@
               </div>
             </div>
           </a></div>
-        
+
       </div>
     </section class="conteiner-fluid">
     <section>
