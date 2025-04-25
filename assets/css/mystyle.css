@@ -22,11 +22,12 @@ body {
 
 /* color y alineación de la etiqueta h1*/
 h1 {
-    color: white;
+    color: black;
     font-weight: bold;
     /* negrito o fuerte*/
     text-align: center;
-    /*alineación*/
+    /*alineación*/   
+    font-family: 'MiFuentePersonal'; 
 }
 
 .style-div {

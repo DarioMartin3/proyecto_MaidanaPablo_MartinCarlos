@@ -4,7 +4,7 @@
 <div class="container-fluid text-center conteiner-text glass-effect" >
   <div class="row align-items-center" >
     <div style="text-align: center;">
-      <p class="h1">Quiénes Somos</p>
+      <h1>Quiénes Somos</h1>
       <p class="h5" style="text-align: justify;" >
         "Nacimos en las calles, no en un taller de moda..."<br>
 
