@@ -1,8 +1,6 @@
 <section class="container-fluid px-0">
     <nav class="navbar navbar-expand-lg" style"background-color: rgba(255, 255, 255, 0.473)">
         <div class="container-fluid">
-            <!--Logo en la barra-->
-
             <!--Boton para moviles-->
             <button
                 class="navbar-toggler"

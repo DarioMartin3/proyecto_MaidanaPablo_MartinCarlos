@@ -1,7 +1,9 @@
-<h2 style="text-align: center;">Términos y Condiciones</h2>
+<div style="background-color: #e5e5e5; padding: 1rem;">
+  <h2 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 2rem;">Términos y Condiciones</h2>
+</div>
 <div class="container mt-4">
-  <p>Fecha de última actualización: 16/4/2025</p>
-  <p>Bienvenido/a a 404Clothing. Al acceder y utilizar nuestro sitio web, aceptás los siguientes Términos y Condiciones. Si no estás de acuerdo con alguna parte, te recomendamos no utilizar nuestros servicios.</p>
+  <h4>Fecha de última actualización: 16/4/2025</h4>
+  <h4>Bienvenido/a a 404Clothing. Al acceder y utilizar nuestro sitio web, aceptás los siguientes Términos y Condiciones. Si no estás de acuerdo con alguna parte, te recomendamos no utilizar nuestros servicios.</h4>
 
   <div class="accordion" id="accordionExample">
     <div class="accordion-item">
