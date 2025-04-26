@@ -95,9 +95,9 @@
                 <h5 class="footer-margin-column">Ayuda</h5>
                 <ul class="list-unstyled">
                     <li><a href="<?= base_url('contact_info') ?>" class="btn btn-link-bottom">Contacto</a></li>
-                    <li><button type="button" class="btn btn-link-bottom">Formas de pago</button></li>
-                    <li><button type="button" class="btn btn-link-bottom">Metodos de envío</button></li>
-                    <li><button type="button" class="btn btn-link-bottom">Cambio y Devoluciones</button></li>              
+                    <li><a class="btn btn-link-bottom" href="<?php echo base_url('/formas_de_pagos'); ?>">Formas de pago</a></li>
+                    <li><a href="metodos_de_envios" class="btn btn-link-bottom">Metodos de envío</a></li>
+                    <li><a href="cambios_y_devoluciones" class="btn btn-link-bottom">Cambio y Devoluciones</a></li>            
                 </ul>
             </div>
             <div class="col-12 col-md-4 mb-4">

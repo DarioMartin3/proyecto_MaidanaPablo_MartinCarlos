@@ -1,96 +1,89 @@
 <link href="./assets/css/formas_pagos.css" rel="stylesheet">
 <section class="conteiner-fluid">
     <h1>
-            Formas de pago
+        Cambios y Devoluciones
     </h1>
+    <h3 style="text-align: center;"> Casos en los que se aceptan devoluciones o cambios</h3>
     <div class="d-flex justify-content-center min-vh-100" style="text-align: center;margin-top:25px">
         
         <div class="accordion arcordeon" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button button_op" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    1. Tarjetas de Crédito/Débito
+                    Talla incorrecta
                 </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body" style="text-align: justify;">
-                    💳 Visa, Mastercard, American Express <br>
-                    <li> PayPal</li> 
-                    <li> Stripe</li> 
-                    <li> Mercado Pago</li>
-                    <li> Square (para tiendas físicas).</li> 
-                    <li> Tarjeta banco de corrientes</li>
-                    <li> Tarjeta Naranja</li>
-                    <li> Tarjeta UALA</li>
+                <div class="accordion-body" style="text-align: justify;">     
+                    <li> El cliente se equivocó de talla y quiere cambiarla por otra.</li> 
+                    <li> Condición: La prenda debe estar en perfecto estado, con etiquetas y sin usar.</li> 
                 </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Transferencias Bancarias
+                    Color o modelo diferente al esperado
                 </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body" style="text-align: justify;">
-                <strong>Pasarelas de Pago en Línea<br>
-                    <li> Transferencia directa</li> 
-                    <li> Pago con SPEI (México)</li> 
-                    <li> PIX (Brasil, instantáneo y sin comisiones).</li>
-                    <li> Bizum (España).</li> <br></strong> 
-                </div>
+                    <div class="accordion-body" style="text-align: justify;">
+                        <li> El producto no coincide con la foto online o no le gustó el color en persona.</li> 
+                        <li> Condición: Debe devolverse en su empaque original y sin daños.</li> 
+        
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Pagos en Efectivo   
+                    Defectos de fábrica (Prenda dañada o fallada)   
                 </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body" style="text-align: justify;">
-                    <li> Pago Fácil / RapiPago (Argentina).</li> 
-                    <li> Western Union / MoneyGram (Para pagos internacionales en efectivo).</li> 
-                </div>
+                    <div class="accordion-body" style="text-align: justify;">
+                        <li> Costuras rotas, hilos sueltos, cremalleras defectuosas, manchas, etc.</li> 
+                        <li> Condición: Se debe reportar dentro de un plazo (7 días desde la entrega).</li> 
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    Criptomonedas   
+                    Error en el pedido (Enviaste otro producto)  
                 </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body" style="text-align: justify;">
-                    <li> Coinbase Commerce</li> 
-                    <li> BitPay</li> 
-                    <li> Binance Pay</li>
+                    <li> El cliente recibió un artículo diferente al que compró.</li> 
+                    <li> Condición: Cubrir costos de envío para el reemplazo (o enviarlo gratis si fue error de la tienda).</li> 
                 </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    Pagos a Plazos / Financiamiento  
+                    Arrepentimiento (Política de satisfacción)
                 </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body" style="text-align: justify;">
-                    <li> Afterpay / Klarna (Para compras en cuotas sin tarjeta).</li> 
-                    <li> Affirm (Financiamiento en EE.UU.).</li> 
-                </div>
+                    <div class="accordion-body" style="text-align: justify;">
+                        <li> El cliente simplemente cambió de opinión y quiere reembolso o cambio.</li> 
+                        <li> Condición: Solo si la prenda está intacta, con etiqueta y en plazo máximo (15 días).</li> 
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                    Otras Opciones   
+                    🔹 Casos en los que NO se aceptarían devoluciones ni cambios: 
                 </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body" style="text-align: justify;">
-                    <li> Apple Pay / Google Pay</li> 
-                    <li> Alipay / WeChat Pay</li> 
+                    <li> ❌ Prenda usada, manchada o sin etiqueta.</li> 
+                    <li> ❌ Pasado el plazo establecido (15 días).</li> 
+                    <li> ❌ Productos en promoción o liquidación (a menos que tengan defectos).</li>
                 </div>
                 </div>
             </div>

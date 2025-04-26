@@ -42,6 +42,20 @@ class Home extends BaseController
         echo view('front/formas_de_pago');
         echo view('front/footer');
     }
+
+    public function metodos_env(){
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/metodos_envios');
+        echo view('front/footer');
+    }
+
+    public function cam_dev(){
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/cambios_devoluciones');
+        echo view('front/footer');
+    }
 }
 
 
