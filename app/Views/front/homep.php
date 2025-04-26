@@ -107,3 +107,40 @@
           </a>
         </div>
     </section>
+    
+    <section class="conteiner-fluid">
+      <h1>Algunos productos</h1>
+      <div class="d-grid gap-3 colum_responsive">
+          <div class="p-3">
+            <div class="card text-bg-dark float borde-card" >
+              <img src="./assets/img/imagenes_cartila/ropa_mujer.jpg" class="card-img" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="p-3">
+            <div class="card text-bg-dark float borde-card" >
+              <img src="./assets/img/imagenes_cartila/ropa_hombre.jpg" class="card-img" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="p-3">
+            <div class="card text-bg-dark float borde-card" >
+              <img src="./assets/img/imagenes_cartila/ropa_invierno.jpg" class="card-img" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+    </section class="conteiner-fluid">
