@@ -73,20 +73,16 @@
                         </ul>
                     </li>
                 </ul>
-                <!--Buscador-->
-                <form class="d-flex" role="search">
-                    <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search" />
-                    <button class="btn btn-dark" type="submit">
-                        Buscar
-                    </button>
-                </form>
             </div>
-            <div class="d=flex aling-items-center">
-                
+            <div class="btn-group d-flex align-items-center" role="group">
+                <div class="search-container position-relative me-3 d-flex align-items-center">
+                    <div id="searchBar" class="d-none">
+                        <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." style="width: 200px;">
+                    </div>
+                    <button class="btn btn-link p-0" id="searchButton" onclick="toggleSearchBar()">
+                        <img src="./assets/img/Iconos_layout/search.svg" width="30" height="30" alt="Search">
+                    </button>
+                </div>
                 <!-- Botón de Login -->
                 <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
                     <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
@@ -99,7 +95,12 @@
         </div>
     </nav>
 </section>
-
+<script>
+    function toggleSearchBar() {
+        const searchBar = document.getElementById('searchBar');
+        searchBar.classList.toggle('d-none');
+    }
+</script>
 <!-- Modal de Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
