@@ -1,5 +1,5 @@
 <!--Carrusel automatico-->
-<section class="container-fluid px-0 mt-4">
+<section class="container-fluid px-0 mt-4 mb-4">
   <div
     id="carouselExampleAutoplaying"
     class="carousel slide"
@@ -65,6 +65,16 @@
     </button>
   </div>
 </section>
+<!--Fin carrusel automatico-->
+<section class="container-fluid text-center py-4">
+  <h2 class="fw-bold text-uppercase" style="color: #6c757d;">
+    Descubrí nuestra nueva colección 
+    <span style="color: #8B4513;">Otoño/</span> <!-- Marrón -->
+    <span style="color: #007bff;">Invierno</span> <!-- Azul -->
+  </h2>
+  <p class="text-muted">¡Explorá las últimas tendencias y encontrá tu estilo perfecto!</p>
+</section>
+<!-- Sección de categorías -->
 <section class="conteiner-fluid">
   <div class="d-grid gap-3 colum_responsive">
     <div class="p-3 "> <a href="#">
@@ -111,7 +121,16 @@
 </section>
 
 <section class="conteiner-fluid">
-  <h1>Algunos productos</h1>
+<div class="container-fluid text-center py-4">
+  
+<h2 class="fw-bold text-uppercase" style="color: #6c757d; font-size: 2.5rem; letter-spacing: 2px;">
+    Descubre Nuestros Productos<span style="color: black"> Destacados</span>
+  </h2>
+  <p class="text-muted" style="font-size: 1.2rem;">
+    Encuentra lo mejor de nuestra colección y dale un toque único a tu estilo.
+  </p>
+</div>
+  
   <div class="d-grid gap-3 colum_responsive">
     <div class="p-3">
       <div class="card text-bg-dark float borde-card">

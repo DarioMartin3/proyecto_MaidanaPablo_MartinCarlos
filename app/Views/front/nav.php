@@ -28,18 +28,36 @@
                         </a>
                         <!--Contenido del menu desplegable-->
                         <ul class="dropdown-menu">
-                            <li class="dropdown-columns">
-                                <ul class="column">
-                                    <li><a class="dropdown-item" href="#">Remeras</a></li>
-                                    <li><a class="dropdown-item" href="#">Musculosas</a></li>
-                                    <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                </ul>
-                                <ul class="column">
-                                    <li><a class="dropdown-item" href="#">Pantalons</a></li>
-                                    <li><a class="dropdown-item" href="#">Bermudas</a></li>
-                                    <li><a class="dropdown-item" href="#">Zapatillas</a></li>
-                                </ul>
+                            <!-- Sección Mujeres -->
+                            <div class="p-3 rounded">
+                                <li>
+                                    <h3 class="dropdown-item disabled" style="color: black; font-weight: bold;">Mujeres</h3>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Remeras</a></li>
+                                <li><a class="dropdown-item" href="#">Camisas</a></li>
+                                <li><a class="dropdown-item" href="#">Abrigo y Camperas</a></li>
+                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="#">Vestidos</a></li>
+                                <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                            </div>
+                            <li>
+                                <hr class="dropdown-divider">
                             </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <!-- Sección Hombres -->
+                            <div class="p-3 rounded">
+                                <li>
+                                    <h3 class="dropdown-item disabled" style="color: black; font-weight: bold;">Hombres</h3>
+                                </li>
+                                <li><a class="dropdown-item" href="#">Remeras</a></li>
+                                <li><a class="dropdown-item" href="#">Camisas</a></li>
+                                <li><a class="dropdown-item" href="#">Abrigo y Camperas</a></li>
+                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
+                                <li><a class="dropdown-item" href="#">Shorts</a></li>
+                                <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                            </div>
                         </ul>
                     </li>
                     <!--Boton Coleeccion del momento-->
@@ -61,10 +79,10 @@
                             <li class="dropdown-columns">
                                 <ul class="column">
                                     <li><a class="dropdown-item" href="#">Remeras</a></li>
-                                    <li><a class="dropdown-item" href="#">Musculosas</a></li>
                                     <li><a class="dropdown-item" href="#">Camisas</a></li>
+                                    <li><a class="dropdown-item" href="#">Abrigo y Camperas</a></li>
                                     <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                    <li><a class="dropdown-item" href="#">Bermudas</a></li>
+                                    <li><a class="dropdown-item" href="#">Shorts</a></li>
                                     <li><a class="dropdown-item" href="#">Zapatillas</a></li>
                                 </ul>
                             </li>
@@ -147,4 +165,5 @@
     </div>
 </div>
 </header>
+
 <body>

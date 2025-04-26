@@ -1,5 +1,5 @@
-<div style="background-color: #e5e5e5; padding: 1rem;">
-  <h2 style="text-align: center; font-size: 2.5rem; font-weight: bold; margin-bottom: 2rem;">Términos y Condiciones</h2>
+<div class="style-div-titulo">
+  <h2 class="style-titulo">Términos y Condiciones</h2>
 </div>
 <div class="container mt-4">
   <h4>Fecha de última actualización: 16/4/2025</h4>

@@ -1,8 +1,8 @@
 <link href="./assets/css/formas_pagos.css" rel="stylesheet">
 <section class="conteiner-fluid">
-    <h1>
-            Formas de pago
-    </h1>
+<div class="style-div-titulo">
+    <h2 class="style-titulo">FORMAS DE PAGOS</h2>
+</div>
     <div class="d-flex justify-content-center min-vh-100" style="text-align: center;margin-top:25px">
         
         <div class="accordion arcordeon" id="accordionExample">

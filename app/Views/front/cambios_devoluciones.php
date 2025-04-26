@@ -1,8 +1,8 @@
 <link href="./assets/css/formas_pagos.css" rel="stylesheet">
 <section class="conteiner-fluid">
-    <h1>
-        Cambios y Devoluciones
-    </h1>
+<div class="style-div-titulo">
+    <h2 class="style-titulo">CAMBIO Y DEVOLUCIONES</h2>
+</div>
     <h3 style="text-align: center;"> Casos en los que se aceptan devoluciones o cambios</h3>
     <div class="d-flex justify-content-center min-vh-100" style="text-align: center;margin-top:25px">
         

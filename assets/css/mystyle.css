@@ -5,11 +5,25 @@
 
 @import url('home.css');
 
+@import url('contact-info.css');
+
 @font-face {
     font-family: 'MiFuentePersonal';
     src: url('fonts/CascadiaCode-VariableFont_wght.ttf');
   }
 
+.style-titulo{
+    text-align: center;    
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: white; 
+    margin-bottom: 0;
+}
+
+.style-div-titulo{
+    background: linear-gradient(135deg, #222, #555); 
+    padding: 2rem;
+}
 
 body {
     background-color: rgba(255, 255, 255, 0.473);
