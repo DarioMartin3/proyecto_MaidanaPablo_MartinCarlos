@@ -19,12 +19,13 @@
                     <!--Boton Categoria-->
                     <li class="nav-item dropdown">
                         <a
-                            class="nav-link dropdown-toggle"
+                            class="nav-link dropdown-toggle fs-4 "
+                            style="color: black;"
                             href="#"
                             role="button"
                             data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Categorias
+                            Categorías
                         </a>
                         <!--Contenido del menu desplegable-->
                         <ul class="dropdown-menu">
@@ -33,12 +34,12 @@
                                 <li>
                                     <h3 class="dropdown-item disabled" style="color: black; font-weight: bold;">Mujeres</h3>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Remeras</a></li>
-                                <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item" href="#">Abrigo y Camperas</a></li>
-                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item" href="#">Vestidos</a></li>
-                                <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Remeras</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Camisas</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Abrigo y Camperas</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Pantalones</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Vestidos</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Zapatillas</a></li>
                             </div>
                             <li>
                                 <hr class="dropdown-divider">
@@ -51,23 +52,24 @@
                                 <li>
                                     <h3 class="dropdown-item disabled" style="color: black; font-weight: bold;">Hombres</h3>
                                 </li>
-                                <li><a class="dropdown-item" href="#">Remeras</a></li>
-                                <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item" href="#">Abrigo y Camperas</a></li>
-                                <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item" href="#">Shorts</a></li>
-                                <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Remeras</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Camisas</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Abrigo y Camperas</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Pantalones</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Shorts</a></li>
+                                <li><a class="dropdown-item style-color" href="#">Zapatillas</a></li>
                             </div>
                         </ul>
                     </li>
                     <!--Boton Coleeccion del momento-->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Colección </a>
+                        <a class="nav-link fs-4" href="#" style="color: black;">Colección </a>
                     </li>
                     <!--Boton Outlet-->
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown fs-4">
                         <a
                             class="nav-link dropdown-toggle"
+                            style="color: black;"
                             href="#"
                             role="button"
                             data-bs-toggle="dropdown"
@@ -78,12 +80,12 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-columns">
                                 <ul class="column">
-                                    <li><a class="dropdown-item" href="#">Remeras</a></li>
-                                    <li><a class="dropdown-item" href="#">Camisas</a></li>
-                                    <li><a class="dropdown-item" href="#">Abrigo y Camperas</a></li>
-                                    <li><a class="dropdown-item" href="#">Pantalones</a></li>
-                                    <li><a class="dropdown-item" href="#">Shorts</a></li>
-                                    <li><a class="dropdown-item" href="#">Zapatillas</a></li>
+                                    <li><a class="dropdown-item style-color" href="#">Remeras</a></li>
+                                    <li><a class="dropdown-item style-color" href="#">Camisas</a></li>
+                                    <li><a class="dropdown-item style-color" href="#">Abrigo y Camperas</a></li>
+                                    <li><a class="dropdown-item style-color" href="#">Pantalones</a></li>
+                                    <li><a class="dropdown-item style-color" href="#">Shorts</a></li>
+                                    <li><a class="dropdown-item style-color" href="#">Zapatillas</a></li>
                                 </ul>
                             </li>
                         </ul>

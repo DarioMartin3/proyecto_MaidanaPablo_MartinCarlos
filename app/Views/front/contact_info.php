@@ -1,31 +1,37 @@
 <!-- Encabezado CONTACTO con fondo degradado -->
-<div class="style-div-titulo">
-    <h2 class="style-titulo">CONTACTO</h2>
-</div>
-
-<div class="container mt-5 mb-5">
-    <!-- Sección de contacto -->
-    <div class="row align-items-center mb-5">
-        <!-- Contenido alineado a la izquierda -->
-        <div class="col-md-6 text-center mb-4 mb-md-0">
-            <img src="./assets/img/Iconos_layout/envelope.svg" width="60" height="60" class="mb-3 icono-contacto">
-            <p class="fs-5">
-                <strong>Consultas:</strong><br>
-                <a href="mailto:ventas@404clothing.com.ar" class="text-decoration-none" style="color: #333; font-size: 1.2rem;">ventas@404clothing.com.ar</a>
-            </p>
-        </div>
-
-        <div class="col-md-6 text-center">
-            <a href="https://www.facebook.com" target="_blank" class="me-4">
-                <img src="./assets/img/Iconos_layout/facebook.svg" width="60" height="60" class="icono-redes" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="./assets/img/Iconos_layout/instagram.svg" width="60" height="60" class="icono-redes" alt="Instagram">
-            </a>
-        </div>
+<section class="conteiner-fluid">
+    <div class="style-div-titulo">
+        <h2 class="style-titulo">CONTACTO</h2>
     </div>
+    <div class="container mt-5 mb-5">
+        <!-- Sección de contacto -->
+        <div class="row align-items-center mb-5">
+            <!-- Contenido alineado a la izquierda -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="./assets/img/Iconos_layout/envelope.svg" width="60" height="60" class="mb-3 icono-contacto">
+                <p class="fs-5">
+                    <strong>Consultas:</strong><br>
+                    <a href="mailto:ventas@404clothing.com.ar" class="text-decoration-none" style="color: #333; font-size: 1.2rem;">ventas@404clothing.com.ar</a>
+                </p>
+            </div>
 
-    <!-- Formulario de Consulta -->
+            <div class="col-md-6 text-center">
+                <a href="https://www.facebook.com" target="_blank" class="me-4">
+                    <img src="./assets/img/Iconos_layout/facebook.svg" width="60" height="60" class="icono-redes" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="./assets/img/Iconos_layout/instagram.svg" width="60" height="60" class="icono-redes" alt="Instagram">
+                </a>
+            </div>
+        </div>
+</section>
+<!-- Separador de Sección -->
+<div class="d-flex align-items-center justify-content-center my-5 w-100">
+    <img src="./assets/img/grafiti.jpg" alt="Separador" class="img-fluid w-100 img-separador">
+</div>
+<!-- Formulario de Consulta -->
+<section class="conteiner-fluid">
+<div class="container mt-5 mb-5">
     <h2 class="text-center mb-4" style="font-weight: bold;">Formulario de Consulta</h2>
     <form class="p-5 border rounded-4 shadow bg-white">
         <!-- Apellido y Nombre -->
@@ -55,8 +61,9 @@
             <button type="reset" class="btn btn-outline-secondary btn-lg px-5 py-2">Limpiar</button>
         </div>
     </form>
-</div>
-
+    </div>
+    </div>
+</section>
 
 
 <script>
