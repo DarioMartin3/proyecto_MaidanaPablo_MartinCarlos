@@ -42,8 +42,8 @@
             </button>
         </div>
         <!-- Iconos de la sección superior -->
-        <div class="row">
-            <div class="col-auto">
+        <div class="row justify-content-center g-4">
+            <div class=" col-md-4 mb-3 d-flex flex-column align-items-center">
                 <div class="icon-item">
                     <img src="./assets/img/Iconos_layout/shipping.svg" alt="Icono Arrepentimiento" width="50" height="50">
                     <h4>Envío Gratis</h4>
@@ -51,7 +51,7 @@
                     <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link">Ver más</a>
                 </div>
             </div>
-            <div class="col-auto">
+            <div class=" col-md-4 mb-3 d-flex flex-column align-items-center">
                 <div class="icon-item">
                     <img src="./assets/img/Iconos_layout/credit-card.svg" alt="Icono Arrepentimiento" width="50" height="50">
                     <h4>3 cuotas sin interés</h4>
@@ -59,11 +59,11 @@
                     <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-link">Ver más</a>
                 </div>
             </div>
-            <div class="col-auto">
+            <div class=" col-md-4 mb-3 d-flex flex-column align-items-center">
                 <div class="icon-item">
                     <img src="./assets/img/Iconos_layout/returns.svg" alt="Icono Arrepentimiento" width="50" height="50">
                     <h4>Cambios?</h4>
-                    <p >Cambio gratis hasta 7 días</p>
+                    <p>Cambio gratis hasta 7 días</p>
                     <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link" style="padding: 0;">Ver más</a>
                 </div>
             </div>
@@ -75,13 +75,13 @@
             <h5 class="mb-1 fw-bold">OBTENÉ UN DESCUENTO</h5>
             <small class="text-muted">Suscribiéndote</small>
         </div>
-        <form id="suscripcion-form" class="d-flex  align-items-center " action="" method="POST" >
+        <form id="suscripcion-form" class="d-flex  align-items-center " action="" method="POST">
             <input type="email" class="form-control form-control-sm flex-grow-1 me-2"
                 placeholder="Ingresá tu email" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
             <button type="submit" class="btn btn-link text-dark p-0 d-flex align-items-center">
-            <img src="./assets/img/Iconos_layout/arrow-right-square.svg" alt="icono mandar" width="29" height="29">
+                <img src="./assets/img/Iconos_layout/arrow-right-square.svg" alt="icono mandar" width="29" height="29">
                 <i class="bi bi-arrow-right"></i>
-            </button>            
+            </button>
         </form>
     </section>
     <!-- Sección de Abajo -->
@@ -97,7 +97,7 @@
                 <h5 class="footer-margin-column">Ayuda</h5>
                 <ul class="list-unstyled">
                     <li><a href="<?= base_url('contact_info') ?>" class="btn btn-link-bottom">Contacto</a></li>
-                    <li><a href="<?php echo base_url('/formas_de_pagos') ?>" class="btn btn-link-bottom" >Formas de pago</a></li>
+                    <li><a href="<?php echo base_url('/formas_de_pagos') ?>" class="btn btn-link-bottom">Formas de pago</a></li>
                     <li><a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link-bottom">Metodos de envío</a></li>
                     <li><a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link-bottom">Cambio y Devoluciones</a></li>
                 </ul>
@@ -116,7 +116,7 @@
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Siguenos</h5>
                 <ul class="list-unstyled d-flex justify-content-start">
-                    <li><a href="https://www.facebook.com" target="_blank" class="me-3"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank" class="me-3" style="padding-left: 12px;"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></a></li>
                     <li><a href="https://www.instagram.com" target="_blank" class="me-3"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></a></li>
                     <li><a href="https://www.tiktok.com" target="_blank"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></a></li>
                 </ul>
@@ -125,28 +125,28 @@
     </section>
 </footer>
 <script>
-document.getElementById('suscripcion-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que se recargue o cambie de página
+    document.getElementById('suscripcion-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita que se recargue o cambie de página
 
-    const email = this.querySelector('input[type="email"]').value;
-    console.log('Email enviado:', email);
+        const email = this.querySelector('input[type="email"]').value;
+        console.log('Email enviado:', email);
 
-    // Aquí podés hacer algo más, como enviar el email por AJAX
-    
-    // Limpiar el formulario
-    this.reset();
+        // Aquí podés hacer algo más, como enviar el email por AJAX
 
-    // Mostrar mensaje de confirmación
-    const message = document.createElement('p');
-    message.textContent = '¡Te suscribiste correctamente!';
-    message.classList.add('text-success');
-    this.appendChild(message);
+        // Limpiar el formulario
+        this.reset();
 
-    // Opcional: Si querés que el mensaje desaparezca después de unos segundos
-    setTimeout(() => {
-        message.remove();
-    }, 3000); // 3000 milisegundos = 3 segundos
-});
+        // Mostrar mensaje de confirmación
+        const message = document.createElement('p');
+        message.textContent = '¡Te suscribiste correctamente!';
+        message.classList.add('text-success');
+        this.appendChild(message);
+
+        // Opcional: Si querés que el mensaje desaparezca después de unos segundos
+        setTimeout(() => {
+            message.remove();
+        }, 3000); // 3000 milisegundos = 3 segundos
+    });
 </script>
 
 
