@@ -1,4 +1,6 @@
 </body>
+
+
 <footer class="footer mt-auto py-3 bg-body-tertiary">
     <!-- Sección de Arriba-->
 
@@ -11,14 +13,14 @@
                         alt="Icono Arrepentimiento" width="15" height="15">
                     <h4>Envío Gratis</h4>
                     <p>a partir de $120.000</p>
-                    <button type="button" class="btn btn-link">Ver más</button>
+                    <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link">Ver más</a>
                 </div>
                 <div class="carousel-item ">
                     <img src="./assets/img/Iconos_layout/credit-card.svg"
                         alt="Icono Arrepentimiento" width="15" height="15">
                     <h4>3 cuotas sin interés</h4>
                     <p>en todo el sitio</p>
-                    <button type="button" class="btn btn-link">Ver más</button>
+                    <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-link">Ver más</a>
                 </div>
                 <div class="carousel-item ">
 
@@ -26,7 +28,7 @@
                         alt="Icono Arrepentimiento" width="15" height="15">
                     <h4>Cambios?</h4>
                     <p>Cambio gratis hasta 7 días</p>
-                    <button type="button" class="btn btn-link">Ver más</button>
+                    <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link">Ver más</a>
                 </div>
             </div>
             <!--Botones del carrusel -->
@@ -46,7 +48,7 @@
                     <img src="./assets/img/Iconos_layout/shipping.svg" alt="Icono Arrepentimiento" width="50" height="50">
                     <h4>Envío Gratis</h4>
                     <p>a partir de $120.000</p>
-                    <button type="button" class="btn btn-link">Ver más</button>
+                    <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link">Ver más</a>
                 </div>
             </div>
             <div class="col-auto">
@@ -54,7 +56,7 @@
                     <img src="./assets/img/Iconos_layout/credit-card.svg" alt="Icono Arrepentimiento" width="50" height="50">
                     <h4>3 cuotas sin interés</h4>
                     <p>en todo el sitio</p>
-                    <button type="button" class="btn btn-link">Ver más</button>
+                    <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-link">Ver más</a>
                 </div>
             </div>
             <div class="col-auto">
@@ -62,7 +64,7 @@
                     <img src="./assets/img/Iconos_layout/returns.svg" alt="Icono Arrepentimiento" width="50" height="50">
                     <h4>Cambios?</h4>
                     <p >Cambio gratis hasta 7 días</p>
-                    <button type="button " class="btn btn-link" style="padding: 0;">Ver más</button>
+                    <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link" style="padding: 0;">Ver más</a>
                 </div>
             </div>
         </div>
@@ -73,12 +75,13 @@
             <h5 class="mb-1 fw-bold">OBTENÉ UN DESCUENTO</h5>
             <small class="text-muted">Suscribiéndote</small>
         </div>
-        <form class="d-flex flex-wrap align-items-center " action="#" method="POST">
+        <form id="suscripcion-form" class="d-flex  align-items-center " action="" method="POST" >
             <input type="email" class="form-control form-control-sm flex-grow-1 me-2"
                 placeholder="Ingresá tu email" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
-            <button type="submit" class="btn btn-link text-dark p-0">
+            <button type="submit" class="btn btn-link text-dark p-0 d-flex align-items-center">
+            <img src="./assets/img/Iconos_layout/arrow-right-square.svg" alt="icono mandar" width="29" height="29">
                 <i class="bi bi-arrow-right"></i>
-            </button>
+            </button>            
         </form>
     </section>
     <!-- Sección de Abajo -->
@@ -94,9 +97,9 @@
                 <h5 class="footer-margin-column">Ayuda</h5>
                 <ul class="list-unstyled">
                     <li><a href="<?= base_url('contact_info') ?>" class="btn btn-link-bottom">Contacto</a></li>
-                    <li><a class="btn btn-link-bottom" href="<?php echo base_url('/formas_de_pagos'); ?>">Formas de pago</a></li>
-                    <li><a href="metodos_de_envios" class="btn btn-link-bottom">Metodos de envío</a></li>
-                    <li><a href="cambios_y_devoluciones" class="btn btn-link-bottom">Cambio y Devoluciones</a></li>
+                    <li><a href="<?php echo base_url('/formas_de_pagos') ?>" class="btn btn-link-bottom" >Formas de pago</a></li>
+                    <li><a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link-bottom">Metodos de envío</a></li>
+                    <li><a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link-bottom">Cambio y Devoluciones</a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-4 mb-4">
@@ -121,6 +124,33 @@
         </div>
     </section>
 </footer>
+<script>
+document.getElementById('suscripcion-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que se recargue o cambie de página
+
+    const email = this.querySelector('input[type="email"]').value;
+    console.log('Email enviado:', email);
+
+    // Aquí podés hacer algo más, como enviar el email por AJAX
+    
+    // Limpiar el formulario
+    this.reset();
+
+    // Mostrar mensaje de confirmación
+    const message = document.createElement('p');
+    message.textContent = '¡Te suscribiste correctamente!';
+    message.classList.add('text-success');
+    this.appendChild(message);
+
+    // Opcional: Si querés que el mensaje desaparezca después de unos segundos
+    setTimeout(() => {
+        message.remove();
+    }, 3000); // 3000 milisegundos = 3 segundos
+});
+</script>
+
+
+
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 </html>
