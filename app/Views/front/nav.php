@@ -148,7 +148,7 @@
                 <!-- Botón de Registro -->
                 <div class="text-center">
                     <p>¿No tienes una cuenta?</p>
-                    <a href="<?php echo base_url('/register'); ?>" class="btn btn-outline-secondary">Registrarse</a>
+                    <a href="<?php echo base_url('/construction_page'); ?>" class="btn btn-outline-secondary">Registrarse</a>
                 </div>
             </div>
         </div>
