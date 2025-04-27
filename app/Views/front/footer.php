@@ -6,32 +6,42 @@
 
     <section class="footer-top container-fluid">
         <!-- Carrusel-->
-        <div id="footerCarousel" class="carousel slide " data-bs-ride="carousel">
+        <div id="footerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/img/Iconos_layout/shipping.svg"
-                        alt="Icono Arrepentimiento" width="15" height="15">
-                    <h4>Envío Gratis</h4>
-                    <p>a partir de $120.000</p>
-                    <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link">Ver más</a>
-                </div>
-                <div class="carousel-item ">
-                    <img src="./assets/img/Iconos_layout/credit-card.svg"
-                        alt="Icono Arrepentimiento" width="15" height="15">
-                    <h4>3 cuotas sin interés</h4>
-                    <p>en todo el sitio</p>
-                    <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-link">Ver más</a>
-                </div>
-                <div class="carousel-item ">
 
-                    <img src="./assets/img/Iconos_layout/returns.svg"
-                        alt="Icono Arrepentimiento" width="15" height="15">
-                    <h4>Cambios?</h4>
-                    <p>Cambio gratis hasta 7 días</p>
-                    <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link">Ver más</a>
+                <div class="carousel-item active text-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="./assets/img/Iconos_layout/shipping.svg"
+                            alt="Icono Envío Gratis" width="50" height="50" class="mb-2">
+                        <h4>Envío Gratis</h4>
+                        <p>a partir de $120.000</p>
+                        <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-link">Ver más</a>
+                    </div>
                 </div>
+
+                <div class="carousel-item text-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="./assets/img/Iconos_layout/credit-card.svg"
+                            alt="Icono 3 cuotas sin interés" width="50" height="50" class="mb-2">
+                        <h4>3 cuotas sin interés</h4>
+                        <p>en todo el sitio</p>
+                        <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-link">Ver más</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="./assets/img/Iconos_layout/returns.svg"
+                            alt="Icono Cambios" width="50" height="50" class="mb-2">
+                        <h4>¿Cambios?</h4>
+                        <p>Cambio gratis hasta 7 días</p>
+                        <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-link">Ver más</a>
+                    </div>
+                </div>
+
             </div>
-            <!--Botones del carrusel -->
+
+            <!-- Botones de navegación del carrusel -->
             <button class="carousel-control-prev" type="button" data-bs-target="#footerCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
@@ -43,38 +53,38 @@
         </div>
         <!-- Iconos de la sección superior -->
         <div class="d-none d-md-block">
-        <div class="row g-0">
-            <!-- Columna Envío Gratis -->
-            <div class="col-md-4 pe-md-3 border-end-md">
-                <div class="d-flex flex-column align-items-center text-center h-100">
-                    <img src="./assets/img/Iconos_layout/shipping.svg" alt="Icono Envío" width="40" height="40" class="mb-2">
-                    <h5 class="mb-1">Envío Gratis</h5>
-                    <p class="small mb-2">a partir de $120.000</p>
-                    <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
+            <div class="row g-0">
+                <!-- Columna Envío Gratis -->
+                <div class="col-md-4 pe-md-3 border-end-md">
+                    <div class="d-flex flex-column align-items-center text-center h-100">
+                        <img src="./assets/img/Iconos_layout/shipping.svg" alt="Icono Envío" width="40" height="40" class="mb-2">
+                        <h5 class="mb-1">Envío Gratis</h5>
+                        <p class="small mb-2">a partir de $120.000</p>
+                        <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Columna Cuotas -->
-            <div class="col-md-4 px-md-3 border-end-md">
-                <div class="d-flex flex-column align-items-center text-center h-100">
-                    <img src="./assets/img/Iconos_layout/credit-card.svg" alt="Icono Tarjeta" width="40" height="40" class="mb-2">
-                    <h5 class="mb-1">3 cuotas sin interés</h5>
-                    <p class="small mb-2">en todo el sitio</p>
-                    <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
+
+                <!-- Columna Cuotas -->
+                <div class="col-md-4 px-md-3 border-end-md">
+                    <div class="d-flex flex-column align-items-center text-center h-100">
+                        <img src="./assets/img/Iconos_layout/credit-card.svg" alt="Icono Tarjeta" width="40" height="40" class="mb-2">
+                        <h5 class="mb-1">3 cuotas sin interés</h5>
+                        <p class="small mb-2">en todo el sitio</p>
+                        <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Columna Cambios -->
-            <div class="col-md-4 ps-md-3">
-                <div class="d-flex flex-column align-items-center text-center h-100">
-                    <img src="./assets/img/Iconos_layout/returns.svg" alt="Icono Cambios" width="40" height="40" class="mb-2">
-                    <h5 class="mb-1">Cambios?</h5>
-                    <p class="small mb-2">Cambio gratis hasta 15 días</p>
-                    <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
+
+                <!-- Columna Cambios -->
+                <div class="col-md-4 ps-md-3">
+                    <div class="d-flex flex-column align-items-center text-center h-100">
+                        <img src="./assets/img/Iconos_layout/returns.svg" alt="Icono Cambios" width="40" height="40" class="mb-2">
+                        <h5 class="mb-1">Cambios?</h5>
+                        <p class="small mb-2">Cambio gratis hasta 15 días</p>
+                        <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
     <!-- Sección intermedia -->
     <section class="footer-middle d-flex align-items-center justify-content-center text-center">
@@ -93,7 +103,7 @@
     </section>
     <!-- Sección de Abajo -->
     <section class="footer-bottom container-fluid">
-        <div class="row ">
+        <div class="row">
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Nosotros</h5>
                 <ul class="list-unstyled">
