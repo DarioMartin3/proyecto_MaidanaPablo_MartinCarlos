@@ -103,11 +103,11 @@
                 <h5 class="footer-margin-column">Legales</h5>
                 <ul class="list-unstyled ">
                     <li><a href="<?= base_url('terminos_y_usos') ?>" class="btn btn-link-bottom">Termino y condiciones</a></li>
-                    <li><button type="button" class="btn btn-link-bottom" style="display: flex; align-items: center;">
+                    <li><a href="<?= base_url('construction_page') ?>" class="btn btn-link-bottom" style="display: flex; align-items: center;">
                             <img src="./assets/img/Iconos_layout/bag-x.svg"
                                 alt="Icono Arrepentimiento"
                                 width="20"
-                                height="20">Boton de arrepentimiento</button></li>
+                                height="20">Boton de arrepentimiento</a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-4 mb-4">

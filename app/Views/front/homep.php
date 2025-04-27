@@ -134,7 +134,7 @@
   <div class="d-grid gap-3 colum_responsive">
     <div class="p-3">
       <div class="card text-bg-dark float borde-card">
-        <img src="./assets/img/card_producto/jean.jpg" class="card-img" alt="...">
+        <img src="./assets/img/card_producto/jean.jpg" class="card-img img-ajustada" alt="...">
         <div class="card-body">
           <h5 class="card-title">Jean U</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -144,7 +144,7 @@
     </div>
     <div class="p-3">
       <div class="card text-bg-dark float borde-card">
-        <img src="./assets/img/card_producto/chaleco.jpg" class="card-img" alt="...">
+        <img src="./assets/img/card_producto/chaleco.jpg" class="card-img img-ajustada" alt="...">
         <div class="card-body">
           <h5 class="card-title">Chaleco R</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

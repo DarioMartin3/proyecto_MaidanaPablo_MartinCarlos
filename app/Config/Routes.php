@@ -18,3 +18,5 @@ $routes->get('/formas_de_pagos', 'Home::form_pagos');
 $routes->get('/metodos_de_envios', 'Home::metodos_env');
 
 $routes->get('/cambios_y_devoluciones', 'Home::cam_dev');
+
+$routes->get('/construction_page', 'Home::cPage');

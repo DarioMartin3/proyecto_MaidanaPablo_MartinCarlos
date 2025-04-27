@@ -19,3 +19,9 @@
     font-weight: bold;
     font-family: 'MiFuentePersonal';
 }
+
+.img-ajustada {
+  height: 300px; /* o la altura que quieras */
+  object-fit: cover; /* que la imagen se recorte bien */
+  object-position: center 90%; /* mueve el recorte hacia abajo */
+}

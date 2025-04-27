@@ -56,6 +56,13 @@ class Home extends BaseController
         echo view('front/cambios_devoluciones');
         echo view('front/footer');
     }
+
+    public function cPage(){
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/construction_page');
+        echo view('front/footer');
+    }
 }
 
 
