@@ -1,5 +1,5 @@
 <section class="container-fluid px-0">
-    <nav class="navbar navbar-expand-lg" style"background-color: rgba(255, 255, 255, 0.473)">
+    <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 255, 255, 0.473)">
         <div class="container-fluid">
             <!--Boton para moviles-->
             <button

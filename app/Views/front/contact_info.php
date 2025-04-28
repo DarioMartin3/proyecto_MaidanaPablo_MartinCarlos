@@ -1,5 +1,5 @@
 <!-- Encabezado CONTACTO con fondo degradado -->
-<section class="conteiner-fluid">
+<section class="container-fluid">
     <div class="style-div-titulo">
         <h2 class="style-titulo">CONTACTO</h2>
     </div>
@@ -30,7 +30,7 @@
     <img src="./assets/img/grafiti.jpg" alt="Separador" class="img-fluid w-100 img-separador">
 </div>
 <!-- Formulario de Consulta -->
-<section class="conteiner-fluid">
+<section class="container-fluid">
 <div class="container mt-5 mb-5">
     <h2 class="text-center mb-4" style="font-weight: bold;">Formulario de Consulta</h2>
     <form class="p-5 border rounded-4 shadow bg-white">
