@@ -25,3 +25,20 @@
   object-fit: cover; /* que la imagen se recorte bien */
   object-position: center 90%; /* mueve el recorte hacia abajo */
 }
+
+.style-card-body{
+  text-align: center; 
+  background-color: #000000
+}
+
+.style-card-title{
+  text-align: center;
+  font-family: 'MiFuentePersonal';
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.style-card-text{
+  
+  text-align: center;
+}

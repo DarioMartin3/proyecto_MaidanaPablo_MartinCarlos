@@ -135,30 +135,30 @@
     <div class="p-3">
       <div class="card text-bg-dark float borde-card">
         <img src="./assets/img/card_producto/jean.jpg" class="card-img img-ajustada" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title" style="text-align: center;">ripped jeans</h5>
-          <p class="card-text" style="text-align: center;">$50.430</p>
-          <a href="#" class="btn btn-primary">Mas Detalles</a>
+        <div class="card-body style-card-body">
+          <h4 class="card-text style-card-title">Ripped jeans</h4>
+          <p class="card-text style-card-text">$50.430</p>
+          <a href="#" class="btn btn-light">Ver</a>
         </div>
       </div>
     </div>
     <div class="p-3">
       <div class="card text-bg-dark float borde-card">
         <img src="./assets/img/card_producto/chaleco.jpg" class="card-img img-ajustada" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title" style="text-align: center;">Chaleco Jean Style</h5>
-          <p class="card-text" style="text-align: center;">$25.640</p>
-          <a href="#" class="btn btn-primary">Mas Detalles</a>
+        <div class="card-body style-card-body">
+          <h4 class="card-text style-card-title">Chaleco Jean Style</h4>
+          <p class="card-text style-card-text">$25.640</p>
+          <a href="#" class="btn btn-light">Ver</a>
         </div>
       </div>
     </div>
     <div class="p-3">
       <div class="card text-bg-dark float borde-card" >
         <img src="./assets/img/card_producto/buzo2.jpeg" class="card-img" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title"  style="text-align: center;">Buzo Grey NewAge</h5>
-          <p class="card-text"  style="text-align: center;">$40.500</p>
-          <a href="#" class="btn btn-primary" >Mas Detalles</a>
+        <div class="card-body style-card-body">
+          <h4 class="card-title style-card-title" >Buzo Grey NewAge</h4>
+          <p class="card-text style-card-text">$40.500</p>
+          <a href="#" class="btn btn-light" >Ver</a>
         </div>
       </div>
     </div>
