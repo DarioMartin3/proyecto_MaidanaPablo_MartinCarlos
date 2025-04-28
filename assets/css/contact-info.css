@@ -1,11 +1,4 @@
-.icono-contacto, .icono-redes {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.icono-contacto:hover, .icono-redes:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
 .img-separador {
     height: 20vh; /* por ejemplo, 50% del alto de la ventana */
     object-fit: cover; /* para que no se deforme */
