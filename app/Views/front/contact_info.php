@@ -8,7 +8,7 @@
         <div class="row align-items-center mb-5">
             <!-- Contenido alineado a la izquierda -->
             <div class="col-md-6 text-center mb-4 mb-md-0">
-                <img src="./assets/img/Iconos_layout/envelope.svg" width="60" height="60" class="mb-3 icono-contacto">
+                <img src="./assets/img/Iconos_layout/envelope.svg" width="60" height="60" class="mb-3">
                 <p class="fs-5">
                     <strong>Consultas:</strong><br>
                     <a href="mailto:ventas@404clothing.com.ar" class="text-decoration-none" style="color: #333; font-size: 1.2rem;">ventas@404clothing.com.ar</a>
@@ -17,10 +17,10 @@
 
             <div class="col-md-6 text-center">
                 <a href="https://www.facebook.com" target="_blank" class="me-4">
-                    <img src="./assets/img/Iconos_layout/facebook.svg" width="60" height="60" class="icono-redes" alt="Facebook">
+                    <img src="./assets/img/Iconos_layout/facebook.svg" width="60" height="60" alt="Facebook">
                 </a>
                 <a href="https://www.instagram.com" target="_blank">
-                    <img src="./assets/img/Iconos_layout/instagram.svg" width="60" height="60" class="icono-redes" alt="Instagram">
+                    <img src="./assets/img/Iconos_layout/instagram.svg" width="60" height="60" alt="Instagram">
                 </a>
             </div>
         </div>
