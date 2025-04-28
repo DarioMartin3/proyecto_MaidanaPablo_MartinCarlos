@@ -10,7 +10,7 @@
             <div class="carousel-inner">
 
                 <div class="carousel-item active text-center">
-                    <div class="d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column align-items-center ">
                         <img src="./assets/img/Iconos_layout/shipping.svg"
                             alt="Icono Envío Gratis" width="50" height="50" class="mb-2">
                         <h4>Envío Gratis</h4>
@@ -52,10 +52,10 @@
             </button>
         </div>
         <!-- Iconos de la sección superior -->
-        <div class="d-none d-md-block">
+        <div class="d-none d-md-block" style="width: 100%;">
             <div class="row g-0">
                 <!-- Columna Envío Gratis -->
-                <div class="col-md-4 pe-md-3 border-end-md">
+                <div class="col-md-4 pe-md-3 border-end-md ">
                     <div class="d-flex flex-column align-items-center text-center h-100">
                         <img src="./assets/img/Iconos_layout/shipping.svg" alt="Icono Envío" width="40" height="40" class="mb-2">
                         <h5 class="mb-1">Envío Gratis</h5>
@@ -65,7 +65,7 @@
                 </div>
 
                 <!-- Columna Cuotas -->
-                <div class="col-md-4 px-md-3 border-end-md">
+                <div class="col-md-4 px-md-3 border-end-md ">
                     <div class="d-flex flex-column align-items-center text-center h-100">
                         <img src="./assets/img/Iconos_layout/credit-card.svg" alt="Icono Tarjeta" width="40" height="40" class="mb-2">
                         <h5 class="mb-1">3 cuotas sin interés</h5>
@@ -75,7 +75,7 @@
                 </div>
 
                 <!-- Columna Cambios -->
-                <div class="col-md-4 ps-md-3">
+                <div class="col-md-4 ps-md-3 ">
                     <div class="d-flex flex-column align-items-center text-center h-100">
                         <img src="./assets/img/Iconos_layout/returns.svg" alt="Icono Cambios" width="40" height="40" class="mb-2">
                         <h5 class="mb-1">Cambios?</h5>
