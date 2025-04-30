@@ -1,11 +1,11 @@
-<link href="./assets/css/formas_pagos.css" rel="stylesheet">
+
 <section class="conteiner-fluid">
 <div class="style-div-titulo">
     <h2 class="style-titulo">METODOS DE ENVIO</h2>
 </div>
     <div class="d-flex justify-content-center " style="text-align: center;margin-top:25px">
         
-        <div class="accordion acordeon" id="accordionExample">
+        <div class="accordion arcordeon" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button button_op" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
