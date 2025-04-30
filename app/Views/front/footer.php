@@ -1,4 +1,4 @@
-</body>
+
 
 
 <footer class="footer mt-auto py-3 bg-body-tertiary">
@@ -163,9 +163,9 @@
         setTimeout(() => {
             message.remove();
         }, 3000); // 3000 milisegundos = 3 segundos
-    });
+    });    
 </script>
-
+</body>
 
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
