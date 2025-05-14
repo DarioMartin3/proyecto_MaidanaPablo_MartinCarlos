@@ -148,8 +148,52 @@
                 <!-- Botón de Registro -->
                 <div class="text-center">
                     <p>¿No tienes una cuenta?</p>
-                    <a href="<?php echo base_url('/construction_page'); ?>" class="btn btn-outline-secondary">Registrarse</a>
+                    <a href="#" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#registerModal">Registrarse</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal de Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado del Modal -->
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registrarse</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <!-- Cuerpo del Modal -->
+            <div class="modal-body">
+                <form>
+                    <!-- Campo de Apellido -->
+                    <div class="mb-3">
+                        <label for="lastname" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Ingresa tu apellido" required>
+                    </div>
+                    <!-- Campo de Nombre -->
+                    <div class="mb-3">
+                        <label for="firstname" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Ingresa tu nombre" required>
+                    </div>
+                    <!-- Campo de Usuario -->
+                    <div class="mb-3">
+                        <label for="registerUsername" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="registerUsername" placeholder="Ingresa tu usuario" required>
+                    </div>
+                    <!-- Campo de Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                    </div>
+                    <!-- Campo de Contraseña -->
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <!-- Botón de Registrarse -->
+                    <button type="submit" class="btn btn-dark w-100">Registrarse</button>
+                </form>
             </div>
         </div>
     </div>
