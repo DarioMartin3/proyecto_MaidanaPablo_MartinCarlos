@@ -166,31 +166,32 @@
             <!-- Cuerpo del Modal -->
              <?php $validation = \Config\Services::validation(); ?>
             <div class="modal-body">
-                <form >
-                    <!-- Campo de Apellido -->
+                <form method="post" action="<?= base_url('/enviar-form')?>"> 
+                <?=csrf_field()?>    
+                <!-- Campo de Apellido -->
                     <div class="mb-3">
                         <label for="lastname" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="lastname" placeholder="Ingresa tu apellido" required>
+                        <input type="text" class="form-control" id="lastname" name="apellido" placeholder="Ingresa tu apellido" required>
                     </div>
                     <!-- Campo de Nombre -->
                     <div class="mb-3">
                         <label for="firstname" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="firstname" placeholder="Ingresa tu nombre" required>
+                        <input type="text" class="form-control" id="firstname" name="nombre" placeholder="Ingresa tu nombre" required>
                     </div>
                     <!-- Campo de Usuario -->
                     <div class="mb-3">
                         <label for="registerUsername" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="registerUsername" placeholder="Ingresa tu usuario" required>
+                        <input type="text" class="form-control" id="registerUsername" name="usuario" placeholder="Ingresa tu usuario" required>
                     </div>
                     <!-- Campo de Email -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa tu email" required>
                     </div>
                     <!-- Campo de Contraseña -->
                     <div class="mb-3">
                         <label for="registerPassword" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="registerPassword" placeholder="Ingresa tu contraseña" required>
+                        <input type="password" class="form-control" id="registerPassword" name="pass" placeholder="Ingresa tu contraseña" required>
                     </div>
                     <!-- Botón de Registrarse -->
                     <button type="submit" class="btn btn-dark w-100">Registrarse</button>
