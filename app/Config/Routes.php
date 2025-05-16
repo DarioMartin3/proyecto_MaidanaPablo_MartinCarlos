@@ -20,3 +20,5 @@ $routes->get('/metodos_de_envios', 'Home::metodos_env');
 $routes->get('/cambios_y_devoluciones', 'Home::cam_dev');
 
 $routes->get('/construction_page', 'Home::cPage');
+
+$router->post('/enviar_formulario', 'Usuario_controller::formvalidation');

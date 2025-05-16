@@ -11,6 +11,9 @@ class Usuarios_controller extends controller
     public function create(){
         $dato['titulo'] = 'Registro';
         echo view('front/header', $dato);
-        
+        echo view('front/navbar');
+        echo view('front/footer');
     }
+
+    
 }
