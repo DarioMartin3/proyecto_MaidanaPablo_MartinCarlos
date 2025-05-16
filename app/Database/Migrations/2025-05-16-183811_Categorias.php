@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Tallas extends Migration
+class Categorias extends Migration
 {
     public function up()
     {
@@ -14,18 +14,18 @@ class Tallas extends Migration
                 'unsigned' => true,
                 'auto_increment' => true
             ],
-            'talla' => [
+            'categoria' => [
                 'type' => 'varchar',
-                'constraint' => 10
+                'constraint' => 4
             ]
         ]);
-
+        
         $this->forge->addKey('id', true);
-        $this->forge->createTable('Tallas');
+        $this->forge->createTable('Categorias');
     }
 
     public function down()
     {
-        $this->forge->dropTable('Tallas');
+        $this->forge->dropTable('Categorias');
     }
 }
