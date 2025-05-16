@@ -164,8 +164,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- Cuerpo del Modal -->
+             <?php $validation = \Config\Services::validation(); ?>
             <div class="modal-body">
-                <form>
+                <form >
                     <!-- Campo de Apellido -->
                     <div class="mb-3">
                         <label for="lastname" class="form-label">Apellido</label>
