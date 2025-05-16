@@ -21,11 +21,11 @@ class Marcas extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->createTable('Marcas');
+        $this->forge->createTable('marcas');
     }
 
     public function down()
     {
-        $this->forge->dropTable('Marcas');
+        $this->forge->dropTable('marcas');
     }
 }

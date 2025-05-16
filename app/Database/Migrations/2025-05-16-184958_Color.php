@@ -20,11 +20,11 @@ class Color extends Migration
             ]
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('Colores');
+        $this->forge->createTable('colores');
     }
 
     public function down()
     {
-        $this->forge->dropTable('Colores');
+        $this->forge->dropTable('colores');
     }
 }

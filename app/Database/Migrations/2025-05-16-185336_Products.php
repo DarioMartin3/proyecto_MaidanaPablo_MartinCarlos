@@ -17,7 +17,8 @@ class Products extends Migration
                 'auto_increment' => true
             ],
             'id_categoria' => [
-                'type' => 'int'
+                'type' => 'int',
+                'unsigned' => true
             ],
             'estado' => [
                 'type' => 'varchar',
@@ -31,7 +32,8 @@ class Products extends Migration
                 'type' => 'text'
             ],
             'id_talla' => [
-                'type' => 'int'
+                'type' => 'int',
+                'unsigned' => true
             ],
             'stock' => [
                 'type' => 'int'
@@ -40,22 +42,24 @@ class Products extends Migration
                 'type' => 'float'
             ],
             'id_marca' => [
-                'type' => 'int'
+                'type' => 'int',
+                'unsigned' => true
             ],
             'id_color' => [
-                'type' => 'int'
+                'type' => 'int',
+                'unsigned' => true                
             ]
         ]); 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('id_categoria', 'Categorias', 'id');
-        $this->forge->addForeignKey('id_talla', 'Tallas', 'id');
-        $this->forge->addForeignKey('id_marca', 'Marcas', 'id');
-        $this->forge->addForeignKey('id_color', 'Colores', 'id');
-        $this->forge->createTable('Products');
+        $this->forge->addForeignKey('id_categoria', 'categorias', 'id');
+        $this->forge->addForeignKey('id_talla', 'tallas', 'id');
+        $this->forge->addForeignKey('id_marca', 'marcas', 'id');
+        $this->forge->addForeignKey('id_color', 'colores', 'id');
+        $this->forge->createTable('products');
     }
 
     public function down()
     {
-        $this->forge->dropTable('Products');
+        $this->forge->dropTable('products');
     }
 }

@@ -21,11 +21,11 @@ class Tallas extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->createTable('Tallas');
+        $this->forge->createTable('tallas');
     }
 
     public function down()
     {
-        $this->forge->dropTable('Tallas');
+        $this->forge->dropTable('tallas');
     }
 }
