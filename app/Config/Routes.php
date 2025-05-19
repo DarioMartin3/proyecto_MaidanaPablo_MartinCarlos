@@ -22,3 +22,15 @@ $routes->get('/cambios_y_devoluciones', 'Home::cam_dev');
 $routes->get('/construction_page', 'Home::cPage');
 
 $routes->post('/enviar_form', 'Usuarios_controller::formvalidation');
+
+$routes->get('/agregar_productos', 'Productos::index');
+
+$routes->get('/agregar_campos', 'Productos::agregar_campos');
+
+$routes->POST('/categoria', 'Categorias::categoria');
+
+$routes->POST('/marca', 'Categorias::marca');
+
+$routes->POST('/talla', 'Categorias::talla');
+
+$routes->POST('/color', 'Categorias::color');
