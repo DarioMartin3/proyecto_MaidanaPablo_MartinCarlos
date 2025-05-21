@@ -3,50 +3,58 @@
 </h1>
 <section  style="justify-content: center;display: flex;">
     <br>
-    <form class="row g-3" style="width: 70%;">
+    <form class="row g-3" style="width: 70%;" action="<?php echo base_url('ingresar_producto');?>" method="POST">
         <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nombre del Producto</label>
-            <input type="email" class="form-control" id="inputEmail4">
+            <label for="nombre" class="form-label">Nombre del Producto</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
         </div>
         <div class="col-md-6">
-            <label for="inputState" class="form-label">Categoria</label>
-            <select id="inputState" class="form-select">
+            <label for="categoria" class="form-label">Categoria</label>
+            <select id="categoria" class="form-select" name="categoria">
             <option selected>Choose...</option>
-            <option>...</option>
+            <?php foreach($categorias as $categorias):?>
+                <option value="<?= $categorias['id'] ?>"><?= $categorias['categoria'];?></option>
+            <?php endforeach;?>
             </select>
         </div>
         <div class="col-md-6">
-            <label for="inputState" class="form-label">Talla</label>
-            <select id="inputState" class="form-select">
+            <label for="talla" class="form-label">Talla</label>
+            <select id="talla" class="form-select" name="talla">
             <option selected>Choose...</option>
-            <option>...</option>
+            <?php foreach($tallas as $talla):?>
+                <option value="<?= $talla['id'] ?>"><?= $talla['talla'];?></option>
+            <?php endforeach;?>
             </select>
         </div>
         <div class="col-md-6">
-            <label for="inputState" class="form-label">Marca</label>
-            <select id="inputState" class="form-select">
+            <label for="marca" class="form-label">Marca</label>
+            <select id="marca" class="form-select" name="marca">
             <option selected>Choose...</option>
-            <option>...</option>
+            <?php foreach($marcas as $marca):?>
+                <option value="<?= $marca['id'] ?>"><?= $marca['marca'];?></option>
+            <?php endforeach;?>
             </select>
         </div>
         <div class="col-md-6">
-            <label for="inputCity" class="form-label">stock</label>
-            <input type="number" class="form-control" id="inputCity" min=1>
+            <label for="stock" class="form-label">stock</label>
+            <input type="number" class="form-control" id="stock" min=1 name="stock">
         </div>
         <div class="col-md-4">
-            <label for="inputState" class="form-label">color</label>
-            <select id="inputState" class="form-select">
+            <label for="color" class="form-label">color</label>
+            <select id="color" class="form-select" name="color">
             <option selected>Choose...</option>
-            <option>...</option>
+            <?php foreach($colores as $color):?>
+                <option value="<?= $color['id'] ?>"><?= $color['color'];?></option>
+            <?php endforeach;?>
             </select>
         </div>
         <div class="col-md-2">
-            <label for="inputZip" class="form-label">Precio</label>
-            <input type="number" class="form-control" id="inputZip" min=1>
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" id="precio" min=1 name="precio">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea class="form-control" id="descripcion" rows="3" name="descripcion"></textarea>
         </div>
         <div class="col-12 conteiner-flex" style="justify-content: center;display: flex;">
             <button type="submit" class="btn btn-primary">Agregar Producto</button>

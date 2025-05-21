@@ -34,3 +34,5 @@ $routes->POST('/marca', 'Categorias::marca');
 $routes->POST('/talla', 'Categorias::talla');
 
 $routes->POST('/color', 'Categorias::color');
+
+$routes->POST('/ingresar_producto', 'Productos::agrega_producto');
