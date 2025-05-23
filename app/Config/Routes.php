@@ -38,3 +38,6 @@ $routes->POST('/ingresar_producto', 'Productos::agrega_producto');
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
 
 $routes->get('/dashboard', 'Dashboard::index', ['filter'=>'auth']);
+
+$routes->post('/enviarlogin', 'login_controller::auth');
+
