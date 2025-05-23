@@ -12,14 +12,7 @@ class Usuarios_controller extends Controller
         helper(['form', 'url']);
     }
 
-    public function create()
-    {
-        $dato['titulo'] = 'Registro';
-        echo view('front/header', $dato);
-        echo view('front/navbar');
-        echo view('front/homep');
-        echo view('front/footer');
-    }
+    
 
     public function formValidation()
     {
@@ -45,12 +38,12 @@ class Usuarios_controller extends Controller
                 'usuario'  => $this->request->getPost('usuario'),
                 'email'    => $this->request->getPost('email'),
                 'pass'     => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
-                'perfil_id'=> 2, // o el valor por defecto que uses
-                'baja'     => 0  // o el valor por defecto que uses
+                'perfil_id'=> 3, 
+                'baja'     => 0  
             ];
             $model->insert($data);
 
-            return redirect()->to('/')->with('mensaje', 'Usuario registrado correctamente');
+            return redirect()-> back()->with('mensaje', 'Usuario registrado correctamente');
         }
     }
 }

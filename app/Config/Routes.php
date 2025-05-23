@@ -21,8 +21,6 @@ $routes->get('/cambios_y_devoluciones', 'Home::cam_dev');
 
 $routes->get('/construction_page', 'Home::cPage');
 
-$routes->post('/enviar_form', 'Usuarios_controller::formvalidation');
-
 $routes->get('/agregar_productos', 'Productos::index');
 
 $routes->get('/agregar_campos', 'Productos::agregar_campos');
@@ -36,3 +34,7 @@ $routes->POST('/talla', 'Categorias::talla');
 $routes->POST('/color', 'Categorias::color');
 
 $routes->POST('/ingresar_producto', 'Productos::agrega_producto');
+
+$routes->post('/enviar-form', 'Usuarios_controller::formValidation');
+
+$routes->get('/dashboard', 'Dashboard::index', ['filter'=>'auth']);
