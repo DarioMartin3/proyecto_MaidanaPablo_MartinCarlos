@@ -41,24 +41,13 @@ class Usuarios extends Migration
                 'type'       => 'INT',
                 'constraint' => 11,
                 'unsigned'   => true,
-                'default'    => 2, // 👈 todos entran como perfil 2 por defecto
+                'default'    => 2, //todos entran como perfil 2 por defecto
             ],
             'baja' => [
                 'type'       => 'BOOLEAN',
                 'default'    => false,
             ],
-            'created_at' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
-            'updated_at' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
-            'deleted_at' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
+            
         ]);
 
         $this->forge->addKey('id_usuario', true);
