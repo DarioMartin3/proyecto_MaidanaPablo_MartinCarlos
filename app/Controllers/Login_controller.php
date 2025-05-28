@@ -1,15 +1,12 @@
 <?php
+
 namespace App\Controllers;
-use CodeIgniter\Controller;
+
 use App\Models\UsuariosModel;
+use CodeIgniter\Controller;
 
-class Login_controller extends BaseController 
+class Login_controller extends Controller
 {
-    public function index()
-    {
-        helper(['form', "url"]);
-    }
-
     public function auth()
     {
         $session = session();
@@ -18,39 +15,44 @@ class Login_controller extends BaseController
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        $data = $model->wher('email', $email)->firts();
-        if($data){
+        $data = $model->where('email', $email)->first();
+        if ($data) {
             $pass = $data['pass'];
             $verify_pass = password_verify($password, $pass);
             $ba = $data['baja'];
-            if($ba == 'SI'){
+            if ($ba == 'SI' || $ba == 1) {
                 $session->setFlashdata('error', 'Usuario dado de baja');
                 return redirect()->back();
             }
-        $verify_pass = password_verify($password, $pass);
 
-        if($verify_pass){
+            if ($verify_pass) {
                 $ses_data = [
                     'id_usuario' => $data['id_usuario'],
-                    'nombre' => $data['nombre'],
-                    'aplledio'=> $data['apellido'],
-                    'email' => $data['email'],
-                    'usuario' => $data['usuario'],
-                    'perfil_id'=> $data['perfil_id'],
-                    'logged_in' => TRUE
+                    'nombre'     => $data['nombre'],
+                    'apellido'   => $data['apellido'],
+                    'email'      => $data['email'],
+                    'usuario'    => $data['usuario'],
+                    'perfil_id'  => $data['perfil_id'],
+                    'logged_in'  => TRUE
                 ];
 
                 $session->set($ses_data);
 
                 session()->setFlashdata('success', 'Bienvenido');
                 return redirect()->back();
-            }else{
+            } else {
                 session()->setFlashdata('error', 'Contraseña incorrecta');
                 return redirect()->back();
             }
-        }else{
+        } else {
             session()->setFlashdata('error', 'El usuario no existe');
             return redirect()->back();
         }
+    }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('/');
     }
 }

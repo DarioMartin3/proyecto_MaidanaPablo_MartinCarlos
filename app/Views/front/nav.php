@@ -101,10 +101,15 @@
                         <img src="./assets/img/Iconos_layout/search.svg" width="30" height="30" alt="Search">
                     </button>
                 </div>
-                <!-- Botón de Login -->
-                <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
-                </button>
+                <?php if (session()->get('usuario')): ?>
+                    <span class="me-2">Hola, <b><?= esc(session()->get('nombre')) ?></b></span>
+                    <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm">Cerrar sesión</a>
+                <?php else: ?>
+                    <!-- Botón de Login -->
+                    <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
+                    </button>
+                <?php endif; ?>
                 <!-- Botón de carrito -->
                 <button href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
                     <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
@@ -113,12 +118,6 @@
         </div>
     </nav>
 </section>
-<script>
-    function toggleSearchBar() {
-        const searchBar = document.getElementById('searchBar');
-        searchBar.classList.toggle('d-none');
-    }
-</script>
 <!-- Modal de Login -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -164,11 +163,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <!-- Cuerpo del Modal -->
-             <?php $validation = \Config\Services::validation(); ?>
+            <?php $validation = \Config\Services::validation(); ?>
             <div class="modal-body">
-                <form method="post" action="<?= base_url('/enviar-form')?>"> 
-                <?=csrf_field()?>    
-                <!-- Campo de Apellido -->
+                <form method="post" action="<?= base_url('/enviar-form') ?>">
+                    <?= csrf_field() ?>
+                    <!-- Campo de Apellido -->
                     <div class="mb-3">
                         <label for="lastname" class="form-label">Apellido</label>
                         <input type="text" class="form-control" id="lastname" name="apellido" placeholder="Ingresa tu apellido" required>
@@ -213,5 +212,11 @@
     </div>
 </div>
 </header>
+<script>
+    function toggleSearchBar() {
+        const searchBar = document.getElementById('searchBar');
+        searchBar.classList.toggle('d-none');
+    }
+</script>
 
 <body>

@@ -41,3 +41,4 @@ $routes->get('/dashboard', 'Dashboard::index', ['filter'=>'auth']);
 
 $routes->post('/enviarlogin', 'login_controller::auth');
 
+$routes->get('/logout', 'Login_controller::logout');
