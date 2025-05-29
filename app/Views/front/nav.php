@@ -129,16 +129,17 @@
             </div>
             <!-- Cuerpo del Modal -->
             <div class="modal-body">
-                <form>
+                <form method="post" action="<?= base_url('/login') ?>">
+                    <?= csrf_field() ?>
                     <!-- Campo de Usuario -->
                     <div class="mb-3">
                         <label for="username" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario" required>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu usuario" required>
                     </div>
                     <!-- Campo de Contraseña -->
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" required>
+                        <input type="password" class="form-control" id="password" name="pass" placeholder="Ingresa tu contraseña" required>
                     </div>
                     <!-- Botón de Iniciar Sesión -->
                     <button type="submit" class="btn btn-dark w-100">Iniciar Sesión</button>

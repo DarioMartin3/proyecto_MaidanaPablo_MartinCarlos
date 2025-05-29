@@ -38,7 +38,7 @@ class Usuarios_controller extends Controller
                 'usuario'  => $this->request->getPost('usuario'),
                 'email'    => $this->request->getPost('email'),
                 'pass'     => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
-                'perfil_id'=> 3, 
+                'perfil_id'=> 2, 
                 'baja'     => 0  
             ];
             $model->insert($data);
