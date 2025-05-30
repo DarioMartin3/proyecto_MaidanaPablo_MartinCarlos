@@ -105,14 +105,13 @@
                     <span class="me-2">Hola, <b><?= esc(session()->get('nombre')) ?></b></span>
                     <?php if (session()->get('perfil_id') == 1): ?>
                         <!-- Opciones solo para administrador -->
-                        <a href="<?= base_url('/admin') ?>" class="btn btn-warning btn-sm me-2">Panel Admin</a>
-                        <a href="<?= base_url('/productos') ?>" class="btn btn-info btn-sm me-2">Mis Productos</a>
-
+                        <a href="<?= base_url('/admin') ?>" class="btn btn-black btn-sm me-2">Panel Admin</a>
+                        <a href="<?= base_url('/agregar_productos') ?>" class="btn btn-black btn-sm me-2">Mis Productos</a>
                     <?php elseif (session()->get('perfil_id') == 2): ?>
-                        <!-- Opciones solo para vendedor -->
-
                         <!-- Opciones solo para cliente -->
-                        <a href="<?= base_url('/mis-compras') ?>" class="btn btn-success btn-sm me-2">Mis Compras</a>
+                        <button href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
+                            <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
+                        </button>
                     <?php endif; ?>
                     <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm">Cerrar sesión</a>
                 <?php else: ?>
