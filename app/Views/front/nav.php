@@ -139,7 +139,7 @@
                     <!-- Campo de Contraseña -->
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="pass" placeholder="Ingresa tu contraseña" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu contraseña" required>
                     </div>
                     <!-- Botón de Iniciar Sesión -->
                     <button type="submit" class="btn btn-dark w-100">Iniciar Sesión</button>
