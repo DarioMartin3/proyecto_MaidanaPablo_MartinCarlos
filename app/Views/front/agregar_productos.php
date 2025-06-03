@@ -3,12 +3,12 @@
 </h1>
 <section  style="justify-content: center;display: flex;">
     <br>
-    <form class="row g-3" style="width: 70%;" action="<?php echo base_url('ingresar_producto');?>" method="POST">
+    <form class="row g-3" style="width: 70%;" action="<?php echo base_url('ingresar_producto');?>" method="POST" enctype="multipart/form-data">
         <div class="col-md-6">
             <label for="nombre" class="form-label">Nombre del Producto</label>
             <input type="text" class="form-control" id="nombre" name="nombre">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" >
             <label for="categoria" class="form-label">Categoria</label>
             <select id="categoria" class="form-select" name="categoria">
             <option selected>Choose...</option>
@@ -55,6 +55,11 @@
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripcion</label>
             <textarea class="form-control" id="descripcion" rows="3" name="descripcion"></textarea>
+        </div>
+        <div class="col-md-12 mb-3">
+            <label for="imagen" class="form-label">Imagen del Producto</label>
+            <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
+            <small class="text-muted">Formatos aceptados: JPG, PNG, JPEG (Max. 2MB)</small>
         </div>
         <div class="col-12 conteiner-flex" style="justify-content: center;display: flex;">
             <button type="submit" class="btn btn-primary">Agregar Producto</button>

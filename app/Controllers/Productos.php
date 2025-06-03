@@ -39,6 +39,19 @@ class Productos extends BaseController
 
     public function agrega_producto()
     {
+        $rules = [
+            'imagen' => [
+                'uploaded[imagen]',
+                'mime_in[imagen,image/jpg,image/jpeg,image/png]',
+                'max_size[imagen,2048]'
+            ]
+        ];
+        $imagen = $this->request->getFile('imagen');
+        $nuevoNombre = $imagen->getRandomName();
+        if ($imagen->isValid() && !$imagen->hasMoved()) {
+            $imagen->move(WRITEPATH . 'uploads/imagenes', $nuevoNombre);
+        }
+
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'precio' => $this->request->getPost('precio'),
@@ -47,7 +60,9 @@ class Productos extends BaseController
             'stock' => $this->request->getPost('stock'),
             'id_talla' => $this->request->getPost('talla'),
             'id_categoria' => $this->request->getPost('categoria'),
-            'descripcion' => $this->request->getPost('descripcion')
+            'descripcion' => $this->request->getPost('descripcion'),
+            'nombre_imagen' => $nuevoNombre,
+            'estado' => 1
         ];
         $model = new ProductsModel();
 
@@ -64,7 +79,15 @@ class Productos extends BaseController
     
     public function lista()
     {
+        $modelMarcas = new MarcasModel();
+        $modelCate = new CategoriasModel();
+        $modelTalla = new TallasModel();
+        $modelColor = new ColoresModel();
         $model = new ProductsModel();
+        $data['marcas'] = $modelMarcas->findAll();
+        $data['categorias'] = $modelCate->findAll();
+        $data['tallas'] = $modelTalla->findAll();
+        $data['colores'] = $modelColor->findAll();
         $data['productos'] = $model->findAll();
         echo view('front/header');
         echo view('front/nav');
@@ -84,5 +107,25 @@ class Productos extends BaseController
         $model = new ProductsModel();
         $model->update($id, ['estado' => 1]);
         return redirect()->back()->with('mensaje', 'Producto habilitado');
+    }
+
+    public function actualizar($id)
+    {
+        $model = new ProductsModel();
+
+        
+        $data = [
+            'nombre' => $this->request->getPost('nombre'),
+            'id_categoria' => $this->request->getPost('categoria'),
+            'id_talla' => $this->request->getPost('talla'),
+            'stock' => $this->request->getPost('stock'),
+            'precio' => $this->request->getPost('precio'),
+            'id_marca' => $this->request->getPost('marca'),
+            'id_color' => $this->request->getPost('color'),
+            'descripcion' => $this->request->getPost('descripcion')
+        ];
+
+        $model->update($id, $data);
+        return redirect()->to('/productos')->with('mensaje', 'Producto actualizado correctamente');
     }
 }

@@ -13,7 +13,7 @@ class ProductsModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = ['id_categoria', 'estado', 'nombre', 'descripcion',  
-                                    'id_talla', 'stock', 'precio', 'id_marca', 'id_color'];
+                                    'id_talla', 'stock', 'precio', 'id_marca', 'id_color', 'nombre_imagen'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

@@ -53,4 +53,4 @@ $routes->get('/productos/deshabilitar/(:num)', 'Productos::deshabilitar/$1');
 
 $routes->get('/productos/habilitar/(:num)', 'Productos::habilitar/$1');
 
-$routes->get('/productos/modificar/(:num)', 'Productos::modificar/$1');
+$routes->POST('/productos/modificar/(:num)', 'Productos::actualizar/$1');
