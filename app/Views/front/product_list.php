@@ -8,6 +8,7 @@
         <thead class="table-dark">
             <tr>
                 <th>ID</th>
+                <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Precio</th>
@@ -20,6 +21,7 @@
             <?php foreach ($productos as $producto): ?>
                 <tr>
                     <td><?= esc($producto['id']) ?></td>
+                    <td><img ></td>
                     <td><?= esc($producto['nombre']) ?></td>
                     <td><?= esc($producto['descripcion']) ?></td>
                     <td>$<?= esc($producto['precio']) ?></td>
@@ -37,7 +39,7 @@
                         <?php else: ?>
                             <a href="<?= base_url('/productos/habilitar/' . $producto['id']) ?>" class="btn btn-success btn-sm">Habilitar</a>
                         <?php endif; ?>
-                        <a href="<?= base_url('/productos/modificar/' . $producto['id']) ?>" class="btn btn-primary btn-sm">Modificar</a>
+                        <a href="<?= base_url('/productos/modificar/' . $producto['id']) ?>" class="btn btn-black btn-sm">Modificar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

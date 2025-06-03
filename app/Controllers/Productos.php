@@ -61,6 +61,7 @@ class Productos extends BaseController
             echo "error" . $e->getMessage();
         }
     }
+    
     public function lista()
     {
         $model = new ProductsModel();
