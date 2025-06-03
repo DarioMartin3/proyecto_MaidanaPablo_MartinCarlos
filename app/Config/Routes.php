@@ -37,7 +37,7 @@ $routes->POST('/ingresar_producto', 'Productos::agrega_producto');
 
 $routes->post('/enviar-form', 'Usuarios_controller::formValidation');
 
-$routes->get('/dashboard', 'Dashboard::index', ['filter'=>'auth']);
+$routes->get('/dashboard', 'Dashboard::index', ['filter' => 'auth']);
 
 $routes->post('/enviarlogin', 'login_controller::auth');
 
@@ -45,4 +45,12 @@ $routes->get('/logout', 'Login_controller::logout');
 
 $routes->post('/login', 'Login_controller::auth');
 
+$routes->get('/admin_menu', 'Home::adminMenu');
 
+$routes->get('/productos', 'Productos::lista');
+
+$routes->get('/productos/deshabilitar/(:num)', 'Productos::deshabilitar/$1');
+
+$routes->get('/productos/habilitar/(:num)', 'Productos::habilitar/$1');
+
+$routes->get('/productos/modificar/(:num)', 'Productos::modificar/$1');

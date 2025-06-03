@@ -105,8 +105,7 @@
                     <span class="me-2">Hola, <b><?= esc(session()->get('nombre')) ?></b></span>
                     <?php if (session()->get('perfil_id') == 1): ?>
                         <!-- Opciones solo para administrador -->
-                        <a href="<?= base_url('/admin') ?>" class="btn btn-black btn-sm me-2">Panel Admin</a>
-                        <a href="<?= base_url('/agregar_productos') ?>" class="btn btn-black btn-sm me-2">Mis Productos</a>
+                        <a href="<?= base_url('/admin_menu') ?>" class="btn btn-black btn-sm me-2">Panel Admin</a>
                     <?php elseif (session()->get('perfil_id') == 2): ?>
                         <!-- Opciones solo para cliente -->
                         <button href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">

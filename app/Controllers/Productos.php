@@ -40,26 +40,48 @@ class Productos extends BaseController
     public function agrega_producto()
     {
         $data = [
-                    'nombre' => $this->request->getPost('nombre'),
-                    'precio' => $this->request->getPost('precio'),
-                    'id_marca' => $this->request->getPost('marca'),
-                    'id_color' => $this->request->getPost('color'),
-                    'stock' => $this->request->getPost('stock'),
-                    'id_talla' => $this->request->getPost('talla'),
-                    'id_categoria' => $this->request->getPost('categoria'),
-                    'descripcion' => $this->request->getPost('descripcion')
-                ];
+            'nombre' => $this->request->getPost('nombre'),
+            'precio' => $this->request->getPost('precio'),
+            'id_marca' => $this->request->getPost('marca'),
+            'id_color' => $this->request->getPost('color'),
+            'stock' => $this->request->getPost('stock'),
+            'id_talla' => $this->request->getPost('talla'),
+            'id_categoria' => $this->request->getPost('categoria'),
+            'descripcion' => $this->request->getPost('descripcion')
+        ];
         $model = new ProductsModel();
 
-        try{
-            if($model->insert($data)) {
+        try {
+            if ($model->insert($data)) {
                 return redirect()->to('/agregar_productos')->with('mensaje', 'Producto ingresado correctamente');
-            }else{
+            } else {
                 return redirect()->back();
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo "error" . $e->getMessage();
         }
-        
+    }
+    public function lista()
+    {
+        $model = new ProductsModel();
+        $data['productos'] = $model->findAll();
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/product_list', $data);
+        echo view('front/footer');
+    }
+
+    public function deshabilitar($id)
+    {
+        $model = new ProductsModel();
+        $model->update($id, ['estado' => 0]);
+        return redirect()->back()->with('mensaje', 'Producto deshabilitado');
+    }
+
+    public function habilitar($id)
+    {
+        $model = new ProductsModel();
+        $model->update($id, ['estado' => 1]);
+        return redirect()->back()->with('mensaje', 'Producto habilitado');
     }
 }

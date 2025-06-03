@@ -63,6 +63,13 @@ class Home extends BaseController
         echo view('front/construction_page');
         echo view('front/footer');
     }
+
+    public function adminMenu(){
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/admin_menu');
+        echo view('front/footer');
+    }
 }
 
 
