@@ -134,12 +134,17 @@
             </div>
             <!-- Cuerpo del Modal -->
             <div class="modal-body">
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?= session('error') ?>
+                    </div>
+                <?php endif; ?>
                 <form method="post" action="<?= base_url('/login') ?>">
                     <?= csrf_field() ?>
                     <!-- Campo de Usuario -->
                     <div class="mb-3">
-                        <label for="username" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu usuario" required>
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electronico" required>
                     </div>
                     <!-- Campo de Contraseña -->
                     <div class="mb-3">
@@ -224,5 +229,6 @@
         searchBar.classList.toggle('d-none');
     }
 </script>
+
 
 <body>
