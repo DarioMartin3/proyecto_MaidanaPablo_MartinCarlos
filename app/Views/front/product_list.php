@@ -1,5 +1,5 @@
 <!-- Lista de Productos -->
-<div class="container py-4">
+<div class="container-fluid py-4">
     <h2 class="mb-4">Lista de Productos</h2>
     <?php if (session('mensaje')): ?>
         <div class="alert alert-success"> <?= session('mensaje') ?> </div>
