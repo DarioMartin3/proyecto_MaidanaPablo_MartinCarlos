@@ -144,7 +144,7 @@
                     <!-- Campo de Usuario -->
                     <div class="mb-3">
                         <label for="Email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electronico" required>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Ingresa tu correo electronico" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
                     </div>
                     <!-- Campo de Contraseña -->
                     <div class="mb-3">
@@ -223,12 +223,4 @@
     </div>
 </div>
 </header>
-<script>
-    function toggleSearchBar() {
-        const searchBar = document.getElementById('searchBar');
-        searchBar.classList.toggle('d-none');
-    }
-</script>
-
-
 <body>
