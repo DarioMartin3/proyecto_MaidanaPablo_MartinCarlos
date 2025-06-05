@@ -38,8 +38,7 @@
                             <a href="<?= base_url('/productos/deshabilitar/' . $producto['id']) ?>" class="btn btn-warning btn-sm">Deshabilitar</a>
                         <?php else: ?>
                             <a href="<?= base_url('/productos/habilitar/' . $producto['id']) ?>" class="btn btn-success btn-sm">Habilitar</a>
-                        <?php endif; ?>
-                        <!-- Scrollable modal -->
+                        <?php endif; ?>                        
                         <!-- Modal de Edición -->
                         <div class="modal fade" id="editarProductoModal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
@@ -48,8 +47,7 @@
                             <div class="modal-header bg-light p-3">
                                 <h5 class="modal-title">Editar Producto</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            
+                            </div>                            
                             <!-- Cuerpo del Modal -->
                             <div class="modal-body p-4">
                                 <form id="editarProductoForm" action="<?= base_url('/productos/modificar/' . $producto['id']) ?>" method="POST">
@@ -69,7 +67,6 @@
                                         </select>
                                     </div>
                                 </div>
-
                                 <!-- Fila 2: Talla, Stock y Precio -->
                                 <div class="row mb-3">
                                     <div class="col-md-3">
@@ -93,7 +90,6 @@
                                     </div>
                                     </div>
                                 </div>
-
                                 <!-- Fila 3: Marca y Color -->
                                 <div class="row mb-3">
                                     <div class="col-md-6">
