@@ -131,7 +131,13 @@ class Productos extends BaseController
 
     public function catalogo_productos()
     {
+        $modelMarcas = new MarcasModel();
+        $modelCate = new CategoriasModel();
+        $modelTalla = new TallasModel();
         $model = new ProductsModel();
+        $data['marcas'] = $modelMarcas->findAll();
+        $data['categorias'] = $modelCate->findAll();
+        $data['tallas'] = $modelTalla->findAll();
         $data['productos'] = $model->where('estado', 1)->findAll();
 
         echo view('front/header');
