@@ -11,7 +11,7 @@
         <div class="col-md-6" >
             <label for="categoria" class="form-label">Categoria</label>
             <select id="categoria" class="form-select" name="categoria">
-            <option selected>Choose...</option>
+            <option selected>Selecciona...</option>
             <?php foreach($categorias as $categorias):?>
                 <option value="<?= $categorias['id'] ?>"><?= $categorias['categoria'];?></option>
             <?php endforeach;?>
@@ -20,7 +20,7 @@
         <div class="col-md-6">
             <label for="talla" class="form-label">Talla</label>
             <select id="talla" class="form-select" name="talla">
-            <option selected>Choose...</option>
+            <option selected>Selecciona...</option>
             <?php foreach($tallas as $talla):?>
                 <option value="<?= $talla['id'] ?>"><?= $talla['talla'];?></option>
             <?php endforeach;?>
@@ -29,7 +29,7 @@
         <div class="col-md-6">
             <label for="marca" class="form-label">Marca</label>
             <select id="marca" class="form-select" name="marca">
-            <option selected>Choose...</option>
+            <option selected>Selecciona...</option>
             <?php foreach($marcas as $marca):?>
                 <option value="<?= $marca['id'] ?>"><?= $marca['marca'];?></option>
             <?php endforeach;?>
@@ -37,12 +37,12 @@
         </div>
         <div class="col-md-6">
             <label for="stock" class="form-label">stock</label>
-            <input type="number" class="form-control" id="stock" min=1 name="stock">
+            <input type="number" class="form-control" id="stock" min=1 name="stock" value="1">
         </div>
         <div class="col-md-4">
             <label for="color" class="form-label">color</label>
             <select id="color" class="form-select" name="color">
-            <option selected>Choose...</option>
+            <option selected>Selecciona...</option>
             <?php foreach($colores as $color):?>
                 <option value="<?= $color['id'] ?>"><?= $color['color'];?></option>
             <?php endforeach;?>

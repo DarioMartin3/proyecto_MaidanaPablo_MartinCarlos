@@ -21,7 +21,7 @@
             <?php foreach ($productos as $producto): ?>
                 <tr>
                     <td><?= esc($producto['id']) ?></td>
-                    <td><img src="./public/uploads/imagenes/<?= $producto['nombre_imagen'] ?>" alt="Imagen del producto" style="max-width: 200px;max-height:200px"></td>
+                    <td><img src="./assets/uploads/<?= $producto['nombre_imagen'] ?>" alt="Imagen del producto" style="max-width: 200px;max-height:200px"></td>
                     <td><?= esc($producto['nombre']) ?></td>
                     <td><?= esc($producto['descripcion']) ?></td>
                     <td>$<?= esc($producto['precio']) ?></td>
@@ -60,7 +60,7 @@
                                     <div class="col-md-4">
                                         <label for="categoria" class="form-label">Categoria</label>
                                         <select id="categoria" class="form-select" name="categoria">
-                                        <option value="<?= $producto['id_categoria']?>">Choose...</option>
+                                        <option value="<?= $producto['id_categoria']?>">Selecciona...</option>
                                         <?php foreach($categorias as $categoria):?>
                                             <option value="<?= $categoria['id'] ?>"><?= $categoria['categoria'];?></option>
                                         <?php endforeach;?>
@@ -72,7 +72,7 @@
                                     <div class="col-md-3">
                                         <label for="talla" class="form-label">Talla</label>
                                         <select id="talla" class="form-select" name="talla">
-                                        <option value="<?= $producto['id_talla']?>">Choose...</option>
+                                        <option value="<?= $producto['id_talla']?>">Selecciona...</option>
                                         <?php foreach($tallas as $talla):?>
                                             <option value="<?= $talla['id'] ?>"><?= $talla['talla'];?></option>
                                         <?php endforeach;?>
@@ -95,7 +95,7 @@
                                     <div class="col-md-6">
                                         <label for="marca" class="form-label">Marca</label>
                                         <select id="marca" class="form-select" name="marca">
-                                        <option value="<?= $producto['id_marca']?>">Choose...</option>
+                                        <option value="<?= $producto['id_marca']?>">Selecciona...</option>
                                         <?php foreach($marcas as $marca):?>
                                             <option value="<?= $marca['id'] ?>"><?= $marca['marca'];?></option>
                                         <?php endforeach;?>
@@ -104,7 +104,7 @@
                                     <div class="col-md-6">
                                     <label for="color" class="form-label">color</label>
                                     <select id="color" class="form-select" name="color">
-                                    <option value="<?= $producto['id_color']?>">Choose...</option>
+                                    <option value="<?= $producto['id_color']?>">Selecciona...</option>
                                     <?php foreach($colores as $color):?>
                                         <option value="<?= $color['id'] ?>"><?= $color['color'];?></option>
                                     <?php endforeach;?>
@@ -123,14 +123,14 @@
                             <!-- Pie del Modal -->
                             <div class="modal-footer bg-light p-3">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" form="editarProductoForm" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="submit" form="editarProductoForm" class="btn btn-black">Guardar Cambios</button>
                             </div>
                             </div>
                         </div>
                         </div>
 
                         
-                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
+                        <button class="btn btn-sm btn-black" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
                         <i class="bi bi-pencil-square"></i> Editar
                         </button>
                     </td>

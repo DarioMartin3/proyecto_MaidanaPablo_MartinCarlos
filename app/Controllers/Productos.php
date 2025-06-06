@@ -49,7 +49,7 @@ class Productos extends BaseController
         $imagen = $this->request->getFile('imagen');
         $nuevoNombre = $imagen->getRandomName();
         if ($imagen->isValid() && !$imagen->hasMoved()) {
-            $imagen->move( './public/uploads/imagenes', $nuevoNombre);
+            $imagen->move( './assets/uploads', $nuevoNombre);
         }
 
         $data = [
