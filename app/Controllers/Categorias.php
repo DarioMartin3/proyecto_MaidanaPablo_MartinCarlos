@@ -16,70 +16,77 @@ class Categorias extends BaseController
     public function categoria()
     {
         $datos = ['categoria' => $this->request->getPost('categoria')];
-
         $model = new CategoriasModel();
-        try{
-            if($model->insert($datos)) {
+        $existe = $model->where('categoria', $datos)->first();
+        if ($existe) {
+            return redirect()->back()->with('campo_error', 'El dato ingresado ya existe.');
+        }
+        try {
+            if ($model->insert($datos)) {
                 return redirect()->to('/agregar_campos')->with('mensaje', 'Categoria creada correctamente');
-            }else{
+            } else {
                 return redirect()->back();
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo "datos contiene " . $datos['categoria'];
             echo "error" . $e->getMessage();
         }
-        
     }
     public function marca()
     {
         $datos = ['marca' => $this->request->getPost('marca')];
-
         $model = new MarcasModel();
-        try{
-            if($model->insert($datos)) {
-                return redirect()->to('/agregar_campos')->with('mensaje', 'Categoria creada correctamente');
-            }else{
+        $existe = $model->where('marca', $datos)->first();
+        if ($existe) {
+            return redirect()->back()->with('campo_error', 'El dato ingresado ya existe.');
+        }
+        try {
+            if ($model->insert($datos)) {
+                return redirect()->to('/agregar_campos')->with('mensaje', 'Marca creada correctamente');
+            } else {
                 return redirect()->back();
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo "datos contiene " . $datos['marca'];
             echo "error" . $e->getMessage();
         }
-        
     }
     public function talla()
     {
         $datos = ['talla' => $this->request->getPost('talla')];
-
         $model = new TallasModel();
-        try{
-            if($model->insert($datos)) {
-                return redirect()->to('/agregar_campos')->with('mensaje', 'Categoria creada correctamente');
-            }else{
+        $existe = $model->where('talla', $datos)->first();
+        if ($existe) {
+            return redirect()->back()->with('campo_error', 'El dato ingresado ya existe.');
+        }
+        try {
+            if ($model->insert($datos)) {
+                return redirect()->to('/agregar_campos')->with('mensaje', 'Talla creada correctamente');
+            } else {
                 return redirect()->back();
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo "datos contiene " . $datos['talla'];
             echo "error" . $e->getMessage();
         }
-        
     }
-
     public function color()
     {
         $datos = ['color' => $this->request->getPost('color')];
-
         $model = new ColoresModel();
-        try{
-            if($model->insert($datos)) {
-                return redirect()->to('/agregar_campos')->with('mensaje', 'Categoria creada correctamente');
-            }else{
+        $existe = $model->where('color', $datos)->first();
+        if ($existe) {
+            return redirect()->back()->with('campo_error', 'El dato ingresado ya existe.');
+        }
+        try {
+            if ($model->insert($datos)) {
+                return redirect()->to('/agregar_campos')->with('mensaje', 'Color creado correctamente');
+            } else {
                 return redirect()->back();
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             echo "datos contiene " . $datos['color'];
             echo "error" . $e->getMessage();
         }
-        
     }
 }

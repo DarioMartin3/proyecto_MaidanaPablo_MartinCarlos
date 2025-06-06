@@ -16,6 +16,7 @@ class Login_controller extends Controller
         $password = $this->request->getVar('password');
 
         $data = $model->where('email', $email)->first();
+       
         if ($data) {
             $pass = $data['pass'];
             $verify_pass = password_verify($password, $pass);

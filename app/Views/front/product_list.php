@@ -1,5 +1,5 @@
 <!-- Lista de Productos -->
-<div class="container py-4">
+<div class="container-fluid py-4">
     <h2 class="mb-4">Lista de Productos</h2>
     <?php if (session('mensaje')): ?>
         <div class="alert alert-success"> <?= session('mensaje') ?> </div>
@@ -21,7 +21,7 @@
             <?php foreach ($productos as $producto): ?>
                 <tr>
                     <td><?= esc($producto['id']) ?></td>
-                    <td><img src="./public/uploads/imagenes/<?= $producto['nombre_imagen'] ?>" alt="Imagen del producto" style="max-width: 200px;max-height:200px"></td>
+                    <td><img src="./assets/uploads/<?= $producto['nombre_imagen'] ?>" alt="Imagen del producto" style="max-width: 200px;max-height:200px"></td>
                     <td><?= esc($producto['nombre']) ?></td>
                     <td><?= esc($producto['descripcion']) ?></td>
                     <td>$<?= esc($producto['precio']) ?></td>
@@ -38,8 +38,7 @@
                             <a href="<?= base_url('/productos/deshabilitar/' . $producto['id']) ?>" class="btn btn-warning btn-sm">Deshabilitar</a>
                         <?php else: ?>
                             <a href="<?= base_url('/productos/habilitar/' . $producto['id']) ?>" class="btn btn-success btn-sm">Habilitar</a>
-                        <?php endif; ?>
-                        <!-- Scrollable modal -->
+                        <?php endif; ?>                        
                         <!-- Modal de Edición -->
                         <div class="modal fade" id="editarProductoModal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
@@ -48,8 +47,7 @@
                             <div class="modal-header bg-light p-3">
                                 <h5 class="modal-title">Editar Producto</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            
+                            </div>                            
                             <!-- Cuerpo del Modal -->
                             <div class="modal-body p-4">
                                 <form id="editarProductoForm" action="<?= base_url('/productos/modificar/' . $producto['id']) ?>" method="POST">
@@ -62,20 +60,19 @@
                                     <div class="col-md-4">
                                         <label for="categoria" class="form-label">Categoria</label>
                                         <select id="categoria" class="form-select" name="categoria">
-                                        <option value="<?= $producto['id_categoria']?>">Choose...</option>
+                                        <option value="<?= $producto['id_categoria']?>">Selecciona...</option>
                                         <?php foreach($categorias as $categoria):?>
                                             <option value="<?= $categoria['id'] ?>"><?= $categoria['categoria'];?></option>
                                         <?php endforeach;?>
                                         </select>
                                     </div>
                                 </div>
-
                                 <!-- Fila 2: Talla, Stock y Precio -->
                                 <div class="row mb-3">
                                     <div class="col-md-3">
                                         <label for="talla" class="form-label">Talla</label>
                                         <select id="talla" class="form-select" name="talla">
-                                        <option value="<?= $producto['id_talla']?>">Choose...</option>
+                                        <option value="<?= $producto['id_talla']?>">Selecciona...</option>
                                         <?php foreach($tallas as $talla):?>
                                             <option value="<?= $talla['id'] ?>"><?= $talla['talla'];?></option>
                                         <?php endforeach;?>
@@ -93,13 +90,12 @@
                                     </div>
                                     </div>
                                 </div>
-
                                 <!-- Fila 3: Marca y Color -->
                                 <div class="row mb-3">
                                     <div class="col-md-6">
                                         <label for="marca" class="form-label">Marca</label>
                                         <select id="marca" class="form-select" name="marca">
-                                        <option value="<?= $producto['id_marca']?>">Choose...</option>
+                                        <option value="<?= $producto['id_marca']?>">Selecciona...</option>
                                         <?php foreach($marcas as $marca):?>
                                             <option value="<?= $marca['id'] ?>"><?= $marca['marca'];?></option>
                                         <?php endforeach;?>
@@ -108,7 +104,7 @@
                                     <div class="col-md-6">
                                     <label for="color" class="form-label">color</label>
                                     <select id="color" class="form-select" name="color">
-                                    <option value="<?= $producto['id_color']?>">Choose...</option>
+                                    <option value="<?= $producto['id_color']?>">Selecciona...</option>
                                     <?php foreach($colores as $color):?>
                                         <option value="<?= $color['id'] ?>"><?= $color['color'];?></option>
                                     <?php endforeach;?>
@@ -127,14 +123,14 @@
                             <!-- Pie del Modal -->
                             <div class="modal-footer bg-light p-3">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="submit" form="editarProductoForm" class="btn btn-primary">Guardar Cambios</button>
+                                <button type="submit" form="editarProductoForm" class="btn btn-black">Guardar Cambios</button>
                             </div>
                             </div>
                         </div>
                         </div>
 
                         
-                        <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
+                        <button class="btn btn-sm btn-black" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
                         <i class="bi bi-pencil-square"></i> Editar
                         </button>
                     </td>

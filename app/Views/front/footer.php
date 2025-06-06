@@ -141,6 +141,19 @@
         </div>
     </section>
 </footer>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleSearchBar() {
+        const searchBar = document.getElementById('searchBar');
+        searchBar.classList.toggle('d-none');
+    }
+</script>
+<script>
+    document.getElementById('telefono').addEventListener('input', function(e) {
+        // Elimina cualquier carácter que no sea un número
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    });
+</script>
 <script>
     document.getElementById('suscripcion-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Evita que se recargue o cambie de página
@@ -165,9 +178,24 @@
         }, 3000); // 3000 milisegundos = 3 segundos
     });    
 </script>
+<script>
+    function toggleSearchBar() {
+        const searchBar = document.getElementById('searchBar');
+        searchBar.classList.toggle('d-none');
+    }
+</script>
+
+<?php if (session()->getFlashdata('error')): ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+        loginModal.show();
+    });
+</script>
+<?php endif; ?>
 </body>
 
 
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+
 
 </html>

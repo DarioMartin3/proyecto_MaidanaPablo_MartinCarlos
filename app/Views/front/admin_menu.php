@@ -38,7 +38,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Gráficos</h5>
                     <p class="card-text">Visualiza estadísticas y gráficos sobre ventas y productos.</p>
-                    <a href="<?= base_url('/graficos') ?>" class="btn btn-black mt-auto">Ver gráficos</a>
+                    <a href="<?= base_url('/construction_page') ?>" class="btn btn-black mt-auto">Ver gráficos</a>
                 </div>
             </div>
         </div>

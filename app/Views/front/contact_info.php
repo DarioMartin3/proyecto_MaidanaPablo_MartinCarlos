@@ -66,9 +66,3 @@
 </section>
 
 
-<script>
-    document.getElementById('telefono').addEventListener('input', function(e) {
-        // Elimina cualquier carácter que no sea un número
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');
-    });
-</script>
