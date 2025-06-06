@@ -3,14 +3,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-1">
-        <form method="post" action="<?= base_url('/productos/catalogo') ?>" class="p-3">
+        <form method="get" action="<?= base_url('/catalogo') ?>" class="p-3">
             <div class="row mb-3">
                 <div class="col-md-12">
                     <label for="marca" class="form-label">Marca</label>
                     <?php foreach($marcas as $marca):?>
                         <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<?= $marca['id'] ?>" id="marca">
-                        <label class="form-check-label" for="marca">
+                        <input class="form-check-input" type="checkbox" value="<?= $marca['id'] ?>" id="marca_<?= $marca['id'] ?>" name="marca[]">
+                        <label class="form-check-label" for="marca_<?= $marca['id'] ?>">
                             <?= $marca['marca'];?>
                         </label>
                     </div>
@@ -20,8 +20,8 @@
                     <label for="categoria" class="form-label">Categorias</label>
                     <?php foreach($categorias as $categoria):?>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="<?= $categoria['id'] ?>" id="categoria">
-                        <label class="form-check-label" for="categoria">
+                        <input class="form-check-input" type="checkbox" value="<?= $categoria['id'] ?>" id="categoria_<?= $categoria['id'] ?>" name="categorias[]">
+                        <label class="form-check-label" for="categoria_<?= $categoria['id'] ?>">
                             <?= $categoria['categoria'];?>
                         </label>
                     </div>
@@ -31,14 +31,15 @@
                     <label for="talla" class="form-label">Tallas</label>
                     <?php foreach($tallas as $talla):?>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="<?= $talla['id'] ?>" id="talla">  
-                            <label class="form-check-label" for="talla">
+                            <input class="form-check-input" type="checkbox" value="<?= $talla['id'] ?>" id="talla_<?= $talla['id'] ?>" name="talla[]">  
+                            <label class="form-check-label" for="talla_<?= $talla['id'] ?>">
                                 <?= $talla['talla'];?>
                             </label>
                         </div>
                     <?php endforeach;?>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary">Filtrar</button>
         </form>
         </div>
         <div class="col-10">            

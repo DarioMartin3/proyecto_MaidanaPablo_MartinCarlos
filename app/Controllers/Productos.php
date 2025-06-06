@@ -131,10 +131,31 @@ class Productos extends BaseController
 
     public function catalogo_productos()
     {
+        $marcas = $this->request->getGet('marcas') ?? [];
+        $categorias = $this->request->getGet('categorias') ?? [];
+        $tallas = $this->request->getGet('tallas') ?? [];
+
         $modelMarcas = new MarcasModel();
         $modelCate = new CategoriasModel();
         $modelTalla = new TallasModel();
         $model = new ProductsModel();
+
+        if (!empty($marcas)) {
+            $model->whereIn('id_marca', $marcas);
+        }
+
+        if (!empty($categorias)) {
+            $model->whereIn('id_categoria', $categorias);
+        }
+
+        if (!empty($tallas)) {
+            $model->whereIn('id_talla', $tallas);
+            #producto_talla.
+            #join('producto_talla', 'products.id = producto_talla.id_producto')
+                         
+                        # ->groupBy('productos.id'); // Importante para evitar duplicados
+        }
+
         $data['marcas'] = $modelMarcas->findAll();
         $data['categorias'] = $modelCate->findAll();
         $data['tallas'] = $modelTalla->findAll();
