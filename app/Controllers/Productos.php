@@ -49,7 +49,7 @@ class Productos extends BaseController
         $imagen = $this->request->getFile('imagen');
         $nuevoNombre = $imagen->getRandomName();
         if ($imagen->isValid() && !$imagen->hasMoved()) {
-            $imagen->move(WRITEPATH . 'uploads/imagenes', $nuevoNombre);
+            $imagen->move('./public/uploads/imagenes', $nuevoNombre);
         }
 
         $data = [
@@ -127,5 +127,16 @@ class Productos extends BaseController
 
         $model->update($id, $data);
         return redirect()->to('/productos')->with('mensaje', 'Producto actualizado correctamente');
+    }
+
+    public function catalogo_productos()
+    {
+        $model = new ProductsModel();
+        $data['productos'] = $model->where('estado', 1)->findAll();
+
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/catalogo_productos', $data);
+        echo view('front/footer');
     }
 }
