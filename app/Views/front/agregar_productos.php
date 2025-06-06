@@ -62,7 +62,7 @@
             <small class="text-muted">Formatos aceptados: JPG, PNG, JPEG (Max. 2MB)</small>
         </div>
         <div class="col-12 conteiner-flex" style="justify-content: center;display: flex;">
-            <button type="submit" class="btn btn-primary">Agregar Producto</button>
+            <button type="submit" class="btn btn-black">Agregar Producto</button>
         </div>
     </form>
 </section>
