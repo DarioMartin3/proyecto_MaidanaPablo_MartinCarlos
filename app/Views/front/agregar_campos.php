@@ -1,9 +1,9 @@
 <h1>Agregar Categorias</h1>
 <?php if (session('campo_error')): ?>
-    <div class="alert alert-danger"><?= session('campo_error') ?></div>
+    <div class="alert alert-danger small"><?= session('campo_error') ?></div>
 <?php endif; ?>
 <?php if (session('mensaje')): ?>
-    <div class="alert alert-success"><?= session('mensaje') ?></div>
+    <div class="alert alert-success small"><?= session('mensaje') ?></div>
 <?php endif; ?>
 <section style="justify-content: center;display: flex;">
     <div class="col-md-6" style="justify-content: center;">
