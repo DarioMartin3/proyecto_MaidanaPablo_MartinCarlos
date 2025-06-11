@@ -131,9 +131,9 @@ class Productos extends BaseController
 
     public function catalogo_productos()
     {
-        $marcas = $this->request->getGet('marcas') ?? [];
+        $marcas = $this->request->getGet('marca') ?? [];
         $categorias = $this->request->getGet('categorias') ?? [];
-        $tallas = $this->request->getGet('tallas') ?? [];
+        $tallas = $this->request->getGet('talla') ?? [];
 
         $modelMarcas = new MarcasModel();
         $modelCate = new CategoriasModel();

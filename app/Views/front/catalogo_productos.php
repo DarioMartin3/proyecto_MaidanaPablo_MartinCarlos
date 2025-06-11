@@ -55,7 +55,7 @@
                         <div class="p-3">
                             <div class="card text-bg-dark float borde-card"  style="max-height: 400px;">                                                <img src="<?= base_url('./assets/uploads/' . $producto['nombre_imagen']) ?>" class="card-img" alt="..." style="max-height: 200px; max-width: 100%;">
                                 <div class="card-body style-card-body">
-                                    <h4 class="card-title style-card-title" ><?= esc($producto['precio']) ?></h4>
+                                    <h4 class="card-title style-card-title" ><?= esc($producto['nombre']) ?></h4>
                                     <p class="card-text style-card-text">$<?= esc($producto['precio']) ?></p>
                                     <a href="#" class="btn btn-light" >Ver</a>
                                 </div>
