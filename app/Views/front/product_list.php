@@ -39,7 +39,7 @@
                     </td>
                     <td>
                         <?php if ($producto['estado']): ?>
-                            <a href="<?= base_url('/productos/deshabilitar/' . $producto['id']) ?>" class="btn btn-warning btn-sm">Deshabilitar</a>
+                            <a href="<?= base_url('/productos/deshabilitar/' . $producto['id']) ?>" class="btn btn-danger btn-sm">Deshabilitar</a>
                         <?php else: ?>
                             <a href="<?= base_url('/productos/habilitar/' . $producto['id']) ?>" class="btn btn-success btn-sm">Habilitar</a>
                         <?php endif; ?>
