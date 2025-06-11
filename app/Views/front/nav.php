@@ -219,7 +219,21 @@
     <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
         <i class="bi bi-bag" style="font-size: 3rem;"></i>
         <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
-        <p class="mt-2">Tu carrito está vacío.</p>
+        <?php if (!empty($cartItems)): ?>
+            <ul class="list-group w-100">
+                <?php foreach ($cartItems as $item): ?>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <?= esc($item['name']) ?> (<?= esc($item['qty']) ?>)
+                        <span>$<?= number_format($item['subtotal'], 2) ?></span>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+            <div class="mt-3">
+                <strong>Total: $<?= number_format($cartTotal, 2) ?></strong>
+            </div>
+        <?php else: ?>
+            <p class="mt-2">Tu carrito está vacío.</p>
+        <?php endif; ?>
     </div>
 </div>
 </header>
