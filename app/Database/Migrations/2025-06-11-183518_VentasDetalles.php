@@ -33,7 +33,7 @@ class Ventas_Detalles extends Migration
                 'null' => false
             ],
             'precio_unitario' => [
-                'type' => 'float',
+                'type' => 'DECIMAL',
                 'constraint' => '10,2',
                 'null' => false
             ]
@@ -41,7 +41,7 @@ class Ventas_Detalles extends Migration
 
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('venta_id', 'ventas_cabecera', 'id');
-        $this->forge->addForeignKey('producto_id', 'productos', 'id');
+        $this->forge->addForeignKey('producto_id', 'products', 'id');
         $this->forge->createTable('ventas_detalles');
     }
 
