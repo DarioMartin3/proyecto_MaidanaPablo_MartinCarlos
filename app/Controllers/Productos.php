@@ -128,4 +128,42 @@ class Productos extends BaseController
         $model->update($id, $data);
         return redirect()->to('/productos')->with('mensaje', 'Producto actualizado correctamente');
     }
+
+    public function catalogo_productos()
+    {
+        $marcas = $this->request->getGet('marcas') ?? [];
+        $categorias = $this->request->getGet('categorias') ?? [];
+        $tallas = $this->request->getGet('tallas') ?? [];
+
+        $modelMarcas = new MarcasModel();
+        $modelCate = new CategoriasModel();
+        $modelTalla = new TallasModel();
+        $model = new ProductsModel();
+
+        if (!empty($marcas)) {
+            $model->whereIn('id_marca', $marcas);
+        }
+
+        if (!empty($categorias)) {
+            $model->whereIn('id_categoria', $categorias);
+        }
+
+        if (!empty($tallas)) {
+            $model->whereIn('id_talla', $tallas);
+            #producto_talla.
+            #join('producto_talla', 'products.id = producto_talla.id_producto')
+                         
+                        # ->groupBy('productos.id'); // Importante para evitar duplicados
+        }
+
+        $data['marcas'] = $modelMarcas->findAll();
+        $data['categorias'] = $modelCate->findAll();
+        $data['tallas'] = $modelTalla->findAll();
+        $data['productos'] = $model->where('estado', 1)->findAll();
+
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/catalogo_productos', $data);
+        echo view('front/footer');
+    }
 }
