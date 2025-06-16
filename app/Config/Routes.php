@@ -66,3 +66,5 @@ $routes->get('/usuarios/deshabilitar/(:num)', 'Usuarios_controller::deshabilitar
 $routes->get('/usuarios/editar/(:num)', 'Usuarios_controller::editar/$1');
 
 $routes->post('/usuarios/actualizar/(:num)', 'Usuarios_controller::actualizar/$1');
+
+$routes->post('/usuarios/alta', 'Usuarios_controller::alta');

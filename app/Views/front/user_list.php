@@ -1,9 +1,60 @@
 <!-- Lista de Usuarios -->
 <div class="container-fluid py-4">
-    <h2 class="mb-4">Lista de Usuarios</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Lista de Usuarios</h2>
+        <button class="btn btn-black" data-bs-toggle="modal" data-bs-target="#altaUsuarioModal">Agregar Usuario</button>
+    </div>
     <?php if (session('mensaje')): ?>
         <div class="alert alert-success"> <?= session('mensaje') ?> </div>
     <?php endif; ?>
+    <!--Alta Usuario -->
+    <div class="modal fade" id="altaUsuarioModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <?php $validation = \Config\Services::validation(); ?>
+            <div class="modal-content">
+                <form action="<?= base_url('/usuarios/alta') ?>" method="post">
+                    <?= csrf_field() ?>
+                    <div class="modal-header bg-light p-3">
+                        <h5 class="modal-title">Alta de Usuario</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <?php if (session('validation')): ?>
+                            <div class="alert alert-danger">
+                                <?php foreach (session('validation')->getErrors() as $error): ?>
+                                    <div><?= esc($error) ?></div>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="mb-3">
+                            <label class="form-label" for="alta_nombre">Nombre</label>
+                            <input type="text" class="form-control" id="alta_nombre" name="nombre" value="<?= old('nombre') ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="alta_apellido">Apellido</label>
+                            <input type="text" class="form-control" id="alta_apellido" name="apellido" value="<?= old('apellido') ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="alta_email">Email</label>
+                            <input type="email" class="form-control" id="alta_email" name="email" value="<?= old('email') ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="alta_usuario">Usuario</label>
+                            <input type="text" class="form-control" id="alta_usuario" name="usuario" value="<?= old('usuario') ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="alta_pass">Contraseña</label>
+                            <input type="password" class="form-control" id="alta_pass" name="pass" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light p-3">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-black">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
@@ -34,7 +85,7 @@
                         </td>
                         <td>
                             <?php if ($usuario['perfil_id'] == 1): ?>
-                                <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm disabled" >Deshabilitar</a>
+                                <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm disabled">Deshabilitar</a>
                             <?php else: ?>
                                 <?php if ($usuario['baja']): ?>
                                     <a href="<?= base_url('/usuarios/habilitar/' . $usuario['id_usuario']) ?>" class="btn btn-success btn-sm">Habilitar</a>
@@ -55,16 +106,16 @@
                                             </div>
                                             <div class="modal-body p-4">
                                                 <div class="mb-3">
-                                                    <label for="nombre<?= $usuario['id_usuario'] ?>" class="form-label">Nombre</label>
-                                                    <input type="text" class="form-control" id="nombre<?= $usuario['id_usuario'] ?>" name="nombre" value="<?= esc($usuario['nombre']) ?>" required>
+                                                    <label class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" value="<?= esc($usuario['nombre']) ?>" readonly>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="apellido<?= $usuario['id_usuario'] ?>" class="form-label">Apellido</label>
-                                                    <input type="text" class="form-control" id="apellido<?= $usuario['id_usuario'] ?>" name="apellido" value="<?= esc($usuario['apellido']) ?>" required>
+                                                    <label class="form-label">Apellido</label>
+                                                    <input type="text" class="form-control" value="<?= esc($usuario['apellido']) ?>" readonly>
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="email<?= $usuario['id_usuario'] ?>" class="form-label">Email</label>
-                                                    <input type="email" class="form-control" id="email<?= $usuario['id_usuario'] ?>" name="email" value="<?= esc($usuario['email']) ?>" required>
+                                                    <label class="form-label">Email</label>
+                                                    <input type="email" class="form-control" value="<?= esc($usuario['email']) ?>" readonly>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="perfil_id<?= $usuario['id_usuario'] ?>" class="form-label">Perfil</label>
@@ -76,7 +127,7 @@
                                             </div>
                                             <div class="modal-footer bg-light p-3">
                                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                                <button type="submit" class="btn btn-black">Guardar Cambios</button>
                                             </div>
                                         </form>
                                     </div>

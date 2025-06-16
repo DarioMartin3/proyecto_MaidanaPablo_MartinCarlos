@@ -21,7 +21,7 @@ class Usuarios_controller extends Controller
             'apellido' => 'required|min_length[3]|max_length[25]',
             'usuario'  => 'required|min_length[3]|max_length[25]',
             'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
-            'pass'     => 'required|min_length[3]|max_length[10]'
+            'pass'     => 'required|min_length[3]|max_length[200]'
         ]);
 
         if (!$input) {
@@ -36,12 +36,12 @@ class Usuarios_controller extends Controller
                 'usuario'  => $this->request->getPost('usuario'),
                 'email'    => $this->request->getPost('email'),
                 'pass'     => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
-                'perfil_id'=> 2, 
-                'baja'     => 0  
+                'perfil_id' => 2,
+                'baja'     => 0
             ];
             $model->insert($data);
 
-            return redirect()-> back()->with('mensaje', 'Usuario registrado correctamente');
+            return redirect()->back()->with('mensaje', 'Usuario registrado correctamente');
         }
     }
 
@@ -100,5 +100,39 @@ class Usuarios_controller extends Controller
         $usuariosModel->update($id, $data);
         return redirect()->to('/usuarios')->with('mensaje', 'Usuario actualizado correctamente');
     }
-}
 
+    public function alta()
+    {
+        log_message('error', 'Método alta ejecutado');
+        if ($this->request->getMethod() === 'post') {
+            $validation = \Config\Services::validation();
+            $input = $this->validate([
+                'nombre'   => 'required|min_length[3]|max_length[25]',
+                'apellido' => 'required|min_length[3]|max_length[25]',
+                'usuario'  => 'required|min_length[3]|max_length[25]',
+                'email'    => 'required|min_length[4]|max_length[100]|valid_email|is_unique[usuarios.email]',
+                'pass'     => 'required|min_length[3]|max_length[200]'
+            ]);
+            if (!$input) {
+                log_message('error', 'Validación fallida en alta: ' . json_encode($validation->getErrors()));
+                return redirect()->back()->withInput()->with('validation', $validation);
+            }
+            $model = new UsuariosModel();
+            $data = [
+                'apellido' => $this->request->getPost('apellido'),
+                'nombre'   => $this->request->getPost('nombre'),
+                'usuario'  => $this->request->getPost('usuario'),
+                'email'    => $this->request->getPost('email'),
+                'pass'     => password_hash($this->request->getPost('pass'), PASSWORD_DEFAULT),
+                'perfil_id' => 2, // Siempre usuario
+                'baja'     => 0
+            ];
+            $model->insert($data);
+            log_message('error', 'Usuario insertado: ' . json_encode($data));
+            return redirect()->to('/usuarios')->with('mensaje', 'Usuario registrado correctamente');
+        }
+        log_message('error', 'No es POST en alta');
+        // Si no es POST, redirige a la lista
+        return redirect()->to('/usuarios');
+    }
+}
