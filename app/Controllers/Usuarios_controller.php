@@ -103,7 +103,6 @@ class Usuarios_controller extends Controller
 
     public function alta()
     {
-        log_message('error', 'Método alta ejecutado');
         if ($this->request->getMethod() === 'post') {
             $validation = \Config\Services::validation();
             $input = $this->validate([
@@ -114,7 +113,6 @@ class Usuarios_controller extends Controller
                 'pass'     => 'required|min_length[3]|max_length[200]'
             ]);
             if (!$input) {
-                log_message('error', 'Validación fallida en alta: ' . json_encode($validation->getErrors()));
                 return redirect()->back()->withInput()->with('validation', $validation);
             }
             $model = new UsuariosModel();
@@ -128,10 +126,8 @@ class Usuarios_controller extends Controller
                 'baja'     => 0
             ];
             $model->insert($data);
-            log_message('error', 'Usuario insertado: ' . json_encode($data));
             return redirect()->to('/usuarios')->with('mensaje', 'Usuario registrado correctamente');
         }
-        log_message('error', 'No es POST en alta');
         // Si no es POST, redirige a la lista
         return redirect()->to('/usuarios');
     }

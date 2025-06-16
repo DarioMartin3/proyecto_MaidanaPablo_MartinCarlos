@@ -12,7 +12,7 @@
         <div class="modal-dialog">
             <?php $validation = \Config\Services::validation(); ?>
             <div class="modal-content">
-                <form action="<?= base_url('/usuarios/alta') ?>" method="post">
+                <form method="post" action="<?= base_url('/enviar-form') ?>">
                     <?= csrf_field() ?>
                     <div class="modal-header bg-light p-3">
                         <h5 class="modal-title">Alta de Usuario</h5>
