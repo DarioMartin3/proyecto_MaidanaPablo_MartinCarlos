@@ -193,6 +193,19 @@
     });
 </script>
 <?php endif; ?>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Focus en el select de perfil al abrir cualquier modal de edición de usuario
+        document.querySelectorAll('[id^="editarUsuarioModal"]').forEach(function(modal) {
+            modal.addEventListener('shown.bs.modal', function () {
+                var select = modal.querySelector('select[name="perfil_id"]');
+                if (select) {
+                    select.focus();
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 

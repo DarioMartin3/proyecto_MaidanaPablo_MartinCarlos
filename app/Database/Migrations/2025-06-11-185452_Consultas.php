@@ -34,7 +34,10 @@ class Consultas extends Migration
             'consulta' => [
                 'type' => 'TEXT',
             ],
-            
+            'respondido' => [
+                'type' => 'BOOLEAN',
+                'default' => false,
+            ]
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('consultas');
