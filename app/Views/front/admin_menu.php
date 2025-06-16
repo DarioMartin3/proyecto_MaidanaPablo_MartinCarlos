@@ -42,6 +42,15 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Lista de consultas</h5>
+                    <p class="card-text">Visualiza las consultas recibidas de los usuarios.</p>
+                    <a href="<?= base_url('/consulta') ?>" class="btn btn-black mt-auto">Ver consultas</a>
+                </div>
+            </div>
+        </div>
         <!--Gráficos -->
         <div class="col">
             <div class="card h-100 shadow-sm">

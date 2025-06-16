@@ -31,38 +31,39 @@
 </div>
 <!-- Formulario de Consulta -->
 <section class="container-fluid">
-<div class="container mt-5 mb-5">
-    <h2 class="text-center mb-4" style="font-weight: bold;">Formulario de Consulta</h2>
-    <form class="p-5 border rounded-4 shadow bg-white">
-        <!-- Apellido y Nombre -->
-        <div class="row g-4 mb-4">
-            <div class="col-md-6">
-                <input type="text" class="form-control form-control-lg" placeholder="Apellido" aria-label="Apellido" required pattern="[A-Za-zÀ-ÿ\s]+">
+    <div class="container mt-5 mb-5">
+        <h2 class="text-center mb-4" style="font-weight: bold;">Formulario de Consulta</h2>
+        <?php if (session('mensaje')): ?>
+            <div class="alert alert-success text-center"> <?= session('mensaje') ?> </div>
+        <?php endif; ?>
+        <form class="p-5 border rounded-4 shadow bg-white" method="post" action="<?= base_url('/consultas/guardar') ?>">
+            <!-- Apellido y Nombre -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <input type="text" name="apellido" class="form-control form-control-lg" placeholder="Apellido" aria-label="Apellido" required pattern="[A-Za-zÀ-ÿ\s]+">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="nombre" class="form-control form-control-lg" placeholder="Nombre" aria-label="Nombre" required pattern="[A-Za-zÀ-ÿ\s]+">
+                </div>
             </div>
-            <div class="col-md-6">
-                <input type="text" class="form-control form-control-lg" placeholder="Nombre" aria-label="Nombre" required pattern="[A-Za-zÀ-ÿ\s]+">
+            <!-- Correo Electrónico -->
+            <div class="mb-4">
+                <input type="email" name="email" class="form-control form-control-lg" placeholder="Correo Electrónico" aria-label="Correo Electrónico" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
             </div>
-        </div>
-        <!-- Correo Electrónico -->
-        <div class="mb-4">
-            <input type="email" class="form-control form-control-lg" placeholder="Correo Electrónico" aria-label="Correo Electrónico" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
-        </div>
-        <!-- Número de Teléfono -->
-        <div class="mb-4">
-            <input type="tel" class="form-control form-control-lg" id="telefono" placeholder="Número de Teléfono" aria-label="Número de Teléfono" required pattern="[0-9]+" title="Por favor, ingresa solo números.">
-        </div>
-        <!-- Mensaje de Consulta -->
-        <div class="mb-4">
-            <textarea class="form-control form-control-lg" rows="5" placeholder="Mensaje de Consulta" aria-label="Mensaje de Consulta" required></textarea>
-        </div>
-        <!-- Botón de Enviar y Limpiar -->
-        <div class="text-center">
-            <button type="submit" class="btn btn-dark btn-lg me-3 px-5 py-2">Enviar</button>
-            <button type="reset" class="btn btn-outline-secondary btn-lg px-5 py-2">Limpiar</button>
-        </div>
-    </form>
+            <!-- Número de Teléfono -->
+            <div class="mb-4">
+                <input type="tel" name="telefono" class="form-control form-control-lg" id="telefono" placeholder="Número de Teléfono" aria-label="Número de Teléfono" required pattern="[0-9]+" title="Por favor, ingresa solo números.">
+            </div>
+            <!-- Mensaje de Consulta -->
+            <div class="mb-4">
+                <textarea name="consulta" class="form-control form-control-lg" rows="5" placeholder="Mensaje de Consulta" aria-label="Mensaje de Consulta" required></textarea>
+            </div>
+            <!-- Botón de Enviar y Limpiar -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-dark btn-lg me-3 px-5 py-2">Enviar</button>
+                <button type="reset" class="btn btn-outline-secondary btn-lg px-5 py-2">Limpiar</button>
+            </div>
+        </form>
     </div>
     </div>
 </section>
-
-
