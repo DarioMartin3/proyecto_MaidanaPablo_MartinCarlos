@@ -37,7 +37,7 @@
                         <td>
                             <a href="<?= base_url('/consultas/cambiar_respondido/' . $consulta['id']) ?>"
                                 class="btn btn-sm <?= $consulta['respondido'] ? 'btn-black' : 'btn-danger' ?>">
-                                <?= $consulta['respondido'] ? 'Respondido' : 'No respondido' ?>
+                                <?= $consulta['respondido'] ? 'Contestado' : 'Responder' ?>
                             </a>
                         </td>
                     </tr>
