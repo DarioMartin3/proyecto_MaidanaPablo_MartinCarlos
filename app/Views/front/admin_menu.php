@@ -32,6 +32,16 @@
                 </div>
             </div>
         </div>
+        <!--Lista usuarios -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Lista de usuarios</h5>
+                    <p class="card-text">Visualiza, edita o elimina los usuarios existentes en el sistema.</p>
+                    <a href="<?= base_url('/usuarios') ?>" class="btn btn-black mt-auto">Ver usuarios</a>
+                </div>
+            </div>
+        </div>
         <!--Gráficos -->
         <div class="col">
             <div class="card h-100 shadow-sm">

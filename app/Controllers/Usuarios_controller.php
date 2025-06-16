@@ -12,8 +12,6 @@ class Usuarios_controller extends Controller
         helper(['form', 'url']);
     }
 
-    
-
     public function formValidation()
     {
         $validation = \Config\Services::validation();
@@ -45,6 +43,62 @@ class Usuarios_controller extends Controller
 
             return redirect()-> back()->with('mensaje', 'Usuario registrado correctamente');
         }
+    }
+
+    public function lista()
+    {
+        $usuariosModel = new \App\Models\UsuariosModel();
+        $db = \Config\Database::connect();
+        $usuarios = $db->table('usuarios')
+            ->select('usuarios.*, perfiles.descripcion as perfil')
+            ->join('perfiles', 'usuarios.perfil_id = perfiles.id_perfil')
+            ->get()->getResultArray();
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/user_list', ['usuarios' => $usuarios]);
+        echo view('front/footer');
+    }
+
+    public function habilitar($id)
+    {
+        $usuariosModel = new \App\Models\UsuariosModel();
+        $usuariosModel->update($id, ['baja' => 0]);
+        return redirect()->to('/usuarios')->with('mensaje', 'Usuario habilitado correctamente');
+    }
+
+    public function deshabilitar($id)
+    {
+        $usuariosModel = new \App\Models\UsuariosModel();
+        $usuariosModel->update($id, ['baja' => 1]);
+        return redirect()->to('/usuarios')->with('mensaje', 'Usuario deshabilitado correctamente');
+    }
+
+    public function editar($id)
+    {
+        $usuariosModel = new \App\Models\UsuariosModel();
+        $db = \Config\Database::connect();
+        $usuario = $usuariosModel->find($id);
+        $perfiles = $db->table('perfiles')->where('baja', 0)->get()->getResultArray();
+        if (!$usuario) {
+            return redirect()->to('/usuarios')->with('mensaje', 'Usuario no encontrado');
+        }
+        echo view('front/header');
+        echo view('front/nav');
+        echo view('front/user_edit', ['usuario' => $usuario, 'perfiles' => $perfiles]);
+        echo view('front/footer');
+    }
+
+    public function actualizar($id)
+    {
+        $usuariosModel = new \App\Models\UsuariosModel();
+        $data = [
+            'nombre' => $this->request->getPost('nombre'),
+            'apellido' => $this->request->getPost('apellido'),
+            'email' => $this->request->getPost('email'),
+            'perfil_id' => $this->request->getPost('perfil_id'),
+        ];
+        $usuariosModel->update($id, $data);
+        return redirect()->to('/usuarios')->with('mensaje', 'Usuario actualizado correctamente');
     }
 }
 

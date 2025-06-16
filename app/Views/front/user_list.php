@@ -1,0 +1,95 @@
+<!-- Lista de Usuarios -->
+<div class="container-fluid py-4">
+    <h2 class="mb-4">Lista de Usuarios</h2>
+    <?php if (session('mensaje')): ?>
+        <div class="alert alert-success"> <?= session('mensaje') ?> </div>
+    <?php endif; ?>
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Perfil</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if (!empty($usuarios)): ?>
+                <?php foreach ($usuarios as $usuario): ?>
+                    <tr>
+                        <td><?= esc($usuario['id_usuario']) ?></td>
+                        <td><?= esc($usuario['nombre']) ?></td>
+                        <td><?= esc($usuario['apellido']) ?></td>
+                        <td><?= esc($usuario['email']) ?></td>
+                        <td><?= esc($usuario['perfil']) ?></td>
+                        <td>
+                            <?php if ($usuario['baja']): ?>
+                                <span class="badge bg-secondary">Deshabilitado</span>
+                            <?php else: ?>
+                                <span class="badge bg-success">Activo</span>
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <?php if ($usuario['perfil_id'] == 1): ?>
+                                <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm disabled" >Deshabilitar</a>
+                            <?php else: ?>
+                                <?php if ($usuario['baja']): ?>
+                                    <a href="<?= base_url('/usuarios/habilitar/' . $usuario['id_usuario']) ?>" class="btn btn-success btn-sm">Habilitar</a>
+                                <?php else: ?>
+                                    <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm">Deshabilitar</a>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                            <!-- Botón para abrir el modal de edición -->
+                            <button class="btn btn-black btn-sm" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal<?= $usuario['id_usuario'] ?>">Editar</button>
+                            <!-- Modal de Edición -->
+                            <div class="modal fade" id="editarUsuarioModal<?= $usuario['id_usuario'] ?>" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form action="<?= base_url('/usuarios/actualizar/' . $usuario['id_usuario']) ?>" method="post">
+                                            <div class="modal-header bg-light p-3">
+                                                <h5 class="modal-title">Editar Usuario</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body p-4">
+                                                <div class="mb-3">
+                                                    <label for="nombre<?= $usuario['id_usuario'] ?>" class="form-label">Nombre</label>
+                                                    <input type="text" class="form-control" id="nombre<?= $usuario['id_usuario'] ?>" name="nombre" value="<?= esc($usuario['nombre']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="apellido<?= $usuario['id_usuario'] ?>" class="form-label">Apellido</label>
+                                                    <input type="text" class="form-control" id="apellido<?= $usuario['id_usuario'] ?>" name="apellido" value="<?= esc($usuario['apellido']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="email<?= $usuario['id_usuario'] ?>" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email<?= $usuario['id_usuario'] ?>" name="email" value="<?= esc($usuario['email']) ?>" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="perfil_id<?= $usuario['id_usuario'] ?>" class="form-label">Perfil</label>
+                                                    <select class="form-select" id="perfil_id<?= $usuario['id_usuario'] ?>" name="perfil_id">
+                                                        <option value="1" <?= $usuario['perfil_id'] == 1 ? 'selected' : '' ?>>Admin</option>
+                                                        <option value="2" <?= $usuario['perfil_id'] == 2 ? 'selected' : '' ?>>Usuario</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer bg-light p-3">
+                                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="7">No hay usuarios registrados.</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
+</div>
