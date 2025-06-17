@@ -6,6 +6,28 @@
         <form method="get" action="<?= base_url('/catalogo') ?>" class="p-3">
             <div class="row mb-3">
                 <div class="col-md-12">
+                    <label for="marca" class="form-label">sexo</label>
+                    <?php foreach($sexos as $sexo):?>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="<?= $sexo['id'] ?>" id="marca_<?= $sexo['sexo'] ?>" name="sexo[]">
+                        <label class="form-check-label" for="marca_<?= $sexo['id'] ?>">
+                            <?= $sexo['sexo'];?>
+                        </label>
+                    </div>
+                    <?php endforeach;?>
+                </div>
+                <div class="col-md-12">
+                    <label for="marca" class="form-label">Color</label>
+                    <?php foreach($colores as $color):?>
+                        <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="<?= $color['id'] ?>" id="marca_<?= $color['color'] ?>" name="color[]">
+                        <label class="form-check-label" for="marca_<?= $color['id'] ?>">
+                            <?= $color['color'];?>
+                        </label>
+                    </div>
+                    <?php endforeach;?>
+                </div>
+                <div class="col-md-12">
                     <label for="marca" class="form-label">Marca</label>
                     <?php foreach($marcas as $marca):?>
                         <div class="form-check">
@@ -57,7 +79,17 @@
                                 <div class="card-body style-card-body">
                                     <h4 class="card-title style-card-title" ><?= esc($producto['precio']) ?></h4>
                                     <p class="card-text style-card-text">$<?= esc($producto['precio']) ?></p>
-                                    <a href="#" class="btn btn-light" >Ver</a>
+                                    <div class="container-flex text-center">
+                                        <div class="container-flex row">
+                                            <div class="col-6 col-sm-6"><a href="#" class="btn btn-light" >Ver</a></div>
+                                            <div class="col-6 col-sm-6"><a href="#" class="btn btn-light" >agregar al carrito</a></div>
+
+                                            <!-- Force next columns to break to new line at md breakpoint and up -->
+                                            <div class="w-100 d-none d-md-block"></div>
+
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                         </div>
                     </div>

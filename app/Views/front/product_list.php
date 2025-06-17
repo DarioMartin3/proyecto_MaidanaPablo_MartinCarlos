@@ -107,12 +107,21 @@
                                                         <?php endforeach; ?>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
                                                     <label for="color" class="form-label">color</label>
                                                     <select id="color" class="form-select" name="color">
                                                         <option value="<?= $producto['id_color'] ?>">Selecciona...</option>
                                                         <?php foreach ($colores as $color): ?>
                                                             <option value="<?= $color['id'] ?>"><?= $color['color']; ?></option>
+                                                        <?php endforeach; ?>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label for="sexo" class="form-label">sexo</label>
+                                                    <select id="sexo" class="form-select" name="sexo">
+                                                        <option value="<?= $producto['id_sexo'] ?>">Selecciona...</option>
+                                                        <?php foreach ($sexos as $sexo): ?>
+                                                            <option value="<?= $sexo['id'] ?>"><?= $sexo['sexo']; ?></option>
                                                         <?php endforeach; ?>
                                                     </select>
                                                 </div>

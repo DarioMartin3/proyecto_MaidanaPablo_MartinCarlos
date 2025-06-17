@@ -9,8 +9,21 @@
     <div class="col-md-6" style="justify-content: center;">
         <form method="POST" action="<?php echo base_url('/categoria'); ?>">
             <div class="form-floating mb-3 col-md-11" style="margin-left:20px">
+                
                 <input type="text" class="form-control mb-3" id="categoria" placeholder="Remera" name="categoria">
                 <label for="categoria">Agregar Categoria</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="hombre" name="hombre">
+                    <label class="form-check-label" for="hombre">
+                        Hombre
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="mujer" name="mujer">
+                    <label class="form-check-label" for="mujer">
+                        mujer
+                    </label>
+                </div>
                 <button type="submit" class="btn btn-black">Agregar Categoria</button>
             </div>
         </form>

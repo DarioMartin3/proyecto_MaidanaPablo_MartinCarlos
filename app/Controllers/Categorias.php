@@ -15,9 +15,9 @@ class Categorias extends BaseController
 {
     public function categoria()
     {
-        $datos = ['categoria' => $this->request->getPost('categoria')];
+        $datos = ['categoria' => $this->request->getPost('categoria'), 'hombre' => $this->request->getPost('hombre'), 'mujer' => $this->request->getPost('mujer')];
         $model = new CategoriasModel();
-        $existe = $model->where('categoria', $datos)->first();
+        $existe = $model->where('categoria', $datos['categoria'])->first();
         if ($existe) {
             return redirect()->back()->with('campo_error', 'El dato ingresado ya existe.');
         }

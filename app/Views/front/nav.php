@@ -34,12 +34,19 @@
                                 <li>
                                     <h3 class="dropdown-item disabled" style="color: black; font-weight: bold;">Mujeres</h3>
                                 </li>
-                                <li><a class="dropdown-item style-color" href="#">Remeras</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Abrigo y Camperas</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Vestidos</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Zapatillas</a></li>
+                                <li>
+                                    <?php foreach ($categorias as $categoria): ?>
+
+                                        <?php if ($categoria['mujer'] == 1): ?>
+                                            <form action="<?= base_url('/catalogo') ?>" method="get">
+                                                <input type="hidden" name="categoria" value="<?= $categoria['id'] ?>">
+                                                <input type="hidden" name="id_sexo" value="<?= $categoria['mujer'] ?>">
+                                                <button type="submit" class="dropdown-item"><?= $categoria['categoria'] ?></button>
+                                            </form>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </li>
+                                
                             </div>
                             <li>
                                 <hr class="dropdown-divider">
@@ -52,12 +59,19 @@
                                 <li>
                                     <h3 class="dropdown-item disabled" style="color: black; font-weight: bold;">Hombres</h3>
                                 </li>
-                                <li><a class="dropdown-item style-color" href="#">Remeras</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Camisas</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Abrigo y Camperas</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Pantalones</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Shorts</a></li>
-                                <li><a class="dropdown-item style-color" href="#">Zapatillas</a></li>
+                                <li>
+                                    <?php foreach ($categorias as $categoria): ?>
+
+                                        <?php if ($categoria['hombre'] == 1): ?>
+                                            <form action="<?= base_url('/catalogo') ?>" method="get">
+                                                <input type="hidden" name="categoria" value="<?= $categoria['id'] ?>">
+                                                <input type="hidden" name="id_sexo" value="<?= $categoria['hombre'] ?>">
+                                                <button type="submit" class="dropdown-item"><?= $categoria['categoria'] ?></button>
+                                            </form>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </li>
+
                             </div>
                         </ul>
                     </li>
@@ -237,4 +251,5 @@
     </div>
 </div>
 </header>
+
 <body>

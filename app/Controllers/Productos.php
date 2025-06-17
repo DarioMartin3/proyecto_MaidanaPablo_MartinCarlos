@@ -7,6 +7,7 @@ use App\Models\CategoriasModel;
 use App\Models\ColoresModel;
 use App\Models\MarcasModel;
 use App\Models\ProductsModel;
+use App\Models\SexosModel;
 use App\Models\TallasModel;
 use CodeIgniter\HTTP\ResponseInterface;
 use Exception;
@@ -23,17 +24,23 @@ class Productos extends BaseController
         $data['categorias'] = $modelCate->findAll();
         $data['tallas'] = $modelTalla->findAll();
         $data['colores'] = $modelColor->findAll();
+        $nav['categorias'] = $modelCate->findAll();
 
         echo view('front/header');
-        echo view('front/nav');
+        echo view('front/nav', $nav);
         echo view('front/agregar_productos', $data);
         echo view('front/footer');
     }
     public function agregar_campos()
-    {
+    {   
+        $modelCate = new CategoriasModel();
+        $nav['categorias'] = $modelCate->findAll();
+        $sexos = new SexosModel();
+        $data['sexos'] = $sexos->findAll();
+
         echo view('front/header');
-        echo view('front/nav');
-        echo view('front/agregar_campos');
+        echo view('front/nav', $nav);
+        echo view('front/agregar_campos', $data);
         echo view('front/footer');
     }
 
@@ -84,13 +91,16 @@ class Productos extends BaseController
         $modelTalla = new TallasModel();
         $modelColor = new ColoresModel();
         $model = new ProductsModel();
+        $modelSexos = new SexosModel();
         $data['marcas'] = $modelMarcas->findAll();
         $data['categorias'] = $modelCate->findAll();
         $data['tallas'] = $modelTalla->findAll();
         $data['colores'] = $modelColor->findAll();
         $data['productos'] = $model->findAll();
+        $data['sexos'] = $modelSexos->findAll();
+        $nav['categorias'] = $modelCate->findAll();
         echo view('front/header');
-        echo view('front/nav');
+        echo view('front/nav', $nav);
         echo view('front/product_list', $data);
         echo view('front/footer');
     }
@@ -122,7 +132,8 @@ class Productos extends BaseController
             'precio' => $this->request->getPost('precio'),
             'id_marca' => $this->request->getPost('marca'),
             'id_color' => $this->request->getPost('color'),
-            'descripcion' => $this->request->getPost('descripcion')
+            'descripcion' => $this->request->getPost('descripcion'),
+            'id_sexo' => $this->request->getPost('sexo')
         ];
 
         $model->update($id, $data);
@@ -134,6 +145,8 @@ class Productos extends BaseController
         $marcas = $this->request->getGet('marcas') ?? [];
         $categorias = $this->request->getGet('categorias') ?? [];
         $tallas = $this->request->getGet('tallas') ?? [];
+        $colores = $this->request->getGet('colores') ?? [];
+        $sexos = $this->request->getGet('sexos') ?? [];
 
         $modelMarcas = new MarcasModel();
         $modelCate = new CategoriasModel();
@@ -148,6 +161,13 @@ class Productos extends BaseController
             $model->whereIn('id_categoria', $categorias);
         }
 
+        if (!empty($colores)) {
+            $model->whereIn('id_color', $colores);
+        }
+        if (!empty($sexos)) {
+            $model->whereIn('id_sexo', $sexos);
+        }
+
         if (!empty($tallas)) {
             $model->whereIn('id_talla', $tallas);
             #producto_talla.
@@ -160,9 +180,12 @@ class Productos extends BaseController
         $data['categorias'] = $modelCate->findAll();
         $data['tallas'] = $modelTalla->findAll();
         $data['productos'] = $model->where('estado', 1)->findAll();
+        $data['colores'] = (new ColoresModel())->findAll();
+        $data['sexos'] = (new SexosModel())->findAll();
+        $nav['categorias'] = $modelCate->findAll();
 
         echo view('front/header');
-        echo view('front/nav');
+        echo view('front/nav', $nav);
         echo view('front/catalogo_productos', $data);
         echo view('front/footer');
     }
