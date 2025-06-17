@@ -56,7 +56,7 @@ class Productos extends BaseController
         $imagen = $this->request->getFile('imagen');
         $nuevoNombre = $imagen->getRandomName();
         if ($imagen->isValid() && !$imagen->hasMoved()) {
-            $imagen->move( './assets/uploads', $nuevoNombre);
+            $imagen->move('./assets/uploads', $nuevoNombre);
         }
 
         $data = [
@@ -83,7 +83,7 @@ class Productos extends BaseController
             echo "error" . $e->getMessage();
         }
     }
-    
+
     public function lista()
     {
         $modelMarcas = new MarcasModel();
@@ -96,6 +96,13 @@ class Productos extends BaseController
         $data['categorias'] = $modelCate->findAll();
         $data['tallas'] = $modelTalla->findAll();
         $data['colores'] = $modelColor->findAll();
+        $productos = $model->findAll();
+        $data['productos_habilitados'] = array_filter($productos, function ($p) {
+            return $p['estado'];
+        });
+        $data['productos_deshabilitados'] = array_filter($productos, function ($p) {
+            return !$p['estado'];
+        });
         $data['productos'] = $model->findAll();
         $data['sexos'] = $modelSexos->findAll();
         $nav['categorias'] = $modelCate->findAll();
@@ -123,7 +130,7 @@ class Productos extends BaseController
     {
         $model = new ProductsModel();
 
-        
+
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'id_categoria' => $this->request->getPost('categoria'),
@@ -142,8 +149,9 @@ class Productos extends BaseController
 
     public function catalogo_productos()
     {
-        $marcas = $this->request->getGet('marcas') ?? [];
+        $marcas = $this->request->getGet('marca') ?? [];
         $categorias = $this->request->getGet('categorias') ?? [];
+        $tallas = $this->request->getGet('talla') ?? [];
         $tallas = $this->request->getGet('tallas') ?? [];
         $colores = $this->request->getGet('colores') ?? [];
         $sexos = $this->request->getGet('sexos') ?? [];
@@ -172,8 +180,8 @@ class Productos extends BaseController
             $model->whereIn('id_talla', $tallas);
             #producto_talla.
             #join('producto_talla', 'products.id = producto_talla.id_producto')
-                         
-                        # ->groupBy('productos.id'); // Importante para evitar duplicados
+
+            # ->groupBy('productos.id'); // Importante para evitar duplicados
         }
 
         $data['marcas'] = $modelMarcas->findAll();

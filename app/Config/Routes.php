@@ -56,3 +56,21 @@ $routes->get('/productos/habilitar/(:num)', 'Productos::habilitar/$1');
 $routes->POST('/productos/modificar/(:num)', 'Productos::actualizar/$1');
 
 $routes->get('/catalogo', 'Productos::catalogo_productos');
+
+$routes->get('/usuarios', 'Usuarios_controller::lista');
+
+$routes->get('/usuarios/habilitar/(:num)', 'Usuarios_controller::habilitar/$1');
+
+$routes->get('/usuarios/deshabilitar/(:num)', 'Usuarios_controller::deshabilitar/$1');
+
+$routes->get('/usuarios/editar/(:num)', 'Usuarios_controller::editar/$1');
+
+$routes->post('/usuarios/actualizar/(:num)', 'Usuarios_controller::actualizar/$1');
+
+$routes->post('/usuarios/alta', 'Usuarios_controller::alta');
+
+$routes->post('/consultas/guardar', 'Consultas_controller::guardar');
+
+$routes->get('/consultas/cambiar_respondido/(:num)', 'Consultas_controller::cambiar_respondido/$1');
+
+$routes->get('/consulta', 'Consultas_controller::lista');

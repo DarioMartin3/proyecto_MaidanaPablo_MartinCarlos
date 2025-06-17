@@ -36,7 +36,8 @@ class Products extends Migration
                 'unsigned' => true
             ],
             'stock' => [
-                'type' => 'int'
+                'type' => 'int',
+                'unsigned' => true
             ],
             'precio' => [
                 'type' => 'float'
