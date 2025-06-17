@@ -20,6 +20,8 @@ class Productos extends BaseController
         $modelCate = new CategoriasModel();
         $modelTalla = new TallasModel();
         $modelColor = new ColoresModel();
+        $sexos = new SexosModel();
+        $data['sexos'] = $sexos->findAll();
         $data['marcas'] = $modelMarcas->findAll();
         $data['categorias'] = $modelCate->findAll();
         $data['tallas'] = $modelTalla->findAll();
@@ -66,6 +68,7 @@ class Productos extends BaseController
             'id_color' => $this->request->getPost('color'),
             'stock' => $this->request->getPost('stock'),
             'id_talla' => $this->request->getPost('talla'),
+            'id_sexo' => $this->request->getPost('sexo'),
             'id_categoria' => $this->request->getPost('categoria'),
             'descripcion' => $this->request->getPost('descripcion'),
             'nombre_imagen' => $nuevoNombre,
