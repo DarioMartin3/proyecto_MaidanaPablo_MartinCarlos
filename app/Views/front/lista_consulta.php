@@ -7,7 +7,6 @@
     <table class="table table-bordered table-hover">
         <thead class="table-dark">
             <tr>
-                <th>ID</th>
                 <th>Apellido</th>
                 <th>Nombre</th>
                 <th>Email</th>
@@ -21,7 +20,6 @@
             <?php if (!empty($consultas)): ?>
                 <?php foreach ($consultas as $consulta): ?>
                     <tr>
-                        <td><?= esc($consulta['id']) ?></td>
                         <td><?= esc($consulta['apellido']) ?></td>
                         <td><?= esc($consulta['nombre']) ?></td>
                         <td><?= esc($consulta['email']) ?></td>
@@ -36,8 +34,8 @@
                         </td>
                         <td>
                             <a href="<?= base_url('/consultas/cambiar_respondido/' . $consulta['id']) ?>"
-                                class="btn btn-sm <?= $consulta['respondido'] ? 'btn-black' : 'btn-danger' ?>">
-                                <?= $consulta['respondido'] ? 'Contestado' : 'Responder' ?>
+                                class="btn btn-sm <?= $consulta['respondido'] ? 'btn-outline-danger disabled' : 'btn-danger' ?>">
+                                <?= $consulta['respondido'] ? 'Responder' : 'Responder' ?>
                             </a>
                         </td>
                     </tr>

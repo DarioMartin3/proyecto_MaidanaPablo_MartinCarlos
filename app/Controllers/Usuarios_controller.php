@@ -47,6 +47,7 @@ class Usuarios_controller extends Controller
 
     public function lista()
     {
+        $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $usuariosModel = new \App\Models\UsuariosModel();
         $db = \Config\Database::connect();
         $usuarios = $db->table('usuarios')
@@ -54,7 +55,7 @@ class Usuarios_controller extends Controller
             ->join('perfiles', 'usuarios.perfil_id = perfiles.id_perfil')
             ->get()->getResultArray();
         echo view('front/header');
-        echo view('front/nav');
+        echo view('front/nav', $nav);
         echo view('front/user_list', ['usuarios' => $usuarios]);
         echo view('front/footer');
     }
@@ -74,7 +75,8 @@ class Usuarios_controller extends Controller
     }
 
     public function editar($id)
-    {
+    {   
+        $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $usuariosModel = new \App\Models\UsuariosModel();
         $db = \Config\Database::connect();
         $usuario = $usuariosModel->find($id);
@@ -83,7 +85,7 @@ class Usuarios_controller extends Controller
             return redirect()->to('/usuarios')->with('mensaje', 'Usuario no encontrado');
         }
         echo view('front/header');
-        echo view('front/nav');
+        echo view('front/nav', $nav);
         echo view('front/user_edit', ['usuario' => $usuario, 'perfiles' => $perfiles]);
         echo view('front/footer');
     }

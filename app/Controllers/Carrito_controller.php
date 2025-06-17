@@ -44,7 +44,7 @@ class Carrito_controller extends BaseController
         $cart = new Cart();
         $data['cartItems'] = $cart->contents();
         $data['cartTotal'] = $cart->total();
-        return view('front/nav', $data); // O la vista donde quieras mostrar el carrito
+        return view('front/nav', $data); 
     }
 
     public function vaciar()
