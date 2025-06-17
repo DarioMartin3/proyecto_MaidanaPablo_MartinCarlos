@@ -199,4 +199,27 @@ class Productos extends BaseController
         echo view('front/catalogo_productos', $data);
         echo view('front/footer');
     }
+
+    public function detalle_producto($id)
+    {
+        $model = new ProductsModel();
+        $producto['producto'] = $model->find($id);
+        $colorModel = new ColoresModel();
+        $producto['color'] = $colorModel->find($producto['producto']['id_color']);
+        $tallaModel = new TallasModel();
+        $producto['talla'] = $tallaModel->find($producto['producto']['id_talla']);
+        $marcaModel = new MarcasModel();
+        $producto['marca'] = $marcaModel->find($producto['producto']['id_marca']);
+
+        if (!$producto) {
+            return redirect()->to('/catalogo')->with('error', 'Producto no encontrado');
+        }
+
+        $nav['categorias'] = (new CategoriasModel())->findAll();
+
+        echo view('front/header');
+        echo view('front/nav', $nav);
+        echo view('front/detalle_producto', $producto);
+        echo view('front/footer');
+    }
 }

@@ -81,12 +81,8 @@
                                     <p class="card-text style-card-text">$<?= esc($producto['precio']) ?></p>
                                     <div class="container-flex text-center">
                                         <div class="container-flex row">
-                                            <div class="col-6 col-sm-6"><a href="#" class="btn btn-light" >Ver</a></div>
+                                            <div class="col-6 col-sm-6"><a href="<?= base_url('detalle_producto/' . $producto['id'])?>" class="btn btn-light" >Ver</a></div>
                                             <div class="col-6 col-sm-6"><a href="#" class="btn btn-light" >agregar al carrito</a></div>
-
-                                            <!-- Force next columns to break to new line at md breakpoint and up -->
-                                            <div class="w-100 d-none d-md-block"></div>
-
                                         </div>
                                     </div>
                                     

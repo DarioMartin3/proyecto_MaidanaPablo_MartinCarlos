@@ -1,6 +1,3 @@
-
-
-
 <footer class="footer mt-auto py-3 bg-body-tertiary">
     <!-- Sección de Arriba-->
 
@@ -11,7 +8,7 @@
 
                 <div class="carousel-item active text-center">
                     <div class="d-flex flex-column align-items-center ">
-                        <img src="./assets/img/Iconos_layout/shipping.svg"
+                        <img src="<?= base_url('assets/img/Iconos_layout/shipping.svg') ?>"
                             alt="Icono Envío Gratis" width="50" height="50" class="mb-2">
                         <h4>Envío Gratis</h4>
                         <p>a partir de $120.000</p>
@@ -21,7 +18,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="d-flex flex-column align-items-center">
-                        <img src="./assets/img/Iconos_layout/credit-card.svg"
+                        <img src="<?= base_url('assets/img/Iconos_layout/credit-card.svg') ?>"
                             alt="Icono 3 cuotas sin interés" width="50" height="50" class="mb-2">
                         <h4>3 cuotas sin interés</h4>
                         <p>en todo el sitio</p>
@@ -31,7 +28,7 @@
 
                 <div class="carousel-item text-center">
                     <div class="d-flex flex-column align-items-center">
-                        <img src="./assets/img/Iconos_layout/returns.svg"
+                        <img src="<?= base_url('assets/img/Iconos_layout/returns.svg') ?>"
                             alt="Icono Cambios" width="50" height="50" class="mb-2">
                         <h4>¿Cambios?</h4>
                         <p>Cambio gratis hasta 7 días</p>
@@ -57,7 +54,7 @@
                 <!-- Columna Envío Gratis -->
                 <div class="col-md-4 pe-md-3 border-end-md ">
                     <div class="d-flex flex-column align-items-center text-center h-100">
-                        <img src="./assets/img/Iconos_layout/shipping.svg" alt="Icono Envío" width="40" height="40" class="mb-2">
+                        <img src="<?= base_url('assets/img/Iconos_layout/shipping.svg') ?>" alt="Icono Envío" width="40" height="40" class="mb-2">
                         <h5 class="mb-1">Envío Gratis</h5>
                         <p class="small mb-2">a partir de $120.000</p>
                         <a href="<?= base_url('metodos_de_envios') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
@@ -67,7 +64,7 @@
                 <!-- Columna Cuotas -->
                 <div class="col-md-4 px-md-3 border-end-md ">
                     <div class="d-flex flex-column align-items-center text-center h-100">
-                        <img src="./assets/img/Iconos_layout/credit-card.svg" alt="Icono Tarjeta" width="40" height="40" class="mb-2">
+                        <img src="<?= base_url('assets/img/Iconos_layout/credit-card.svg') ?>" alt="Icono Tarjeta" width="40" height="40" class="mb-2">
                         <h5 class="mb-1">3 cuotas sin interés</h5>
                         <p class="small mb-2">en todo el sitio</p>
                         <a href="<?= base_url('formas_de_pagos') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
@@ -77,7 +74,7 @@
                 <!-- Columna Cambios -->
                 <div class="col-md-4 ps-md-3 ">
                     <div class="d-flex flex-column align-items-center text-center h-100">
-                        <img src="./assets/img/Iconos_layout/returns.svg" alt="Icono Cambios" width="40" height="40" class="mb-2">
+                        <img src="<?= base_url('assets/img/Iconos_layout/returns.svg') ?>" alt="Icono Cambios" width="40" height="40" class="mb-2">
                         <h5 class="mb-1">Cambios?</h5>
                         <p class="small mb-2">Cambio gratis hasta 15 días</p>
                         <a href="<?= base_url('cambios_y_devoluciones') ?>" class="btn btn-sm btn-link p-0">Ver más</a>
@@ -96,7 +93,7 @@
             <input type="email" class="form-control form-control-sm flex-grow-1 me-2"
                 placeholder="Ingresá tu email" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
             <button type="submit" class="btn btn-link text-dark p-0 d-flex align-items-center">
-                <img src="./assets/img/Iconos_layout/arrow-right-square.svg" alt="icono mandar" width="29" height="29">
+                <img src="<?= base_url('assets/img/Iconos_layout/arrow-right-square.svg') ?>" alt="icono mandar" width="29" height="29">
                 <i class="bi bi-arrow-right"></i>
             </button>
         </form>
@@ -124,7 +121,7 @@
                 <ul class="list-unstyled ">
                     <li><a href="<?= base_url('terminos_y_usos') ?>" class="btn btn-link-bottom">Termino y condiciones</a></li>
                     <li><a href="<?= base_url('construction_page') ?>" class="btn btn-link-bottom" style="display: flex; align-items: center;">
-                            <img src="./assets/img/Iconos_layout/bag-x.svg"
+                            <img src="<?= base_url('assets/img/Iconos_layout/bag-x.svg') ?>"
                                 alt="Icono Arrepentimiento"
                                 width="20"
                                 height="20">Boton de arrepentimiento</a></li>
@@ -133,15 +130,15 @@
             <div class="col-12 col-md-4 mb-4">
                 <h5 class="footer-margin-column">Siguenos</h5>
                 <ul class="list-unstyled d-flex justify-content-start">
-                    <li><a href="https://www.facebook.com" target="_blank" class="me-3" style="padding-left: 12px;"><img src="./assets/img/Iconos_layout/facebook.svg" alt="Icono Facebook" width="20" height="20"></a></li>
-                    <li><a href="https://www.instagram.com" target="_blank" class="me-3"><img src="./assets/img/Iconos_layout/instagram.svg" alt="Icono Instagram" width="20" height="20"></a></li>
-                    <li><a href="https://www.tiktok.com" target="_blank"><img src="./assets/img/Iconos_layout/tiktok.svg" alt="Icono Tiktok" width="20" height="20"></a></li>
+                    <li><a href="https://www.facebook.com" target="_blank" class="me-3" style="padding-left: 12px;"><img src="<?= base_url('assets/img/Iconos_layout/facebook.svg') ?>" alt="Icono Facebook" width="20" height="20"></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" class="me-3"><img src="<?= base_url('assets/img/Iconos_layout/instagram.svg') ?>" alt="Icono Instagram" width="20" height="20"></a></li>
+                    <li><a href="https://www.tiktok.com" target="_blank"><img src="<?= base_url('assets/img/Iconos_layout/tiktok.svg') ?>" alt="Icono Tiktok" width="20" height="20"></a></li>
                 </ul>
             </div>
         </div>
     </section>
 </footer>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
 <script>
     function toggleSearchBar() {
         const searchBar = document.getElementById('searchBar');

@@ -112,7 +112,7 @@
                         <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." style="width: 200px;">
                     </div>
                     <button class="btn btn-link p-0" id="searchButton" onclick="toggleSearchBar()">
-                        <img src="./assets/img/Iconos_layout/search.svg" width="30" height="30" alt="Search">
+                        <img src="<?= base_url('assets/img/Iconos_layout/search.svg') ?>" width="30" height="30" alt="Search">
                     </button>
                 </div>
                 <?php if (session()->get('usuario')): ?>
@@ -123,14 +123,14 @@
                     <?php elseif (session()->get('perfil_id') == 2): ?>
                         <!-- Opciones solo para cliente -->
                         <button href="#" class="btn btn-link" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas" aria-controls="carritoOffcanvas">
-                            <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
+                            <img src="<?= base_url('assets/img/Iconos_layout/bag.svg') ?>" width="30" height="30" alt="Carrito">
                         </button>
                     <?php endif; ?>
                     <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm">Cerrar sesión</a>
                 <?php else: ?>
                     <!-- Botón de Login -->
                     <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
+                        <img src="<?= base_url('assets/img/Iconos_layout/person-circle.svg') ?>" width="30" height="30" alt="Login">
                     </button>
                 <?php endif; ?>
             </div>
@@ -232,7 +232,7 @@
     </div>
     <div class="offcanvas-body d-flex flex-column justify-content-center align-items-center">
         <i class="bi bi-bag" style="font-size: 3rem;"></i>
-        <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
+        <img src="<?= base_url('assets/img/Iconos_layout/bag.svg') ?>" width="30" height="30" alt="Carrito">
         <?php if (!empty($cartItems)): ?>
             <ul class="list-group w-100">
                 <?php foreach ($cartItems as $item): ?>
