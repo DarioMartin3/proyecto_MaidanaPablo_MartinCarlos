@@ -39,8 +39,8 @@
 
                                         <?php if ($categoria['mujer'] == 1): ?>
                                             <form action="<?= base_url('/catalogo') ?>" method="get">
-                                                <input type="hidden" name="categoria" value="<?= $categoria['id'] ?>">
-                                                <input type="hidden" name="id_sexo" value="<?= $categoria['mujer'] ?>">
+                                                <input type="hidden" name="categorias[]" value="<?= $categoria['id'] ?>">
+                                                <input type="hidden" name="sexo[]" value="2">
                                                 <button type="submit" class="dropdown-item"><?= $categoria['categoria'] ?></button>
                                             </form>
                                         <?php endif; ?>
@@ -64,8 +64,8 @@
 
                                         <?php if ($categoria['hombre'] == 1): ?>
                                             <form action="<?= base_url('/catalogo') ?>" method="get">
-                                                <input type="hidden" name="categoria" value="<?= $categoria['id'] ?>">
-                                                <input type="hidden" name="id_sexo" value="<?= $categoria['hombre'] ?>">
+                                                <input type="hidden" name="categorias[]" value="<?= $categoria['id'] ?>">
+                                                <input type="hidden" name="sexo[]" value="1">
                                                 <button type="submit" class="dropdown-item"><?= $categoria['categoria'] ?></button>
                                             </form>
                                         <?php endif; ?>
