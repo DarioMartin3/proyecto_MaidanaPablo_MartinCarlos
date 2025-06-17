@@ -152,9 +152,8 @@ class Productos extends BaseController
         $marcas = $this->request->getGet('marca') ?? [];
         $categorias = $this->request->getGet('categorias') ?? [];
         $tallas = $this->request->getGet('talla') ?? [];
-        $tallas = $this->request->getGet('tallas') ?? [];
-        $colores = $this->request->getGet('colores') ?? [];
-        $sexos = $this->request->getGet('sexos') ?? [];
+        $colores = $this->request->getGet('color') ?? [];
+        $sexos = $this->request->getGet('sexo') ?? [];
 
         $modelMarcas = new MarcasModel();
         $modelCate = new CategoriasModel();
