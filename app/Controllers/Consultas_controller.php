@@ -26,12 +26,11 @@ class Consultas_controller extends BaseController
     {
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $model = new ConsultasModel();
-        // Ordenar: primero los no respondidos, luego los respondidos
         $data['consultas'] = $model->orderBy('respondido ASC, id DESC')->findAll();
-        return view('front/header')
-            . view('front/nav', $nav)
-            . view('front/lista_consulta', $data)
-            . view('front/footer');
+        echo view('front/header');
+        echo view('front/nav', $nav);
+        echo view('front/lista_consulta', $data);
+        echo view('front/footer');
     }
 
 

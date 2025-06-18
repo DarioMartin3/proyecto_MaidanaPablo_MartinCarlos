@@ -36,7 +36,7 @@
         <?php if (session('mensaje')): ?>
             <div class="alert alert-success text-center"> <?= session('mensaje') ?> </div>
         <?php endif; ?>
-        <form class="p-5 border rounded-4 shadow bg-white" method="post" action="<?= base_url('/consultas/guardar') ?>">
+        <form class="p-5 border rounded-4 shadow bg-white" method="post" action="<?= base_url('/consultas_guardar') ?>">
             <!-- Apellido y Nombre -->
             <div class="row g-4 mb-4">
                 <div class="col-md-6">

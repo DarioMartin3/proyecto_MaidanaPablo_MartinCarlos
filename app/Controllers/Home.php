@@ -11,7 +11,13 @@ class Home extends BaseController
     {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
-
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/homep');
@@ -22,78 +28,135 @@ class Home extends BaseController
     {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/quienes_somos');
         echo view('front/footer');
     }
 
-    public function contact() 
+    public function contact()
     {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/contact_info');
         echo view('front/footer');
     }
 
-    public function terms() 
+    public function terms()
     {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/terminos_y_usos');
         echo view('front/footer');
     }
 
-    public function form_pagos(){
+    public function form_pagos()
+    {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/formas_de_pago');
         echo view('front/footer');
     }
 
-    public function metodos_env(){
+    public function metodos_env()
+    {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/metodos_envios');
         echo view('front/footer');
     }
 
-    public function cam_dev(){
+    public function cam_dev()
+    {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/cambios_devoluciones');
         echo view('front/footer');
     }
 
-    public function cPage(){
+    public function cPage()
+    {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/construction_page');
         echo view('front/footer');
     }
 
-    public function adminMenu(){
+    public function adminMenu()
+    {
         $categorias = new CategoriasModel();
         $data['categorias'] = $categorias->findAll();
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
         echo view('front/nav', $data);
         echo view('front/admin_menu');
         echo view('front/footer');
     }
 }
-
-
-
-

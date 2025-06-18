@@ -75,7 +75,7 @@ class Usuarios_controller extends Controller
     }
 
     public function editar($id)
-    {   
+    {
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $usuariosModel = new \App\Models\UsuariosModel();
         $db = \Config\Database::connect();
@@ -94,13 +94,10 @@ class Usuarios_controller extends Controller
     {
         $usuariosModel = new \App\Models\UsuariosModel();
         $data = [
-            'nombre' => $this->request->getPost('nombre'),
-            'apellido' => $this->request->getPost('apellido'),
-            'email' => $this->request->getPost('email'),
             'perfil_id' => $this->request->getPost('perfil_id'),
         ];
         $usuariosModel->update($id, $data);
-        return redirect()->to('/usuarios')->with('mensaje', 'Usuario actualizado correctamente');
+        return redirect()->to('/usuarios')->with('mensaje', 'Perfil de usuario actualizado correctamente');
     }
 
     public function alta()

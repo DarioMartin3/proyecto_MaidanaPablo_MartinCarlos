@@ -203,9 +203,16 @@
         });
     });
 </script>
+<script>
+            setTimeout(function() {
+                var alert = document.getElementById('alertMensaje');
+                if (alert) {
+                    alert.classList.remove('show');
+                    alert.classList.add('hide');
+                    alert.style.display = 'none';
+                }
+            }, 2000);
+        </script>
 </body>
-
-
-
 
 </html>

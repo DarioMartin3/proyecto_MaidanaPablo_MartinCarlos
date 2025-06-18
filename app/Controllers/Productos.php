@@ -34,7 +34,7 @@ class Productos extends BaseController
         echo view('front/footer');
     }
     public function agregar_campos()
-    {   
+    {
         $modelCate = new CategoriasModel();
         $nav['categorias'] = $modelCate->findAll();
         $sexos = new SexosModel();
