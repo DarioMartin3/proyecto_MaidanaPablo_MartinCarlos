@@ -77,7 +77,7 @@
 <!-- Sección de categorías -->
 <section class="conteiner-fluid">
   <div class="d-grid gap-3 colum_responsive">
-    <div class="p-3 "> <a href="#">
+    <div class="p-3 "> <a href="catalogo?sexo%5B%5D=2">
         <div class="card text-bg-dark float borde-card">
           <img src="./assets/img/imagenes_cartila/ropa_mujer.jpg" class="card-img" alt="Ropa mujer">
           <div class="card-img-overlay">
@@ -86,7 +86,7 @@
 
         </div>
       </a></div>
-    <div class="p-3"> <a href="#">
+    <div class="p-3"> <a href="catalogo?sexo%5B%5D=1">
         <div class="card text-bg-dark float borde-card">
           <img src="./assets/img/imagenes_cartila/ropa_hombre.jpg" class="card-img" alt="Ropa Hombre">
           <div class="card-img-overlay">
@@ -109,7 +109,7 @@
 <section>
   <div class="d-grid gap-3">
     <div class="p-3 ">
-      <a href="#">
+      <a href="<?= base_url('catalogo') ?>">
         <div class="card text-bg-dark float borde-card">
           <img src="./assets/img/imagenes_cartila/ver_todo.jpg" class="card-img" alt="Ver Todo">
           <div class="card-img-overlay">

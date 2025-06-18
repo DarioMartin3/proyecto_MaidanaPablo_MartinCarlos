@@ -112,7 +112,7 @@
                         <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." style="width: 200px;">
                     </div>
                     <button class="btn btn-link p-0" id="searchButton" onclick="toggleSearchBar()">
-                        <img src="./assets/img/Iconos_layout/search.svg" width="30" height="30" alt="Search">
+                        <img src="<?= base_url('assets/img/Iconos_layout/search.svg') ?>" width="30" height="30" alt="Search">
                     </button>
                 </div>
                 <?php if (session()->get('usuario')): ?>
@@ -130,7 +130,7 @@
                 <?php else: ?>
                     <!-- Botón de Login -->
                     <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        <img src="./assets/img/Iconos_layout/person-circle.svg" width="30" height="30" alt="Login">
+                        <img src="<?= base_url('assets/img/Iconos_layout/person-circle.svg') ?>" width="30" height="30" alt="Login">
                     </button>
                 <?php endif; ?>
             </div>

@@ -39,12 +39,21 @@
             <label for="stock" class="form-label">stock</label>
             <input type="number" class="form-control" id="stock" min=1 name="stock" value="1">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2">
             <label for="color" class="form-label">color</label>
             <select id="color" class="form-select" name="color">
             <option selected>Selecciona...</option>
             <?php foreach($colores as $color):?>
                 <option value="<?= $color['id'] ?>"><?= $color['color'];?></option>
+            <?php endforeach;?>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="sexo" class="form-label">sexo</label>
+            <select id="sexo" class="form-select" name="sexo">
+            <option selected>Selecciona...</option>
+            <?php foreach($sexos as $sexo):?>
+                <option value="<?= $sexo['id'] ?>"><?= $sexo['sexo'];?></option>
             <?php endforeach;?>
             </select>
         </div>

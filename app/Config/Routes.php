@@ -75,6 +75,8 @@ $routes->get('/consultas/cambiar_respondido/(:num)', 'Consultas_controller::camb
 
 $routes->get('/consulta', 'Consultas_controller::lista');
 
+$routes->get('/detalle_producto/(:num)', 'Productos::detalle_producto/$1');
+
 $routes->get('/carrito', 'Carrito_controller::mostrar');
 
 $routes->post('/carrito/eliminar_todo', 'Carrito_controller::eliminar_todo');
