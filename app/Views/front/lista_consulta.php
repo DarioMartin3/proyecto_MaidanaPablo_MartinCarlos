@@ -6,7 +6,7 @@
     <?php if (session('mensaje_consultaLista')): ?>
         <div class="alert alert-success text-center"> <?= session('mensaje_consultaLista') ?> </div>
     <?php endif; ?>
-    <div class="container-fluid py-4">
+    <div class="container py-4">
         <table class="table table-bordered table-hover">
             <thead class="table-dark text-center">
                 <tr>
