@@ -1,4 +1,3 @@
-<?php // ...existing code... ?>
 <section class="container-fluid">
     <div class="style-div-titulo">
         <h2 class="style-titulo">MIS COMPRAS</h2>
@@ -16,7 +15,10 @@
                 </thead>
                 <tbody>
                     <?php foreach ($compras as $compra): ?>
-                        <?php $cantidad_total = 0; foreach ($compra['detalles'] as $detalle) { $cantidad_total += $detalle['cantidad']; } ?>
+                        <?php $cantidad_total = 0;
+                        foreach ($compra['detalles'] as $detalle) {
+                            $cantidad_total += $detalle['cantidad'];
+                        } ?>
                         <tr class="text-center">
                             <td><?= esc($compra['id']) ?></td>
                             <td><?= $cantidad_total ?></td>
@@ -49,7 +51,7 @@
                                             </tr>
                                         <?php endforeach; ?>
                                         <tr class="table text-end align-middle">
-                                            <td colspan="4" class="fw-bold fs-5 border-0 text-dark" >
+                                            <td colspan="4" class="fw-bold fs-5 border-0 text-dark">
                                                 <div class="d-flex justify-content-end">
                                                     <span>Total de la compra: <span class="fs-4 text-success">$<?= number_format($compra['total_venta'], 2) ?></span></span>
                                                 </div>
@@ -67,4 +69,3 @@
         <?php endif; ?>
     </div>
 </section>
-<?php // ...existing code... ?>

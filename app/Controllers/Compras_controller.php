@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 use App\Models\VentasCabeceraModel;
@@ -13,7 +14,7 @@ class Compras_controller extends Controller
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $session = session();
         $usuario_id = $session->get('id_usuario');
-        
+
         $ventasModel = new VentasCabeceraModel();
         $detallesModel = new VentasDetallesModel();
         $productosModel = new ProductsModel();
