@@ -8,7 +8,7 @@ use CodeIgniter\Controller;
 
 class Compras_controller extends Controller
 {
-    public function lista_usuario()
+    public function lista()
     {
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $session = session();

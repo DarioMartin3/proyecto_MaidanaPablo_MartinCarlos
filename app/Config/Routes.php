@@ -87,4 +87,4 @@ $routes->post('/carrito/eliminar', 'Carrito_controller::eliminar');
 
 $routes->get('/ventas', 'Ventas_controller::lista');
 
-$routes->get('/compras', 'Compras_controller::lista_usuario');
+$routes->get('/compras', 'Compras_controller::lista');
