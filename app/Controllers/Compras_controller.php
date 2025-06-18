@@ -13,9 +13,7 @@ class Compras_controller extends Controller
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $session = session();
         $usuario_id = $session->get('id_usuario');
-        if (!$usuario_id) {
-            return redirect()->to('/login')->with('error', 'Debes iniciar sesión para ver tus compras.');
-        }
+        
         $ventasModel = new VentasCabeceraModel();
         $detallesModel = new VentasDetallesModel();
         $productosModel = new ProductsModel();
