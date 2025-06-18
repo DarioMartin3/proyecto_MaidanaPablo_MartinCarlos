@@ -27,6 +27,7 @@
                             <td><?= esc($venta['fecha']) ?></td>
                             <td>
                                 <button class="btn btn-black btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#detalleVenta<?= $venta['id'] ?>" aria-expanded="false" aria-controls="detalleVenta<?= $venta['id'] ?>">
+                                    <img src="<?= base_url('./assets/img/iconos_layout/clipboard2-check.svg') ?>" alt="Ver Detalle" class="me-1" style="filter: invert(1) brightness(2);" width="20" height="20">
                                     Ver Detalle
                                 </button>
                             </td>
