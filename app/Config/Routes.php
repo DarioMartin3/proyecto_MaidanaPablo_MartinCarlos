@@ -77,13 +77,13 @@ $routes->get('/detalle_producto/(:num)', 'Productos::detalle_producto/$1');
 
 $routes->get('/carrito', 'Carrito_controller::mostrar');
 
-$routes->post('/carrito/eliminar_todo', 'Carrito_controller::eliminar_todo');
+$routes->post('/carrito_eliminar_todo', 'Carrito_controller::eliminar_todo');
 
-$routes->post('/carrito/agregar', 'Carrito_controller::agregar');
+$routes->post('/carrito_agregar', 'Carrito_controller::agregar');
 
-$routes->post('/carrito/finalizar', 'Carrito_controller::finalizar_compra');
+$routes->post('/carrito_finalizar', 'Carrito_controller::finalizar_compra');
 
-$routes->post('/carrito/eliminar', 'Carrito_controller::eliminar');
+$routes->post('/carrito_eliminar', 'Carrito_controller::eliminar');
 
 $routes->get('/ventas', 'Ventas_controller::lista');
 
