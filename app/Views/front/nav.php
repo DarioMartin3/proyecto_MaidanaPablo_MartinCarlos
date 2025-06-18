@@ -108,9 +108,12 @@
             </div>
             <div class="btn-group d-flex align-items-center" role="group">
                 <div class="search-container position-relative me-3 d-flex align-items-center">
-                    <div id="searchBar" class="d-none">
-                        <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." style="width: 200px;">
-                    </div>
+                    <form action="<?= base_url('/catalogo')?>" >
+                        <div id="searchBar" class="d-none">
+                            <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." style="width: 200px;" id="nombre" name="nombre">
+                        </div>
+                        
+                    </form>
                     <button class="btn btn-link p-0" id="searchButton" onclick="toggleSearchBar()">
                         <img src="<?= base_url('assets/img/Iconos_layout/search.svg') ?>" width="30" height="30" alt="Search">
                     </button>

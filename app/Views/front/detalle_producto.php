@@ -57,9 +57,18 @@
                 </div>
 
                 <!-- Botón principal (acento minimalista) -->
-                <button class="btn btn-dark w-100 rounded-0 py-3">
-                    AÑADIR AL CARRITO
-                </button>
+                <?php if (session()->get('perfil_id') == 2): ?>
+                        <!-- Opciones solo para administrador -->
+                    <button class="btn btn-dark w-100 rounded-0 py-3">
+                        AÑADIR AL CARRITO
+                    </button>
+                <?php else:?>
+                    <!-- Opciones solo para cliente -->
+                    <button class="disabled btn btn-dark w-100 rounded-0 py-3">
+                        AÑADIR AL CARRITO
+                    </button>
+                <?php endif; ?>
+                
             </div>
         </div>
     </div>

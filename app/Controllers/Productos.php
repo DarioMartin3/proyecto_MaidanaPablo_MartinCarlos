@@ -157,11 +157,16 @@ class Productos extends BaseController
         $tallas = $this->request->getGet('talla') ?? [];
         $colores = $this->request->getGet('color') ?? [];
         $sexos = $this->request->getGet('sexo') ?? [];
+        $nombre = $this->request->getGet('nombre') ?? '';
 
         $modelMarcas = new MarcasModel();
         $modelCate = new CategoriasModel();
         $modelTalla = new TallasModel();
         $model = new ProductsModel();
+
+        if (!empty($nombre)) {
+            $model->like('nombre', $nombre);
+        }
 
         if (!empty($marcas)) {
             $model->whereIn('id_marca', $marcas);
