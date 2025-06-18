@@ -12,7 +12,10 @@
     <?php endif; ?>
     <div class="container py-4">
         <div class="d-flex justify-content-end align-items-center mb-4">
-            <button class="btn btn-black" data-bs-toggle="modal" data-bs-target="#altaUsuarioModal">Agregar Usuario</button>
+            <button class="btn btn-black d-flex align-items-center gap-2 rounded-pill px-3 py-2" data-bs-toggle="modal" data-bs-target="#altaUsuarioModal">
+                <img src="<?= base_url('assets/img/Iconos_layout/person-plus-fill.svg') ?>" width="25" height="25" alt="Agregar Usuario" style="filter: invert(1) brightness(2);">
+                Agregar Usuario
+            </button>
         </div>
         <!--Alta Usuario -->
         <div class="modal fade" id="altaUsuarioModal" tabindex="-1" aria-hidden="true">
@@ -92,16 +95,25 @@
                             </td>
                             <td>
                                 <?php if ($usuario['perfil_id'] == 1): ?>
-                                    <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm disabled">Deshabilitar</a>
+                                    <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm disabled">
+                                        <img src="<?= base_url('assets/img/Iconos_layout/ban.svg') ?>" width="20" height="20" alt="Deshabilitado" style="filter: invert(1) brightness(2);">
+                                        Deshabilitar
+                                    </a>
                                 <?php else: ?>
                                     <?php if ($usuario['baja']): ?>
                                         <a href="<?= base_url('/usuarios/habilitar/' . $usuario['id_usuario']) ?>" class="btn btn-success btn-sm">Habilitar</a>
                                     <?php else: ?>
-                                        <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm">Deshabilitar</a>
+                                        <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm">
+                                            <img src="<?= base_url('assets/img/Iconos_layout/ban.svg') ?>" width="20" height="20" alt="Deshabilitado" style="filter: invert(1) brightness(2);">
+                                            Deshabilitar
+                                        </a>
                                     <?php endif; ?>
                                 <?php endif; ?>
                                 <!-- Botón para abrir el modal de edición -->
-                                <button class="btn btn-black btn-sm" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal<?= $usuario['id_usuario'] ?>">Editar</button>
+                                <button class="btn btn-black btn-sm  align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#editarUsuarioModal<?= $usuario['id_usuario'] ?>">
+                                    <img src="<?= base_url('assets/img/Iconos_layout/pen.svg') ?>" width="20" height="20" alt="editar" style="filter: invert(1) brightness(2);">
+                                    Editar
+                                </button>
                                 <!-- Modal de Edición -->
                                 <div class="modal fade" id="editarUsuarioModal<?= $usuario['id_usuario'] ?>" tabindex="-1" aria-hidden="true">
                                     <div class="modal-dialog">
