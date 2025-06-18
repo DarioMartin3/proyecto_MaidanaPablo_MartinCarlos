@@ -20,7 +20,7 @@
             </div>
         <?php endif; ?>
         <?php if (isset($cartItems) && !empty($cartItems)): ?>
-            <table class="table table-bordered">
+            <table class="table table-bordered text-center align-middle">
                 <thead>
                     <tr>
                         <th>Imagen</th>
@@ -35,23 +35,23 @@
                     <?php $total = 0; ?>
                     <?php foreach ($cartItems as $item): ?>
                         <tr>
-                            <td>
+                            <td class="align-middle">
                                 <?php if (!empty($item['imagen'])): ?>
                                     <img src="<?= esc($item['imagen']) ?>" alt="<?= esc($item['name']) ?>" width="50">
                                 <?php endif; ?>
                             </td>
-                            <td><?= esc($item['name']) ?></td>
-                            <td>$<?= number_format($item['price'], 2) ?></td>
-                            <td>
-                                <div class="d-flex align-items-center justify-content-center">
+                            <td class="align-middle"><?= esc($item['name']) ?></td>
+                            <td class="align-middle">$<?= number_format($item['price'], 2) ?></td>
+                            <td class="align-middle">
+                                <div class="d-flex align-items-center justify-content-center gap-2">
                                     <form action="<?= site_url('carrito_eliminar') ?>" method="post" style="display:inline;">
                                         <input type="hidden" name="rowid" value="<?= $item['rowid'] ?>">
-                                        <?php
-                                        $disableEliminar = ($item['qty'] <= 1);
-                                        ?>
-                                        <button type="submit" class="btn btn-danger btn-sm" <?= $disableEliminar ? 'disabled' : '' ?>>-</button>
+                                        <?php $disableEliminar = ($item['qty'] <= 1); ?>
+                                        <button type="submit" style="background: transparent; border: none; padding: 0; margin: 0;" <?= $disableEliminar ? 'disabled' : '' ?>>
+                                            <img src="<?= base_url('assets/img/Iconos_layout/dash-circle-fill.svg') ?>" width="20" height="20" alt="restar" style="filter: invert(18%) sepia(99%) saturate(7492%) hue-rotate(357deg) brightness(92%) contrast(92%); display: block;">
+                                        </button>
                                     </form>
-                                    <span class="mx-2" style="min-width: 30px; display: inline-block; text-align: center;">
+                                    <span class="mx-2" style="min-width: 30px; display: inline-block; text-align: center; position: relative; top: -2px;">
                                         <?= esc($item['qty']) ?>
                                     </span>
                                     <form action="<?= site_url('carrito_agregar') ?>" method="post" style="display:inline;">
@@ -65,15 +65,19 @@
                                         }
                                         $disableAgregar = ($stock !== null && $item['qty'] >= $stock);
                                         ?>
-                                        <button type="submit" class="btn btn-success btn-sm" <?= $disableAgregar ? 'disabled' : '' ?>>+</button>
+                                        <button type="submit" style="background: transparent; border: none; padding: 0; margin: 0;" <?= $disableAgregar ? 'disabled' : '' ?>>
+                                            <img src="<?= base_url('assets/img/Iconos_layout/plus-circle-fill.svg') ?>" width="20" height="20" alt="agregar" style="filter: invert(41%) sepia(97%) saturate(749%) hue-rotate(74deg) brightness(92%) contrast(92%); display: block;">
+                                        </button>
                                     </form>
                                 </div>
                             </td>
-                            <td>$<?= number_format($item['price'] * $item['qty'], 2) ?></td>
-                            <td>
+                            <td class="align-middle">$<?= number_format($item['price'] * $item['qty'], 2) ?></td>
+                            <td class="align-middle">
                                 <form action="<?= site_url('carrito_eliminar_todo') ?>" method="post" style="display:inline;">
                                     <input type="hidden" name="rowid" value="<?= $item['rowid'] ?>">
-                                    <button type="submit" class="btn btn-dark btn-sm">Eliminar</button>
+                                    <button type="submit" class="btn btn-dark btn-sm">
+                                        <img src="<?= base_url('assets/img/Iconos_layout/trash.svg') ?>" width="20" height="20" alt="Eliminar" class="me-1" style="filter: invert(1) brightness(2);">
+                                        Eliminar</button>
                                 </form>
                             </td>
                         </tr>
