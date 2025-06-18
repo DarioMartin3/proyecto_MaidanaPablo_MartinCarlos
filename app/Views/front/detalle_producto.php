@@ -43,17 +43,20 @@
                 </div>
 
                 <!-- Selector de cantidad -->
+                <form action="<?= base_url('carrito_agregar') ?>" method="post" class="mb-4">
+                    
                 <div class="mb-4">
                     <label for="cantidad" class="form-label">Cantidad</label>
                     <input 
                         type="number" 
-                        id="cantidad" 
-                        name="cantidad" 
+                        id="qty" 
+                        name="qty" 
                         class="form-control" 
                         value="1" 
                         min="1" 
                         max="<?= esc($producto['stock']) ?>" 
                         style="max-width: 120px;">
+                    <input type="hidden" name="id" value="<?= esc($producto['id']) ?>">
                 </div>
 
                 <!-- Botón principal (acento minimalista) -->
@@ -61,6 +64,7 @@
                         <!-- Opciones solo para administrador -->
                     <button class="btn btn-dark w-100 rounded-0 py-3">
                         AÑADIR AL CARRITO
+                    
                     </button>
                 <?php else:?>
                     <!-- Opciones solo para cliente -->
@@ -68,6 +72,7 @@
                         AÑADIR AL CARRITO
                     </button>
                 <?php endif; ?>
+                </form>
                 
             </div>
         </div>
