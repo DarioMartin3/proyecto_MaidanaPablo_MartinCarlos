@@ -41,7 +41,9 @@
                             <span class="badge bg-success">Activo</span>
                         </td>
                         <td>
-                            <a href="<?= base_url('/productos/deshabilitar/' . $producto['id']) ?>" class="btn btn-danger btn-sm">Deshabilitar</a>
+                            <a href="<?= base_url('/productos/deshabilitar/' . $producto['id']) ?>" class="btn btn-danger btn-sm">
+                                <img src="<?= base_url('assets/img/Iconos_layout/ban.svg') ?>" width="20" height="20" alt="Deshabilitar" style="filter: invert(1) brightness(2);">
+                                Deshabilitar</a>
                             <!-- Modal de Edición -->
                             <div class="modal fade" id="editarProductoModal" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
@@ -135,9 +137,11 @@
                             </div>
 
 
-                            <button class="btn btn-sm btn-black" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
-                                <i class="bi bi-pencil-square"></i> Editar
+                            <button class="btn btn-black btn-sm  align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
+                                <img src="<?= base_url('assets/img/Iconos_layout/pen.svg') ?>" width="20" height="20" alt="editar" style="filter: invert(1) brightness(2);">
+                                Editar
                             </button>
+
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -157,7 +161,10 @@
                             <span class="badge bg-secondary">Deshabilitado</span>
                         </td>
                         <td>
-                            <a href="<?= base_url('/productos/habilitar/' . $producto['id']) ?>" class="btn btn-success btn-sm">Habilitar</a>
+                            <a href="<?= base_url('/productos/habilitar/' . $producto['id']) ?>" class="btn btn-success btn-sm">
+                                <img src="<?= base_url('assets/img/Iconos_layout/check-circle.svg') ?>" width="20" height="20" alt="Habilitar" style="filter: invert(1) brightness(2);">
+                                Habilitar
+                            </a>
                             <!-- Modal de Edición -->
                             <div class="modal fade" id="editarProductoModal" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog modal-lg">
@@ -260,9 +267,11 @@
                             </div>
 
 
-                            <button class="btn btn-sm btn-black" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
-                                <i class="bi bi-pencil-square"></i> Editar
+                            <button class="btn btn-black btn-sm  align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#editarProductoModal">
+                                <img src="<?= base_url('assets/img/Iconos_layout/pen.svg') ?>" width="20" height="20" alt="editar" style="filter: invert(1) brightness(2);">
+                                Editar
                             </button>
+
                         </td>
                     </tr>
                 <?php endforeach; ?>

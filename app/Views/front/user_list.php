@@ -101,10 +101,13 @@
                                     </a>
                                 <?php else: ?>
                                     <?php if ($usuario['baja']): ?>
-                                        <a href="<?= base_url('/usuarios/habilitar/' . $usuario['id_usuario']) ?>" class="btn btn-success btn-sm">Habilitar</a>
+                                        <a href="<?= base_url('/usuarios/habilitar/' . $usuario['id_usuario']) ?>" class="btn btn-success btn-sm">
+                                            <img src="<?= base_url('assets/img/Iconos_layout/check-circle.svg') ?>" width="20" height="20" alt="Habilitar" style="filter: invert(1) brightness(2);">
+                                            Habilitar
+                                        </a>
                                     <?php else: ?>
                                         <a href="<?= base_url('/usuarios/deshabilitar/' . $usuario['id_usuario']) ?>" class="btn btn-danger btn-sm">
-                                            <img src="<?= base_url('assets/img/Iconos_layout/ban.svg') ?>" width="20" height="20" alt="Deshabilitado" style="filter: invert(1) brightness(2);">
+                                            <img src="<?= base_url('assets/img/Iconos_layout/ban.svg') ?>" width="20" height="20" alt="Deshabilitar" style="filter: invert(1) brightness(2);">
                                             Deshabilitar
                                         </a>
                                     <?php endif; ?>
