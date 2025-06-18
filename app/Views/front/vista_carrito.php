@@ -4,15 +4,21 @@
     </div>
     <div class="container mt-5">
         <?php if (session('mensaje')): ?>
-        <div class="d-flex justify-content-center py-2">
-            <div class="alert alert-success fade show py-2 px-2 small text-center" id="alertMensaje" style="min-width:200px; max-width:350px; width:auto; margin:auto;">
-                <?= session('mensaje') ?>
+            <div class="d-flex justify-content-center py-2">
+                <div class="alert alert-success fade show py-2 px-2 small text-center" id="alertMensaje" style="min-width:200px; max-width:350px; width:auto; margin:auto;">
+                    <?= session('mensaje') ?>
+                </div>
             </div>
-        </div>
-    <?php endif; ?>
-        <div class="d-flex justify-content-end mb-3">
-            <a href="<?= base_url('/catalogo') ?>" class="btn btn-secondary">Seguir comprando</a>
-        </div>
+        <?php endif; ?>
+        <?php if (!empty($cartItems)): ?>
+            <div class="d-flex justify-content-end mb-3">
+                <a href="<?= base_url('/catalogo') ?>" class="btn btn-secondary">Seguir comprando</a>
+            </div>
+        <?php else: ?>
+            <div class="d-flex justify-content-end mb-3">
+                <a href="<?= base_url('/catalogo') ?>" class="btn btn-secondary">Ir al catálogo</a>
+            </div>
+        <?php endif; ?>
         <?php if (isset($cartItems) && !empty($cartItems)): ?>
             <table class="table table-bordered">
                 <thead>
@@ -82,7 +88,11 @@
                 </form>
             </div>
         <?php else: ?>
-            <p>El carrito está vacío.</p>
+            <div class="text-center py-5">
+                <img src="./assets/img/Iconos_layout/bag-x.svg" width="50" alt="Carrito vacío" class="mb-3" style="opacity:0.5;">
+                <h4 class="text-secondary">Tu carrito está vacío</h4>
+                <p class="text-muted">¡Agrega productos para comenzar tu compra!</p>
+            </div>
         <?php endif; ?>
     </div>
 </section>

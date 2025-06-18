@@ -119,14 +119,17 @@
                     <span class="me-2">Hola, <b><?= esc(session()->get('nombre')) ?></b></span>
                     <?php if (session()->get('perfil_id') == 1): ?>
                         <!-- Opciones solo para administrador -->
-                        <a href="<?= base_url('/admin_menu') ?>" class="btn btn-black btn-sm me-2">Panel Admin</a>
+                        <a href="<?= base_url('/admin_menu') ?>" class="btn btn-black btn-sm me-2 rounded-pill">Panel Admin</a>
                     <?php elseif (session()->get('perfil_id') == 2): ?>
                         <!-- Opciones solo para cliente -->
+                        <a href="<?= base_url('/compras') ?>" class="btn btn-black btn-sm me-2 rounded-pill">Mis compras</a>
                         <a href="<?= base_url('/carrito') ?>" class="btn btn-link">
                             <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
                         </a>
                     <?php endif; ?>
-                    <a href="<?= base_url('/logout') ?>" class="btn btn-outline-danger btn-sm">Cerrar sesión</a>
+                    <a href="<?= base_url('/logout') ?>" class="btn btn-danger btn-sm rounded p-1 d-flex align-items-center">
+                        <img src="./assets/img/Iconos_layout/box-arrow-in-right.svg" width="20" height="20" alt="out" style="filter: invert(1) brightness(2);">
+                    </a>
                 <?php else: ?>
                     <!-- Botón de Login -->
                     <button href="#" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#loginModal">
