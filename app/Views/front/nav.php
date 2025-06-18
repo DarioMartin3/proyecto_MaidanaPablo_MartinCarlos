@@ -108,11 +108,11 @@
             </div>
             <div class="btn-group d-flex align-items-center" role="group">
                 <div class="search-container position-relative me-3 d-flex align-items-center">
-                    <form action="<?= base_url('/catalogo')?>" >
+                    <form action="<?= base_url('/catalogo') ?>">
                         <div id="searchBar" class="d-none">
                             <input type="text" class="form-control form-control-sm me-2" placeholder="Buscar..." style="width: 200px;" id="nombre" name="nombre">
                         </div>
-                        
+
                     </form>
                     <button class="btn btn-link p-0" id="searchButton" onclick="toggleSearchBar()">
                         <img src="<?= base_url('assets/img/Iconos_layout/search.svg') ?>" width="30" height="30" alt="Search">
@@ -127,11 +127,11 @@
                         <!-- Opciones solo para cliente -->
                         <a href="<?= base_url('/compras') ?>" class="btn btn-black btn-sm me-2 rounded-pill">Mis compras</a>
                         <a href="<?= base_url('/carrito') ?>" class="btn btn-link">
-                            <img src="./assets/img/Iconos_layout/bag.svg" width="30" height="30" alt="Carrito">
+                            <img src="<?= base_url('assets/img/Iconos_layout/bag.svg') ?>" width="30" height="30" alt="Carrito">
                         </a>
                     <?php endif; ?>
                     <a href="<?= base_url('/logout') ?>" class="btn btn-danger btn-sm rounded p-1 d-flex align-items-center">
-                        <img src="./assets/img/Iconos_layout/box-arrow-in-right.svg" width="20" height="20" alt="out" style="filter: invert(1) brightness(2);">
+                        <img src="<?= base_url('assets/img/Iconos_layout/box-arrow-in-right.svg') ?>" width="20" height="20" alt="out" style="filter: invert(1) brightness(2);">
                     </a>
                 <?php else: ?>
                     <!-- Botón de Login -->
