@@ -40,7 +40,7 @@
                         <td>$<?= number_format($item['price'], 2) ?></td>
                         <td>
                             <div class="d-flex align-items-center justify-content-center">
-                                <form action="<?= site_url('carrito/eliminar') ?>" method="post" style="display:inline;">
+                                <form action="<?= site_url('carrito_eliminar') ?>" method="post" style="display:inline;">
                                     <input type="hidden" name="rowid" value="<?= $item['rowid'] ?>">
                                     <?php
                                     $disableEliminar = ($item['qty'] <= 1);
@@ -50,7 +50,7 @@
                                 <span class="mx-2" style="min-width: 30px; display: inline-block; text-align: center;">
                                     <?= esc($item['qty']) ?>
                                 </span>
-                                <form action="<?= site_url('carrito/agregar') ?>" method="post" style="display:inline;">
+                                <form action="<?= site_url('carrito_agregar') ?>" method="post" style="display:inline;">
                                     <input type="hidden" name="id" value="<?= $item['id'] ?>">
                                     <?php
                                     $stock = null;
@@ -67,7 +67,7 @@
                         </td>
                         <td>$<?= number_format($item['price'] * $item['qty'], 2) ?></td>
                         <td>
-                            <form action="<?= site_url('carrito/eliminar_todo') ?>" method="post" style="display:inline;">
+                            <form action="<?= site_url('carrito_eliminar_todo') ?>" method="post" style="display:inline;">
                                 <input type="hidden" name="rowid" value="<?= $item['rowid'] ?>">
                                 <button type="submit" class="btn btn-dark btn-sm">Eliminar</button>
                             </form>
@@ -79,7 +79,7 @@
         </table>
         <div class="d-flex flex-column align-items-end gap-2 mt-3">
             <h4 class="mb-0">Total: $<?= number_format($total, 2) ?></h4>
-            <form action="<?= site_url('carrito/finalizar') ?>" method="post" style="display:inline;">
+            <form action="<?= site_url('carrito_finalizar') ?>" method="post" style="display:inline;">
                 <button type="submit" class="btn btn-black">Finalizar Compra</button>
             </form>
         </div>

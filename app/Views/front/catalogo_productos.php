@@ -81,9 +81,9 @@
                                                 <p class="card-text style-card-text">$<?= esc($producto['precio']) ?></p>
                                                 <div class="container-flex text-center">
                                                     <div class="container-flex row">
-                                                        <div class="col-6 col-sm-6"><a href="<?= base_url('detalle_producto/' . $producto['id'])?>" class="btn btn-light" >Ver</a></div>
+                                                        <div class="col-6 col-sm-6"><a href="<?= base_url('/detalle_producto' . $producto['id']) ?>" class="btn btn-light">Ver</a></div>
                                                         <div class="col-6 col-sm-6">
-                                                            <form action="<?= base_url('/carrito/agregar') ?>" method="post">
+                                                            <form action="<?= base_url('/carrito_agregar') ?>" method="post">
                                                                 <input type="hidden" name="id" value="<?= $producto['id'] ?>">
                                                                 <input type="hidden" name="qty" value="1">
                                                                 <button type="submit" class="btn btn-light">Agregar al carrito</button>

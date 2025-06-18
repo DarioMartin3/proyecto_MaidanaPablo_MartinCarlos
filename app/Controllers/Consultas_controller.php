@@ -26,18 +26,9 @@ class Consultas_controller extends BaseController
     {
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $model = new ConsultasModel();
-        // Ordenar: primero los no respondidos, luego los respondidos
         $data['consultas'] = $model->orderBy('respondido ASC, id DESC')->findAll();
-        // Cargar datos del carrito en $data, no en $nav
-        $cart = \Config\Services::cart();
-        $data['cartItems'] = $cart->contents();
-        $data['cartTotal'] = $cart->total();
-        $data['cartCount'] = 0;
-        foreach ($data['cartItems'] as $item) {
-            $data['cartCount'] += $item['qty'];
-        }
         echo view('front/header');
-        echo view('front/nav', $data);
+        echo view('front/nav', $nav);
         echo view('front/lista_consulta', $data);
         echo view('front/footer');
     }

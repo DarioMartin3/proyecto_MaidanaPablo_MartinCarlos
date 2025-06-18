@@ -54,17 +54,8 @@ class Usuarios_controller extends Controller
             ->select('usuarios.*, perfiles.descripcion as perfil')
             ->join('perfiles', 'usuarios.perfil_id = perfiles.id_perfil')
             ->get()->getResultArray();
-
-        // Cargar datos del carrito en $data, no en $nav
-        $cart = \Config\Services::cart();
-        $data['cartItems'] = $cart->contents();
-        $data['cartTotal'] = $cart->total();
-        $data['cartCount'] = 0;
-        foreach ($data['cartItems'] as $item) {
-            $data['cartCount'] += $item['qty'];
-        }
         echo view('front/header');
-        echo view('front/nav', $data);
+        echo view('front/nav', $nav);
         echo view('front/user_list', ['usuarios' => $usuarios]);
         echo view('front/footer');
     }
@@ -93,17 +84,8 @@ class Usuarios_controller extends Controller
         if (!$usuario) {
             return redirect()->to('/usuarios')->with('mensaje', 'Usuario no encontrado');
         }
-
-        // Cargar datos del carrito en $data, no en $nav
-        $cart = \Config\Services::cart();
-        $data['cartItems'] = $cart->contents();
-        $data['cartTotal'] = $cart->total();
-        $data['cartCount'] = 0;
-        foreach ($data['cartItems'] as $item) {
-            $data['cartCount'] += $item['qty'];
-        }
         echo view('front/header');
-        echo view('front/nav', $data);
+        echo view('front/nav', $nav);
         echo view('front/user_edit', ['usuario' => $usuario, 'perfiles' => $perfiles]);
         echo view('front/footer');
     }
@@ -112,13 +94,10 @@ class Usuarios_controller extends Controller
     {
         $usuariosModel = new \App\Models\UsuariosModel();
         $data = [
-            'nombre' => $this->request->getPost('nombre'),
-            'apellido' => $this->request->getPost('apellido'),
-            'email' => $this->request->getPost('email'),
             'perfil_id' => $this->request->getPost('perfil_id'),
         ];
         $usuariosModel->update($id, $data);
-        return redirect()->to('/usuarios')->with('mensaje', 'Usuario actualizado correctamente');
+        return redirect()->to('/usuarios')->with('mensaje', 'Perfil de usuario actualizado correctamente');
     }
 
     public function alta()
