@@ -25,9 +25,6 @@ class Carrito_controller extends BaseController
         $model = new ProductsModel();
         $producto = $model->find($productId);
 
-
-
-
         $cart->insert([
             'id'    => $producto['id'],
             'qty'   => $qty,
@@ -122,13 +119,13 @@ class Carrito_controller extends BaseController
             ];
             $detallesModel->insert($detalle);
 
-            // Actualizar stock y dar de baja si corresponde
+            // Actualizar stock y baja logica si se queda sin stock
             $producto = $productoModel->find($item['id']);
             if ($producto) {
                 $nuevoStock = $producto['stock'] - $item['qty'];
                 $updateData = ['stock' => $nuevoStock];
                 if ($nuevoStock <= 0) {
-                    $updateData['estado'] = 0; // o 'activo' según tu campo
+                    $updateData['estado'] = 0; 
                 }
                 $productoModel->update($item['id'], $updateData);
             }

@@ -86,3 +86,5 @@ $routes->post('/carrito/agregar', 'Carrito_controller::agregar');
 $routes->post('/carrito/finalizar', 'Carrito_controller::finalizar_compra');
 
 $routes->post('/carrito/eliminar', 'Carrito_controller::eliminar');
+
+$routes->get('/ventas', 'Ventas_controller::lista');

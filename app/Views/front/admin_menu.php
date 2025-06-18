@@ -58,7 +58,7 @@
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">Lista de ventas</h5>
                     <p class="card-text">Visualiza las ventas realizadas por usuarios.</p>
-                    <a href="<?= base_url('/construction_page') ?>" class="btn btn-black mt-auto">Ver ventas</a>
+                    <a href="<?= base_url('/ventas') ?>" class="btn btn-black mt-auto">Ver ventas</a>
                 </div>
             </div>
         </div>
