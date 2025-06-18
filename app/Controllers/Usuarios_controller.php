@@ -54,8 +54,17 @@ class Usuarios_controller extends Controller
             ->select('usuarios.*, perfiles.descripcion as perfil')
             ->join('perfiles', 'usuarios.perfil_id = perfiles.id_perfil')
             ->get()->getResultArray();
+
+        // Cargar datos del carrito en $data, no en $nav
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
-        echo view('front/nav', $nav);
+        echo view('front/nav', $data);
         echo view('front/user_list', ['usuarios' => $usuarios]);
         echo view('front/footer');
     }
@@ -75,7 +84,7 @@ class Usuarios_controller extends Controller
     }
 
     public function editar($id)
-    {   
+    {
         $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $usuariosModel = new \App\Models\UsuariosModel();
         $db = \Config\Database::connect();
@@ -84,8 +93,17 @@ class Usuarios_controller extends Controller
         if (!$usuario) {
             return redirect()->to('/usuarios')->with('mensaje', 'Usuario no encontrado');
         }
+
+        // Cargar datos del carrito en $data, no en $nav
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
-        echo view('front/nav', $nav);
+        echo view('front/nav', $data);
         echo view('front/user_edit', ['usuario' => $usuario, 'perfiles' => $perfiles]);
         echo view('front/footer');
     }

@@ -26,20 +26,36 @@ class Productos extends BaseController
         $data['colores'] = $modelColor->findAll();
         $nav['categorias'] = $modelCate->findAll();
 
+        // Cargar datos del carrito en $data, no en $nav
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
-        echo view('front/nav', $nav);
+        echo view('front/nav', $data);
         echo view('front/agregar_productos', $data);
         echo view('front/footer');
     }
     public function agregar_campos()
-    {   
+    {
         $modelCate = new CategoriasModel();
         $nav['categorias'] = $modelCate->findAll();
         $sexos = new SexosModel();
         $data['sexos'] = $sexos->findAll();
 
+        // Cargar datos del carrito en $data, no en $nav
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
-        echo view('front/nav', $nav);
+        echo view('front/nav', $data);
         echo view('front/agregar_campos', $data);
         echo view('front/footer');
     }
@@ -106,8 +122,17 @@ class Productos extends BaseController
         $data['productos'] = $model->findAll();
         $data['sexos'] = $modelSexos->findAll();
         $nav['categorias'] = $modelCate->findAll();
+
+        // Cargar datos del carrito en $data, no en $nav
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
         echo view('front/header');
-        echo view('front/nav', $nav);
+        echo view('front/nav', $data);
         echo view('front/product_list', $data);
         echo view('front/footer');
     }
@@ -191,8 +216,17 @@ class Productos extends BaseController
         $data['sexos'] = (new SexosModel())->findAll();
         $nav['categorias'] = $modelCate->findAll();
 
+        // Cargar datos del carrito en $data, no en $nav
+        $cart = \Config\Services::cart();
+        $data['cartItems'] = $cart->contents();
+        $data['cartTotal'] = $cart->total();
+        $data['cartCount'] = 0;
+        foreach ($data['cartItems'] as $item) {
+            $data['cartCount'] += $item['qty'];
+        }
+        $data['categorias'] = $modelCate->findAll();
         echo view('front/header');
-        echo view('front/nav', $nav);
+        echo view('front/nav', $data);
         echo view('front/catalogo_productos', $data);
         echo view('front/footer');
     }
