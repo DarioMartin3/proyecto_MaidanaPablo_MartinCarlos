@@ -55,7 +55,7 @@
                                         </div>
                                         <!-- Cuerpo del Modal -->
                                         <div class="modal-body p-4">
-                                            <form id="editarProductoForm" action="<?= base_url('/productos/modificar/' . $producto['id']) ?>" method="POST">
+                                            <form id="editarProductoForm<?= $producto['id'] ?>" action="<?= base_url('/productos/modificar/' . $producto['id']) ?>" method="POST" enctype="multipart/form-data">
                                                 <!-- Fila 1: Nombre y Categoría -->
                                                 <div class="row mb-3">
                                                     <div class="col-md-8">
@@ -121,8 +121,23 @@
 
                                                 <!-- Descripción -->
                                                 <div class="mb-3">
-                                                    <label class="form-label fw-bold">Descripción</label>
-                                                    <input type="text" class="form-control" name="descripcion" value="<?= $producto['descripcion'] ?>" required>
+                                                    <label for="descripcion<?= $producto['id'] ?>" class="form-label">Descripción</label>
+                                                    <textarea class="form-control" id="descripcion<?= $producto['id'] ?>" name="descripcion" rows="3"><?= esc($producto['descripcion']) ?></textarea>
+                                                </div>
+
+                                                <!-- Cambiar imagen justo después de descripción -->
+                                                <div class="mb-3">
+                                                    <label for="nueva_imagen<?= $producto['id'] ?>" class="form-label">Cambiar imagen</label>
+                                                    <input class="form-control" type="file" id="nueva_imagen<?= $producto['id'] ?>" name="nueva_imagen" accept="image/*">
+                                                </div>
+
+                                                <!-- Imagen actual del producto -->
+                                                <div class="mb-3 text-center">
+                                                    <img src="<?= base_url('assets/uploads/' . esc($producto['nombre_imagen'])) ?>"
+                                                         alt="Imagen actual"
+                                                         class="img-fluid"
+                                                         style="max-width:150px; max-height:150px; object-fit:contain;">
+                                                    <div class="small text-muted mt-1">Imagen actual</div>
                                                 </div>
                                             </form>
                                         </div>
@@ -130,7 +145,7 @@
                                         <!-- Pie del Modal -->
                                         <div class="modal-footer bg-light p-3">
                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" form="editarProductoForm" class="btn btn-black">Guardar Cambios</button>
+                                            <button type="submit" form="editarProductoForm<?= $producto['id'] ?>" class="btn btn-black">Guardar Cambios</button>
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +191,7 @@
                                         </div>
                                         <!-- Cuerpo del Modal -->
                                         <div class="modal-body p-4">
-                                            <form id="editarProductoForm" action="<?= base_url('/productos/modificar/' . $producto['id']) ?>" method="POST">
+                                            <form id="editarProductoForm<?= $producto['id'] ?>" action="<?= base_url('/productos/modificar/' . $producto['id']) ?>" method="POST" enctype="multipart/form-data">
                                                 <!-- Fila 1: Nombre y Categoría -->
                                                 <div class="row mb-3">
                                                     <div class="col-md-8">
@@ -251,8 +266,23 @@
 
                                                 <!-- Descripción -->
                                                 <div class="mb-3">
-                                                    <label class="form-label fw-bold">Descripción</label>
-                                                    <input type="text" class="form-control" name="descripcion" value="<?= $producto['descripcion'] ?>" required>
+                                                    <label for="descripcion<?= $producto['id'] ?>" class="form-label">Descripción</label>
+                                                    <textarea class="form-control" id="descripcion<?= $producto['id'] ?>" name="descripcion" rows="3"><?= esc($producto['descripcion']) ?></textarea>
+                                                </div>
+
+                                                <!-- Cambiar imagen justo después de descripción -->
+                                                <div class="mb-3">
+                                                    <label for="nueva_imagen<?= $producto['id'] ?>" class="form-label">Cambiar imagen</label>
+                                                    <input class="form-control" type="file" id="nueva_imagen<?= $producto['id'] ?>" name="nueva_imagen" accept="image/*">
+                                                </div>
+
+                                                <!-- Imagen actual del producto -->
+                                                <div class="mb-3 text-center">
+                                                    <img src="<?= base_url('assets/uploads/' . esc($producto['nombre_imagen'])) ?>"
+                                                         alt="Imagen actual"
+                                                         class="img-fluid"
+                                                         style="max-width:150px; max-height:150px; object-fit:contain;">
+                                                    <div class="small text-muted mt-1">Imagen actual</div>
                                                 </div>
                                             </form>
                                         </div>
@@ -260,7 +290,7 @@
                                         <!-- Pie del Modal -->
                                         <div class="modal-footer bg-light p-3">
                                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="submit" form="editarProductoForm" class="btn btn-black">Guardar Cambios</button>
+                                            <button type="submit" form="editarProductoForm<?= $producto['id'] ?>" class="btn btn-black">Guardar Cambios</button>
                                         </div>
                                     </div>
                                 </div>

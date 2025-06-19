@@ -133,7 +133,7 @@ class Productos extends BaseController
     {
         $model = new ProductsModel();
 
-
+        // Recoge los datos del formulario
         $data = [
             'nombre' => $this->request->getPost('nombre'),
             'id_categoria' => $this->request->getPost('categoria'),
@@ -145,6 +145,14 @@ class Productos extends BaseController
             'descripcion' => $this->request->getPost('descripcion'),
             'id_sexo' => $this->request->getPost('sexo')
         ];
+
+        // Procesa la imagen si se subió una nueva
+        $imagen = $this->request->getFile('nueva_imagen');
+        if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
+            $nuevoNombre = $imagen->getRandomName();
+            $imagen->move('./assets/uploads', $nuevoNombre);
+            $data['nombre_imagen'] = $nuevoNombre;
+        }
 
         $model->update($id, $data);
         return redirect()->to('/productos')->with('mensaje', 'Producto actualizado correctamente');

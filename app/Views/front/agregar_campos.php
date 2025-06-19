@@ -1,5 +1,5 @@
 <section class="container-fluid">
-    <div class="style-div-titulo">
+    <div class="style-div-titulo" style="margin-bottom: 40px;">
         <h2 class="style-titulo">AGREGAR CATEGORIA</h2>
     </div>
     <?php if (session('campo_error')): ?>
@@ -11,7 +11,7 @@
     <div style="justify-content: center;display: flex;">
         <div class="col-md-6" style="justify-content: center;">
             <form method="POST" action="<?php echo base_url('/categoria'); ?>">
-                <div class="form-floating mb-3 col-md-11" style="margin-left:20px">
+                <div class="form-floating mb-3 col-md-11 " style="margin-left:20px">
 
                     <input type="text" class="form-control mb-3" id="categoria" placeholder="Remera" name="categoria">
                     <label for="categoria">Agregar Categoria</label>

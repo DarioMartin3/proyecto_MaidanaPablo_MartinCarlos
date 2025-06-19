@@ -1,5 +1,5 @@
 <section class="container-fluid">
-    <div class="style-div-titulo">
+    <div class="style-div-titulo" style="margin-bottom: 40px;">
         <h2 class="style-titulo">AGREGAR PRODUCTO</h2>
     </div>
     <div style="justify-content: center;display: flex;">
