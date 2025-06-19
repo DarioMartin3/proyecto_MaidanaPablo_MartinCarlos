@@ -38,13 +38,13 @@ class Carrito_controller extends BaseController
     public function mostrar()
     {
         $data = [];
-        $data['categorias'] = (new \App\Models\CategoriasModel())->findAll();
+        $nav['categorias'] = (new \App\Models\CategoriasModel())->findAll();
         $cart = \Config\Services::cart();
         $data['cartItems'] = $cart->contents();
         $data['cartTotal'] = $cart->total();
 
         echo view('front/header');
-        echo view('front/nav', $data);
+        echo view('front/nav', $nav);
         echo view('front/vista_carrito', $data);
         echo view('front/footer');
     }
