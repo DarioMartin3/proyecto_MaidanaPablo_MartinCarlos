@@ -82,7 +82,11 @@
                                     <div class="container-flex text-center">
                                         <div class="container-flex row">
                                             <div class="col-6 col-sm-6"><a href="<?= base_url('detalle_producto/' . $producto['id'])?>" class="btn btn-light" >Ver</a></div>
-                                            <div class="col-6 col-sm-6"><a href="#" class="btn btn-light" >agregar al carrito</a></div>
+                                            <form method="post" action="<?= base_url('carrito_agregar') ?>" class="col-6 col-sm-6">
+                                                <input type="hidden" name="id" value="<?= $producto['id'] ?>">
+                                                <input type="hidden" name="qty" value="1">
+                                                <button type="submit" class="btn btn-light">Agregar al carrito</button>
+                                            </form>
                                         </div>
                                     </div>
                                     
