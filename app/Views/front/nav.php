@@ -77,7 +77,7 @@
                     </li>
                     <!--Boton Coleeccion del momento-->
                     <li class="nav-item">
-                        <a class="nav-link fs-4" href="#" style="color: black;">Colección </a>
+                        <a class="nav-link fs-4" href="<?= base_url('catalogo') ?>" style="color: black;">Colección </a>
                     </li>
                     <!--Boton Outlet-->
                     <li class="nav-item dropdown fs-4">
@@ -94,12 +94,14 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-columns">
                                 <ul class="column">
-                                    <li><a class="dropdown-item style-color" href="#">Remeras</a></li>
-                                    <li><a class="dropdown-item style-color" href="#">Camisas</a></li>
-                                    <li><a class="dropdown-item style-color" href="#">Abrigo y Camperas</a></li>
-                                    <li><a class="dropdown-item style-color" href="#">Pantalones</a></li>
-                                    <li><a class="dropdown-item style-color" href="#">Shorts</a></li>
-                                    <li><a class="dropdown-item style-color" href="#">Zapatillas</a></li>
+                                    <?php foreach ($categorias as $categoria): ?>
+                                        <form action="<?= base_url('/catalogo') ?>" method="get">
+                                            <input type="hidden" name="categorias[]" value="<?= $categoria['id'] ?>">
+                                            <button type="submit" class="dropdown-item  style-color"><?= $categoria['categoria'] ?></button>
+                                        </form>
+                                        
+                                    <?php endforeach; ?>
+                                    
                                 </ul>
                             </li>
                         </ul>
