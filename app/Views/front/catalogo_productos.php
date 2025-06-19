@@ -6,7 +6,7 @@
         <form method="get" action="<?= base_url('/catalogo') ?>" class="p-3">
             <div class="row mb-3">
                 <div class="col-md-12">
-                    <label for="marca" class="form-label">sexo</label>
+                    <label for="sexo" class="form-label"><h3>Sexo</h3></label>
                     <?php foreach($sexos as $sexo):?>
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="<?= $sexo['id'] ?>" id="marca_<?= $sexo['sexo'] ?>" name="sexo[]">
@@ -17,7 +17,7 @@
                     <?php endforeach;?>
                 </div>
                 <div class="col-md-12">
-                    <label for="marca" class="form-label">Color</label>
+                    <label for="marca" class="form-label" style="margin-top:10px;"><h3>Color</h3></label>
                     <?php foreach($colores as $color):?>
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="<?= $color['id'] ?>" id="marca_<?= $color['color'] ?>" name="color[]">
@@ -28,7 +28,7 @@
                     <?php endforeach;?>
                 </div>
                 <div class="col-md-12">
-                    <label for="marca" class="form-label">Marca</label>
+                    <label for="marca" class="form-label" style="margin-top:10px;"><h3>Marca</h3></label>
                     <?php foreach($marcas as $marca):?>
                         <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="<?= $marca['id'] ?>" id="marca_<?= $marca['id'] ?>" name="marca[]">
@@ -39,7 +39,7 @@
                     <?php endforeach;?>
                 </div>
                 <div class="col-md-12">
-                    <label for="categoria" class="form-label">Categorias</label>
+                    <label for="categoria" class="form-label" style="margin-top:10px;"><h3>Categorias</h3></label>
                     <?php foreach($categorias as $categoria):?>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="<?= $categoria['id'] ?>" id="categoria_<?= $categoria['id'] ?>" name="categorias[]">
@@ -50,7 +50,7 @@
                     <?php endforeach;?>
                 </div>
                 <div class="col-md-12">
-                    <label for="talla" class="form-label">Tallas</label>
+                    <label for="talla" class="form-label" style="margin-top:10px;"><h3>Tallas</h3></label>
                     <?php foreach($tallas as $talla):?>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="<?= $talla['id'] ?>" id="talla_<?= $talla['id'] ?>" name="talla[]">  
@@ -61,7 +61,7 @@
                     <?php endforeach;?>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Filtrar</button>
+            <button type="submit" class="btn btn-black">Filtrar</button>
         </form>
         </div>
         <div class="col-10">            
@@ -85,7 +85,7 @@
                                             <form method="post" action="<?= base_url('carrito_agregar') ?>" class="col-6 col-sm-6">
                                                 <input type="hidden" name="id" value="<?= $producto['id'] ?>">
                                                 <input type="hidden" name="qty" value="1">
-                                                <button type="submit" class="btn btn-light">Agregar al carrito</button>
+                                                <button type="submit" class="btn btn-light"><img src="<?= base_url('assets/img/Iconos_layout/bag.svg') ?>" width="30" height="30" alt="Carrito"></button>
                                             </form>
                                         </div>
                                     </div>
