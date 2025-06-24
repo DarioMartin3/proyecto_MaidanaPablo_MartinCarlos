@@ -88,7 +88,23 @@
             <div class="d-flex flex-column align-items-end gap-2 mt-3">
                 <h4 class="mb-0">Total: $<?= number_format($total, 2) ?></h4>
                 <form action="<?= site_url('carrito_finalizar') ?>" method="post" style="display:inline;">
-                    <button type="submit" class="btn btn-black">Finalizar Compra</button>
+                    <?php
+                    // Deshabilitar el botón si algún producto en el carrito supera el stock disponible
+                    $deshabilitarFinalizar = false;
+                    foreach ($cartItems as $item) {
+                        $productModel = new \App\Models\ProductsModel();
+                        $producto = $productModel->find($item['id']);
+                        $stock = $producto ? $producto['stock'] : null;
+                        if ($stock !== null && $item['qty'] > $stock) {
+                            $deshabilitarFinalizar = true;
+                            break;
+                        }
+                    }
+                    ?>
+                    <button type="submit" class="btn btn-black" <?= $deshabilitarFinalizar ? 'disabled' : '' ?>>Finalizar Compra</button>
+                    <?php if ($deshabilitarFinalizar): ?>
+                        <div class="text-danger small mt-1">Los productos no tiene suficiente stock</div>
+                    <?php endif; ?>
                 </form>
             </div>
         <?php else: ?>
