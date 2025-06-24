@@ -43,9 +43,9 @@ $routes->get('/logout', 'Login_controller::logout');
 
 $routes->post('/login', 'Login_controller::auth');
 
-$routes->get('/admin_menu', 'Home::adminMenu', ['filter' => 'auth']);
+$routes->get('/admin_menu', 'Home::adminMenu', ['filter' => 'Admin_Auth']);
 
-$routes->get('/productos', 'Productos::lista', ['filter' => 'auth']);
+$routes->get('/productos', 'Productos::lista', ['filter' => 'Admin_Auth']);
 
 $routes->get('/productos/deshabilitar/(:num)', 'Productos::deshabilitar/$1');
 
@@ -55,7 +55,7 @@ $routes->POST('/productos/modificar/(:num)', 'Productos::actualizar/$1');
 
 $routes->get('/catalogo', 'Productos::catalogo_productos');
 
-$routes->get('/usuarios', 'Usuarios_controller::lista', ['filter' => 'auth']);
+$routes->get('/usuarios', 'Usuarios_controller::lista', ['filter' => 'Admin_Auth']);
 
 $routes->get('/usuarios/habilitar/(:num)', 'Usuarios_controller::habilitar/$1', ['filter' => 'auth']);
 
@@ -69,7 +69,7 @@ $routes->post('/consultas/guardar', 'Consultas_controller::guardar');
 
 $routes->get('/consultas/cambiar_respondido/(:num)', 'Consultas_controller::cambiar_respondido/$1');
 
-$routes->get('/consulta', 'Consultas_controller::lista', ['filter' => 'auth']);
+$routes->get('/consulta', 'Consultas_controller::lista', ['filter' => 'Admin_Auth']);
 
 $routes->get('/detalle_producto/(:num)', 'Productos::detalle_producto/$1');
 
@@ -83,6 +83,6 @@ $routes->post('/carrito_finalizar', 'Carrito_controller::finalizar_compra');
 
 $routes->post('/carrito_eliminar', 'Carrito_controller::eliminar');
 
-$routes->get('/ventas', 'Ventas_controller::lista', ['filter' => 'auth']);
+$routes->get('/ventas', 'Ventas_controller::lista', ['filter' => 'Admin_Auth']);
 
 $routes->get('/compras', 'Compras_controller::lista', ['filter' => 'auth']);
