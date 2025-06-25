@@ -158,8 +158,6 @@
         const email = this.querySelector('input[type="email"]').value;
         console.log('Email enviado:', email);
 
-        // Aquí podés hacer algo más, como enviar el email por AJAX
-
         // Limpiar el formulario
         this.reset();
 
@@ -169,7 +167,7 @@
         message.classList.add('text-success');
         this.appendChild(message);
 
-        // Opcional: Si querés que el mensaje desaparezca después de unos segundos
+        // Eliminar el mensaje después de 3 segundos
         setTimeout(() => {
             message.remove();
         }, 3000); // 3000 milisegundos = 3 segundos

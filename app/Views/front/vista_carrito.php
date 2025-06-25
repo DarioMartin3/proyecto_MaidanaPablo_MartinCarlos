@@ -90,12 +90,15 @@
                 <form action="<?= site_url('carrito_finalizar') ?>" method="post" style="display:inline;">
                     <?php
                     // Deshabilitar el botón si algún producto en el carrito supera el stock disponible
+                    //bandera
                     $deshabilitarFinalizar = false;
                     foreach ($cartItems as $item) {
                         $productModel = new \App\Models\ProductsModel();
                         $producto = $productModel->find($item['id']);
-                        $stock = $producto ? $producto['stock'] : null;
+                        // Verificar el stock del producto
+                        $stock = $producto ? $producto['stock'] : null;                        
                         if ($stock !== null && $item['qty'] > $stock) {
+                            //si la cantidad del producto en el carrito supera el stock, cambia la bandera
                             $deshabilitarFinalizar = true;
                             break;
                         }
